@@ -11,7 +11,7 @@ namespace Gestion_de_convo_Tennis.Classes
         public List<Classement> ClassementList { get; set; }
         public static openConnexion()
         {
-            // Connexion au SQL Serveur
+            // Connexion au SQL Serveur 
         }
     }
 }
