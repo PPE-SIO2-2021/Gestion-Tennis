@@ -8,9 +8,9 @@
         xmlns:iconPacks="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Modern"
         xmlns:local="clr-namespace:Gestion_de_convo_Tennis"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <mah:MetroWindow.LeftWindowCommands>
-        <mah:WindowCommands>
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
+    <mah:MetroWindow.LeftWindowCommands >
+        <mah:WindowCommands Background="AliceBlue">
             <Button x:Name="buttonJoueur" Content="JoueurPage" ToolTip="JoueurPage" Click="JoueurPage"/>
             <Button x:Name="buttonDispo" Content="DispoPage" ToolTip="DispoPage" Click="DispoPage"/>
         </mah:WindowCommands>

@@ -18,11 +18,11 @@ namespace Gestion_de_convo_Tennis.Pages
     /// <summary>
     /// Logique d'interaction pour JoueurPage.xaml
     /// </summary>
-    public partial class JoueurPage : Page
+    public partial class JoueurPage : Page 
     {
         public JoueurPage()
         {
-
+            InitializeComponent();
         }
     }
 }
