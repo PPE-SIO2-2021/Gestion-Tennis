@@ -20,7 +20,7 @@ namespace Gestion_de_convo_Tennis.Classes
             this.Adversaire = adversaire;
         }
         public override string ToString() {
-            return "Date de rencontre : " + this.dte + "\nLieu de rencontre : " + this.lieu + "\nAdversaire : " + this.adversaire;
+            return "Date de rencontre : " + this.Dte + "\nLieu de rencontre : " + this.Lieu + "\nAdversaire : " + this.Adversaire;
         }
     }
 }

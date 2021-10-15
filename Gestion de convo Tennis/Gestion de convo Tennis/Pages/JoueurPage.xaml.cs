@@ -22,7 +22,7 @@ namespace Gestion_de_convo_Tennis.Pages
     {
         public JoueurPage()
         {
-            InitializeComponent();
+
         }
     }
 }

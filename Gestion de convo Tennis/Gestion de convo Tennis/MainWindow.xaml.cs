@@ -29,6 +29,10 @@ namespace Gestion_de_convo_Tennis
         {
             this.Content = new JoueurPage();
         }
-        
+        private void DispoPage(object sender, RoutedEventArgs e)
+        {
+            this.Content = new DispoPage();
+        }
+
     }
 }

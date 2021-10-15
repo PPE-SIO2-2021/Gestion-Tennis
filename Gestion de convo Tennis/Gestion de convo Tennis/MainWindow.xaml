@@ -11,8 +11,8 @@
         Title="MainWindow" Height="450" Width="800">
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
-            <Button x:Name="buttonLivres" Content="Livres" ToolTip="Page1" Click="Page1"/>
-            <Button x:Name="buttonVideos" Content="Videos" ToolTip="Page2" Click="Page2"/>
+            <Button x:Name="buttonJoueur" Content="JoueurPage" ToolTip="JoueurPage" Click="JoueurPage"/>
+            <Button x:Name="buttonDispo" Content="DispoPage" ToolTip="DispoPage" Click="DispoPage"/>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
     <Page Margin="0,0,0,0"/>

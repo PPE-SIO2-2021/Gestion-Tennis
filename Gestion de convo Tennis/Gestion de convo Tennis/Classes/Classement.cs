@@ -8,10 +8,10 @@ namespace Gestion_de_convo_Tennis.Classes
 {
     public class Classement
     {
-        public Int Index {get;set;}
-        public Int Rang {get;set;}
+        public int Index {get;set;}
+        public int Rang {get;set;}
         public Classement (){}
-        public Classement (Int index, Int rang) {
+        public Classement (int index, int rang) {
             this.Index=index;
             this.Rang=rang;
         }

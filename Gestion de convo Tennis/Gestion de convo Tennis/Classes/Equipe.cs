@@ -9,9 +9,9 @@ namespace Gestion_de_convo_Tennis.Classes
     public class Equipe
     {
         public Boolean Categorie {get;set;}
-        public Int Ordre_equipe {get;set;}
+        public int Ordre_equipe {get;set;}
         public Equipe () {}
-        public Equipe (Boolean categorie, Int ordre_equipe) {
+        public Equipe (Boolean categorie, int ordre_equipe) {
             this.Categorie = categorie;
             this.Ordre_equipe = ordre_equipe;
         }
