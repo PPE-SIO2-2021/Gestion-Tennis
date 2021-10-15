@@ -9,7 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Gestion_de_convo_Tennis;
 using Gestion_de_convo_Tennis.Pages;
+using MahApps.Metro.IconPacks;
 using System;
 using System.Diagnostics;
 using System.Windows;
