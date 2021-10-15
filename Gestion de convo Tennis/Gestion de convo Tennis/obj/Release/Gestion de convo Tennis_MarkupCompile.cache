@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\Robin\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\
+C:\Users\Robin\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Release\
 Gestion_de_convo_Tennis
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Robin\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\App.xaml
 6511721831
 
-171801510384
+16-1651097545
 54-485773995
 MainWindow.xaml;Pages\DispoPage.xaml;Pages\EquipePage.xaml;Pages\JoueurPage.xaml;Pages\RencontrePage.xaml;Pages\VuePage.xaml;
 
