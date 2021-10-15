@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gestion_de_convo_Tennis.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Gestion_de_convo_Tennis.Pages
         public JoueurPage()
         {
             InitializeComponent();
+            classementJoueurCombo.ItemsSource = AdoClassement.all(); ;
         }
     }
 }

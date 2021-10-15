@@ -175,6 +175,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\ADO.cs" />
+    <Compile Include="Classes\AdoClassement.cs" />
     <Compile Include="Classes\Classement.cs" />
     <Compile Include="Classes\Disponible.cs" />
     <Compile Include="Classes\Equipe.cs" />

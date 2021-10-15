@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,10 @@ namespace Gestion_de_convo_Tennis
 
     public partial class MainWindow
     {
-        public MainWindow()
+       public MainWindow()
         {
             InitializeComponent();
+           
             this.Content = new JoueurPage();
         }
         private void JoueurPage(object sender, RoutedEventArgs e)

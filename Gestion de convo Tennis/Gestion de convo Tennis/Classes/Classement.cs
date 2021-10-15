@@ -16,7 +16,7 @@ namespace Gestion_de_convo_Tennis.Classes
             this.Rang=rang;
         }
         public override string ToString() {
-            return "Index : " + this.Index + "\nRang : " + this.Rang;
+            return this.Rang +" ";
         }
     }
 }

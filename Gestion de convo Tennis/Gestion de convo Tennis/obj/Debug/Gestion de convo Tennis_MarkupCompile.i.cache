@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Trist\source\repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\
 Gestion_de_convo_Tennis
 none
 false
 DEBUG;TRACE
-C:\Users\Trist\source\repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\App.xaml
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\App.xaml
 6511721831
 
-171801510384
-5329578155
+19-1292970534
+53-45040248
 MainWindow.xaml;Pages\DispoPage.xaml;Pages\EquipePage.xaml;Pages\JoueurPage.xaml;Pages\RencontrePage.xaml;Pages\VuePage.xaml;
 
-True
+False
 
