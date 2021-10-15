@@ -18,15 +18,15 @@
             <Label Content="CREER UN JOUEUR" Margin="0,0,-2,369" HorizontalAlignment="Center" FontWeight="Bold" />
             <Grid Height="30" Margin="0,31,0,339" >
                 <Label Content="Nom :" Margin="0,0,145,4"/>
-                <TextBox x:Name="nomJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" Text="TextBox"  TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,4"/>
+                <TextBox x:Name="nomJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,4"/>
             </Grid>
             <Grid Height="30" Margin="0,61,0,309">
                 <Label Content="Prenom :" Margin="0,0,145,4"/>
-                <TextBox x:Name="prenomJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" Text="TextBox"  TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,4"/>
+                <TextBox x:Name="prenomJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,4"/>
             </Grid>
             <Grid Height="30" Margin="0,91,0,279">
                 <Label Content="Mail :" Margin="0,2,145,-2"/>
-                <TextBox x:Name="mailJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" Text="TextBox"  TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,0.295"/>
+                <TextBox x:Name="mailJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,0.295"/>
             </Grid>
             <Grid Height="30" Margin="0,121,0,249" >
                 <Label Content="Catégorie :" Margin="0,2,139,-2"/>
