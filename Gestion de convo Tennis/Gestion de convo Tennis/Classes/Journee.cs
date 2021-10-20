@@ -8,6 +8,7 @@ namespace Gestion_de_convo_Tennis.Classes
 {
     public class Journee
     {
+        public List<Rencontre> Rencontres { get; set; }
         public DateTime Dte { get; set; }
         public Boolean Senior { get; set; }
 
