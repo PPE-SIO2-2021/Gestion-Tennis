@@ -142,6 +142,15 @@ C:\Users\Trist\source\repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis
 C:\Users\Trist\source\repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.exe
 C:\Users\Trist\source\repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.pdb
 C:\Users\Trist\source\repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.AssemblyReference.cache
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\MainWindow.g.cs
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\DispoPage.g.cs
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\EquipePage.g.cs
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JoueurPage.g.cs
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JourneePage.g.cs
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\VuePage.g.cs
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\App.g.cs
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis_MarkupCompile.cache
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis_MarkupCompile.lref
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.exe.config
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.exe
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.pdb
@@ -254,19 +263,11 @@ C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de co
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Microsoft.Xaml.Behaviors.pdb
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Microsoft.Xaml.Behaviors.xml
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\de\MahApps.Metro.resources.dll
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.AssemblyReference.cache
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\MainWindow.g.cs
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\DispoPage.g.cs
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\EquipePage.g.cs
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JoueurPage.g.cs
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\VuePage.g.cs
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\App.g.cs
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis_MarkupCompile.cache
-C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis_MarkupCompile.lref
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\MainWindow.baml
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\DispoPage.baml
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\EquipePage.baml
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JoueurPage.baml
+C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JourneePage.baml
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\VuePage.baml
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.g.resources
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion_de_convo_Tennis.Properties.Resources.resources
@@ -275,5 +276,3 @@ C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de co
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.CopyComplete
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.exe
 C:\Users\Trist\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.pdb
-C:\Users\Trist\source\repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JourneePage.g.cs
-C:\Users\Trist\source\repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JourneePage.baml
