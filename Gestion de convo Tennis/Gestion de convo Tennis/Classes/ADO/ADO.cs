@@ -33,6 +33,6 @@ namespace Gestion_de_convo_Tennis.Classes
         {
             return "Data Source=LAPTOP-IH3M9RRL;Initial Catalog=bd_tsatgd;Integrated Security=True";
         }
-        public static CleanUp() {}
+        public static void CleanUp() { }
     }
 }
