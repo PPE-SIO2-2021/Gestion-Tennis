@@ -8,7 +8,7 @@ namespace Gestion_de_convo_Tennis.Classes
 {
     public class Rencontre
     {
-        public List<Equipe> Equipes { get; set; }
+        public Equipe Equipes { get; set; }
         public List<Joueur> Joueurs { get; set; }
         public DateTime Dte { get; set; }
         public String Lieu { get; set; }
