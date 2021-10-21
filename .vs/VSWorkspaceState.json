@@ -3,8 +3,10 @@
     "",
     "\\Gestion de convo Tennis",
     "\\Gestion de convo Tennis\\Gestion de convo Tennis",
+    "\\Gestion de convo Tennis\\Gestion de convo Tennis\\Classes",
+    "\\Gestion de convo Tennis\\Gestion de convo Tennis\\Classes\\ADO",
     "\\Gestion de convo Tennis\\Gestion de convo Tennis\\Pages"
   ],
-  "SelectedNode": "\\Gestion de convo Tennis\\Gestion de convo Tennis\\Pages\\JourneePage.xaml",
+  "SelectedNode": "\\Gestion de convo Tennis\\Gestion de convo Tennis\\Pages\\DispoPage.xaml",
   "PreviewInSolutionExplorer": false
 }

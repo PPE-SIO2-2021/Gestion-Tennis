@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -29,4 +29,3 @@ namespace Gestion_de_convo_Tennis.Classes
         }
     }
 }
-*/
