@@ -14,6 +14,8 @@
             <Button x:Name="buttonJoueur" Content="Joueurs" ToolTip="JoueurPage" Click="JoueurPage"/>
             <Button x:Name="buttonJournee" Content="Journees" ToolTip="JourneePage" Click="JourneePage"/>
             <Button x:Name="buttonDispo" Content="Disponibilités" ToolTip="DispoPage" Click="DispoPage"/>
+            <Button x:Name="buttonRencontre" Content="Rencontres" ToolTip="RencontrePage" Click="RencontrePage"/>
+            <Button x:Name="buttonVue" Content="Recapitulatif" ToolTip="VuePage" Click="VuePage"/>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
     <Page Margin="0,0,0,0"/>

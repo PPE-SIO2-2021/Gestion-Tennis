@@ -238,20 +238,29 @@
                 <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Center" Width="50" Height="30" Margin="314,30,86,280"/>
             </Grid>
 
-            <Grid Height="280" Width="450" Margin="0,60,0,0" >
+            <Grid Height="280" Width="450" Margin="0,70,0,0" >
                 <Label Content="Maintenez Ctrl et selectionnez les journées de rencontres :"/>
-                <Viewbox Height="260" Width="350" VerticalAlignment="Bottom" Stretch="Fill">
-                    <Calendar x:Name="CalendarJournees"  SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" >
+                <Viewbox Height="260" Width="320" VerticalAlignment="Bottom" Stretch="Fill">
+                    <Calendar x:Name="CalendarJournees"  SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195" >
                     </Calendar>
                 </Viewbox>
             </Grid>
 
         </Grid>
         <Button x:Name="buttonValiderJournees" Content="Valider"  HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30"/>
-        <DataGrid x:Name="DataGridRecapJournees" Height="340" Width="200" Margin="576,84,10,10">
+        <DataGrid x:Name="DataGridRecapJournees" Height="340" Width="200" Margin="576,84,10,10" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Journées" Binding="{Binding Journees}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
+
+        <Grid Width="800" Height="450">
+            <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
+            <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="350" Margin="241,38,250,62">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
+                </Border.Effect>
+            </Border>
+        </Grid>
     </Grid>
 </Page>

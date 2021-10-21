@@ -24,7 +24,6 @@ namespace Gestion_de_convo_Tennis
        public MainWindow()
         {
             InitializeComponent();
-           
             this.Content = new JoueurPage();
         }
         private void JoueurPage(object sender, RoutedEventArgs e)
@@ -39,6 +38,13 @@ namespace Gestion_de_convo_Tennis
         {
             this.Content = new JourneePage();
         }
-
+        private void RencontrePage(object sender, RoutedEventArgs e)
+        {
+            this.Content = new RencontrePage();
+        }
+        private void VuePage(object sender, RoutedEventArgs e)
+        {
+            this.Content = new VuePage();
+        }
     }
 }

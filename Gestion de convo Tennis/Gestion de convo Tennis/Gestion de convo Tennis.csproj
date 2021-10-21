@@ -175,6 +175,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Classement.cs" />
     <Compile Include="Classes\Disponible.cs" />
     <Compile Include="Classes\Equipe.cs" />
     <Compile Include="Classes\Joueur.cs" />
@@ -188,7 +189,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EquipePage.xaml">
+    <Page Include="Pages\RencontrePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -215,8 +216,8 @@
     <Compile Include="Pages\DispoPage.xaml.cs">
       <DependentUpon>DispoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EquipePage.xaml.cs">
-      <DependentUpon>EquipePage.xaml</DependentUpon>
+    <Compile Include="Pages\RencontrePage.xaml.cs">
+      <DependentUpon>RencontrePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\JoueurPage.xaml.cs">
       <DependentUpon>JoueurPage.xaml</DependentUpon>
@@ -249,13 +250,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Classes\Classement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\ADO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

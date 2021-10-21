@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Gestion_de_convo_Tennis.Pages
 {
     /// <summary>
-    /// Logique d'interaction pour EquipePage.xaml
+    /// Logique d'interaction pour RencontrePage.xaml
     /// </summary>
-    public partial class EquipePage : Page
+    public partial class RencontrePage : Page
     {
-        public EquipePage()
+        public RencontrePage()
         {
             InitializeComponent();
         }
