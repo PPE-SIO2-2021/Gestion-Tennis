@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gestion_de_convo_Tennis.Classes;
 
 namespace Gestion_de_convo_Tennis.Classes
 {

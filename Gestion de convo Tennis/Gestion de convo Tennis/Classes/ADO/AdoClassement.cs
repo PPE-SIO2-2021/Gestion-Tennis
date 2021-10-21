@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gestion_de_convo_Tennis.Classes;
 
 namespace Gestion_de_convo_Tennis.Classes
 {
@@ -15,7 +16,7 @@ namespace Gestion_de_convo_Tennis.Classes
             List<Classement> classements = new List<Classement>();
             SqlCommand requete = new SqlCommand("SELECT * FROM classement");
             requete.Connection = Ado.OpenSqlConnection();
-          SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
+            SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
                  classements.Add(new Classement(reader.GetInt32(0),reader.GetInt32(2)));
