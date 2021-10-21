@@ -8,6 +8,7 @@ namespace Gestion_de_convo_Tennis.Classes
 {
     public class Joueur
     {
+        public Classement Classement { get; set; }
         public String Nom { get; set; }
         public String Prenom { get; set; }
         public int Age { get; set; }
@@ -19,6 +20,16 @@ namespace Gestion_de_convo_Tennis.Classes
 
         public Joueur(String nom, String prenom, int age, String license, String certificat, Boolean categorie)
         {
+            this.Nom = nom;
+            this.Prenom = prenom;
+            this.Age = age;
+            this.License = license;
+            this.Certificat = certificat;
+            this.Categorie = categorie;
+        }
+        public Joueur(String nom, String prenom, int age, String license, String certificat, Boolean categorie, Classement classement)
+        {
+            this.Classement = new Classement();
             this.Nom = nom;
             this.Prenom = prenom;
             this.Age = age;
