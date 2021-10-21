@@ -35,6 +35,10 @@ namespace Gestion_de_convo_Tennis
         {
             this.Content = new DispoPage();
         }
+        private void JourneePage(object sender, RoutedEventArgs e)
+        {
+            this.Content = new JourneePage();
+        }
 
     }
 }

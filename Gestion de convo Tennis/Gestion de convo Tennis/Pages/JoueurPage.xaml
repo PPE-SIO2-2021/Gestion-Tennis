@@ -9,40 +9,48 @@
       Title="Joueur">
 
     <Grid Background="White">
-        <Border Background="LightGray" Margin="10,27,576,23" BorderBrush="Gray" BorderThickness="2" CornerRadius="10">
+        <Border Background="LightGray" Margin="10,10,576,23" BorderBrush="Gray" BorderThickness="2" CornerRadius="10">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
             </Border.Effect>
         </Border>
         <Grid Height="400" Margin="10,27,576,23">
-            <Label Content="CREER UN JOUEUR" Margin="0,0,-2,369" HorizontalAlignment="Center" FontWeight="Bold" />
-            <Grid Height="30" Margin="0,31,0,339" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="133*"/>
+                <ColumnDefinition Width="81*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="CREER UN JOUEUR" Margin="49,-18,48,387" HorizontalAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2" />
+            <Grid Height="30" Margin="0,10,0,360" Grid.ColumnSpan="2" >
                 <Label Content="Nom :" Margin="0,0,145,4"/>
-                <TextBox x:Name="nomJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,4"/>
+                <TextBox x:Name="textBoxNomJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,-1,0,4"/>
             </Grid>
-            <Grid Height="30" Margin="0,61,0,309">
+            <Grid Height="30" Margin="0,40,0,330" Grid.ColumnSpan="2">
                 <Label Content="Prenom :" Margin="0,0,145,4"/>
-                <TextBox x:Name="prenomJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,4"/>
+                <TextBox x:Name="textBoxPrenomJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,-1,0,4"/>
             </Grid>
-            <Grid Height="30" Margin="0,91,0,279">
+            <Grid Height="30" Margin="0,70,0,300" Grid.ColumnSpan="2">
                 <Label Content="Mail :" Margin="0,2,145,-2"/>
-                <TextBox x:Name="mailJoueurTextBox" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,0.295"/>
+                <TextBox x:Name="textBoxeMailJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,0.295"/>
             </Grid>
-            <Grid Height="30" Margin="0,121,0,249" >
-                <Label Content="Catégorie :" Margin="0,2,139,-2"/>
-                <ComboBox x:Name="categorieJoueurCombo" HorizontalAlignment="Left" Margin="84,2,0,0" VerticalAlignment="Top" Width="120" Height="29"/>
+            <Grid Height="30" Margin="0,100,0,270" Grid.ColumnSpan="2">
+                <Label Content="Age :"/>
+                <TextBox x:Name="textBoxAgeJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,2"/>
             </Grid>
-            <Grid Height="30" Margin="0,151,0,219" >
-                <Label Content="Classement :" Margin="0,2,139,-2"/>
-                <ComboBox x:Name="classementJoueurCombo" HorizontalAlignment="Left" Margin="84,2,0,0" VerticalAlignment="Top" Width="120" Height="29"/>
+            <Grid Height="30" Margin="0,133,0,237" Grid.ColumnSpan="2" >
+                <Label Content="Catégorie :"/>
+                <ComboBox x:Name="comboBoxCategorieJoueur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="29" Margin="84,0,0,0"/>
             </Grid>
-            <DataGrid Margin="10,186,10,114">
+            <Grid Height="30" Margin="0,168,0,202" Grid.ColumnSpan="2" >
+                <Label Content="Classement :" />
+                <ComboBox x:Name="comboBoxClassementJoueur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="29" Margin="84,0,0,0"/>
+            </Grid>
+            <DataGrid Margin="10,203,10,97" Grid.ColumnSpan="2">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Fichiers" Binding="{Binding Fichier}" Width="250"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="ajouterFichier" Content="Ajouter un fichier" HorizontalAlignment="Left" Margin="50,304,0,0" VerticalAlignment="Top" Width="116" Height="31"/>
-            <Button x:Name="validerJoueur" Content="Valider" HorizontalAlignment="Left" Margin="50,340,0,0" VerticalAlignment="Top" Width="116" Height="31"/>
+            <Button x:Name="buttonAjouterFichier" Content="Ajouter un fichier" HorizontalAlignment="Left" Margin="49,314,0,0" VerticalAlignment="Top" Width="116" Height="31" Grid.ColumnSpan="2"/>
+            <Button x:Name="buttonValiderJoueur" Content="Valider" HorizontalAlignment="Left" Margin="49,350,0,0" VerticalAlignment="Top" Width="116" Height="31" Grid.ColumnSpan="2"/>
         </Grid>
         <Grid Height="400" Width="550"  Margin="241,27,0,23">
             <DataGrid Margin="0,0,81,0">

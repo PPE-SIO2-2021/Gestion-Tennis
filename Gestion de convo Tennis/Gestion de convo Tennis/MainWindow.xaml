@@ -11,8 +11,9 @@
         Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
     <mah:MetroWindow.LeftWindowCommands >
         <mah:WindowCommands Background="AliceBlue">
-            <Button x:Name="buttonJoueur" Content="JoueurPage" ToolTip="JoueurPage" Click="JoueurPage"/>
-            <Button x:Name="buttonDispo" Content="DispoPage" ToolTip="DispoPage" Click="DispoPage"/>
+            <Button x:Name="buttonJoueur" Content="Joueurs" ToolTip="JoueurPage" Click="JoueurPage"/>
+            <Button x:Name="buttonJournee" Content="Journees" ToolTip="JourneePage" Click="JourneePage"/>
+            <Button x:Name="buttonDispo" Content="Disponibilités" ToolTip="DispoPage" Click="DispoPage"/>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
     <Page Margin="0,0,0,0"/>

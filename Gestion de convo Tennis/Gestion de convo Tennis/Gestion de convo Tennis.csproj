@@ -199,7 +199,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\RencontrePage.xaml">
+    <Page Include="Pages\JourneePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,8 +218,8 @@
     <Compile Include="Pages\JoueurPage.xaml.cs">
       <DependentUpon>JoueurPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\RencontrePage.xaml.cs">
-      <DependentUpon>RencontrePage.xaml</DependentUpon>
+    <Compile Include="Pages\JourneePage.xaml.cs">
+      <DependentUpon>JourneePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\VuePage.xaml.cs">
       <DependentUpon>VuePage.xaml</DependentUpon>
