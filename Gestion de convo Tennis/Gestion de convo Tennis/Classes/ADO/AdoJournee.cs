@@ -4,20 +4,21 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gestion_de_convo_Tennis.Classes;
 
 namespace Gestion_de_convo_Tennis.Classes
 {
-    class AdoClassement
+    class AdoJournee
     {
-        public static List<Classement> all()
+        public static List<Journee> all()
         {
-            List<Classement> classements = new List<Classement>();
-            SqlCommand requete = new SqlCommand("SELECT * FROM classement");
+            List<Journee> classements = new List<Journee>();
+            SqlCommand requete = new SqlCommand("SELECT * FROM journee");
             requete.Connection = Ado.OpenSqlConnection();
-          SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
+            SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                 classements.Add(new Classement(reader.GetInt32(0),reader.GetInt32(2)));
+                 classements.Add(new Journee(reader.GetInt32(0),reader.GetInt32(2))); // à modifier
             }
             reader.Close();
             return classements;
