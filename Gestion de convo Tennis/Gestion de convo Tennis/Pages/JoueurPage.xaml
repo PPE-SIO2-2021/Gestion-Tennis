@@ -33,8 +33,12 @@
                 <TextBox x:Name="textBoxeMailJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,0.295"/>
             </Grid>
             <Grid Height="30" Margin="0,100,0,270" Grid.ColumnSpan="2">
-                <Label Content="Age :"/>
-                <TextBox x:Name="textBoxAgeJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,2"/>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="53*"/>
+                    <ColumnDefinition Width="161*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Age :" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="textBoxAgeJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="10.295,0,0,2" Grid.Column="1"/>
             </Grid>
             <Grid Height="30" Margin="0,133,0,237" Grid.ColumnSpan="2" >
                 <Label Content="Catégorie :"/>

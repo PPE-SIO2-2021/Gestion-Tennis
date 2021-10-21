@@ -65,7 +65,7 @@ namespace Gestion_de_convo_Tennis.Pages {
         #line hidden
         
         
-        #line 37 "..\..\..\Pages\JoueurPage.xaml"
+        #line 41 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textBoxAgeJoueur;
         
@@ -73,7 +73,7 @@ namespace Gestion_de_convo_Tennis.Pages {
         #line hidden
         
         
-        #line 41 "..\..\..\Pages\JoueurPage.xaml"
+        #line 45 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox comboBoxCategorieJoueur;
         
@@ -81,7 +81,7 @@ namespace Gestion_de_convo_Tennis.Pages {
         #line hidden
         
         
-        #line 45 "..\..\..\Pages\JoueurPage.xaml"
+        #line 49 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox comboBoxClassementJoueur;
         
@@ -89,7 +89,7 @@ namespace Gestion_de_convo_Tennis.Pages {
         #line hidden
         
         
-        #line 52 "..\..\..\Pages\JoueurPage.xaml"
+        #line 56 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button buttonAjouterFichier;
         
@@ -97,7 +97,7 @@ namespace Gestion_de_convo_Tennis.Pages {
         #line hidden
         
         
-        #line 53 "..\..\..\Pages\JoueurPage.xaml"
+        #line 57 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button buttonValiderJoueur;
         
@@ -105,7 +105,7 @@ namespace Gestion_de_convo_Tennis.Pages {
         #line hidden
         
         
-        #line 66 "..\..\..\Pages\JoueurPage.xaml"
+        #line 70 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button editerJoueur;
         
