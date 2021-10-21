@@ -249,6 +249,7 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Classes\Classement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
