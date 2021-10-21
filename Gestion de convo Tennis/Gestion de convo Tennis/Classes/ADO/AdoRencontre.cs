@@ -12,16 +12,17 @@ namespace Gestion_de_convo_Tennis.Classes
     {
         public static List<Rencontre> all()
         {
-            List<Rencontre> classements = new List<Rencontre>();
+            List<Rencontre> rencontres = new List<Rencontre>();
             SqlCommand requete = new SqlCommand("SELECT * FROM rencontre");
             requete.Connection = Ado.OpenSqlConnection();
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                 classements.Add(new Rencontre(reader.GetDateTime(1),reader.GetString(2), reader.GetString(3)));
+                // Récupération de la date, lieu & adversaire
+                rencontres.Add(new Rencontre(reader.GetDateTime(1),reader.GetString(2), reader.GetString(3)));
             }
             reader.Close();
-            return classements;
+            return rencontres;
             
      
             
