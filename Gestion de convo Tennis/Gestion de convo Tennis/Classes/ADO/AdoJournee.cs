@@ -18,7 +18,7 @@ namespace Gestion_de_convo_Tennis.Classes
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                 classements.Add(new Journee(reader.GetInt32(0),reader.GetInt32(2))); // à modifier
+                 classements.Add(new Journee(reader.GetDateTime(1),reader.Boolean(2)));
             }
             reader.Close();
             return classements;
