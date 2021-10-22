@@ -19,10 +19,19 @@ namespace Gestion_de_convo_Tennis.Classes
             while (reader.Read())
             {
                 // Récupération du nom, prenom, age, license, certificat & categorie
-                joueurs.Add(new Joueur(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetBoolean(6), MainWindow.classements.Where(x => x.Id == reader.GetInt32(7)).First()));
+                if (reader.IsDBNull(0))
+                {
+                    joueurs.Add(new Joueur(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetBoolean(6), MainWindow.classements.Where(x => x.Id == reader.GetInt32(7)).First()));
+                    reader.Close();
+                    return joueurs;
+                }
+                else
+                {
+                    Console.Write("Aucun joueur n'a été détecter dans la BDD");
+                    return null;
+                }
             }
-            reader.Close();
-            return joueurs;
+
         }
         public static void addJoueur(List<Joueur> joueurs)
         {
