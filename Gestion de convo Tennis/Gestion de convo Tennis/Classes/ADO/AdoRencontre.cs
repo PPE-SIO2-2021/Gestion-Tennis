@@ -23,9 +23,12 @@ namespace Gestion_de_convo_Tennis.Classes
             }
             reader.Close();
             return rencontres;
-            
-     
-            
+        }
+        public static delete()
+        {
+            cmd.Connection = Ado.OpenSqlConnection();
+            cmd.CommandText = "DELETE FROM rencontre";
+            cmd.ExecuteNonQuery();
         }
     }
 }

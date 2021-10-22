@@ -21,9 +21,18 @@ namespace Gestion_de_convo_Tennis
 
     public partial class MainWindow
     {
-       public MainWindow()
+        public static List<Classement> classements;
+        public static List<Joueur> joueurs;
+        public static List<Equipe> equipes;
+        public static List<Journee> journees;
+
+        public MainWindow()
         {
             InitializeComponent();
+            classements = AdoClassement.all();
+            joueurs = AdoJoueur.all();
+            equipes = AdoEquipe.all();
+            journees = AdoJournee.all();
             this.Content = new JoueurPage();
         }
         private void JoueurPage(object sender, RoutedEventArgs e)

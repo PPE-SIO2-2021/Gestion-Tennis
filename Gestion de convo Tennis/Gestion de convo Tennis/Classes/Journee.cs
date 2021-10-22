@@ -11,16 +11,18 @@ namespace Gestion_de_convo_Tennis.Classes
         public List<Rencontre> Rencontres { get; set; }
         public Dictionary<Joueur,Boolean> Dispo { get; set; }
         public DateTime Dte { get; set; }
-        public Boolean Senior { get; set; }
+        public Boolean Categorie { get; set; }
+        public int Id { get; set; }
 
         public Journee () {}
         
-        public Journee (DateTime dte, Boolean senior) {
+        public Journee (Boolean id, DateTime dte, Boolean senior) {
+            this.Id = id;
             this.Dte = dte;
-            this.Senior = senior;
+            this.Categorie = senior;
         }
         public override string ToString() {
-            return "Date de journée : " + this.Dte + "\nCatégorie : " + this.Senior;
+            return "Date de journée : " + this.Dte + "\nCatégorie : " + this.Categorie;
         }
     }
 }

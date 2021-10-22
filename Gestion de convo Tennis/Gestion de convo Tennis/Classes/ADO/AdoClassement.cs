@@ -13,7 +13,7 @@ namespace Gestion_de_convo_Tennis.Classes
         public static List<Classement> all()
         {
             List<Classement> classements = new List<Classement>();
-            SqlCommand requete = new SqlCommand("SELECT * FROM classement");
+            SqlCommand requete = new SqlCommand("SELECT * FROM classement ORDER BY id_classement DESC");
             requete.Connection = Ado.OpenSqlConnection();
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())

@@ -18,13 +18,50 @@ namespace Gestion_de_convo_Tennis.Classes
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                 journees.Add(new Journee(reader.GetDateTime(1),reader.GetBoolean(2)));
+                 journees.Add(new Journee(reader.GetDateTime(1),reader.GetByte(2)));
             }
             reader.Close();
             return journees;
-            
-     
-            
+        }
+        public static addJournee(List<Journee> journees)
+        {
+            cmd.Connection = Ado.OpenSqlConnection();
+            cmd.CommandText = "INSERT INTO journee(dte_journee,categorie_journee) VALUES(@dte_journee,@categorie_journee))";
+            cmd.Prepare();
+            foreach (var journee in journees)
+            {
+                cmd.Parameters.AddWithValue("@dte_journee", journee.Dte);
+                cmd.Parameters.AddWithValue("@categorie_journee", journee.Categorie);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public static addRencontre(List<Journee> journees)
+        {
+            cmd.Connection = Ado.OpenSqlConnection();
+            cmd.CommandText = "INSERT INTO journee(adversaire,lieu,dte_rencontre,heure,fk_id_journee,fk_id_equipe) VALUES(@adversaire,@lieu,@dte_rencontre,@heure,@fk_id_journee,@fk_id_equipe))";
+            cmd.Prepare();
+            foreach (Journee journee in journees)
+            {
+                foreach (Rencontre recontre in journee.Rencontres)
+                {
+                    foreach (Equipe equipe in recontre.Equipes)
+                    {
+                        cmd.Parameters.AddWithValue("@adversaire", recontre.Adversaire);
+                        cmd.Parameters.AddWithValue("@lieu", rencontre.Lieu);
+                        cmd.Parameters.AddWithValue("@dte_rencontre", rencontre.Dte); // Chercher juste la date
+                        cmd.Parameters.AddWithValue("@heure", rencontre.Dte); // Chercher que l'heure
+                        cmd.Parameters.AddWithValue("@fk_id_journee", journee.Id);
+                        cmd.Parameters.AddWithValue("@fk_id_equipe", equipe.Id);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+        }
+        public static delete()
+        {
+            cmd.Connection = Ado.OpenSqlConnection();
+            cmd.CommandText = "DELETE FROM journee";
+            cmd.ExecuteNonQuery();
         }
     }
 }

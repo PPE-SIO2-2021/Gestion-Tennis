@@ -19,10 +19,28 @@ namespace Gestion_de_convo_Tennis.Classes
             while (reader.Read())
             {
                 // Récupération de la catégorie & de l'ordre de l'équipe
-                 equipes.Add(new Equipe(reader.GetBoolean(1),reader.GetInt32(2)));
+                 equipes.Add(new Equipe(reader.GetByte(1),reader.GetInt32(2)));
             }
             reader.Close();
             return equipes;
+        }
+        public static addEquipe(List<Equipe> equipes)
+        {
+            foreach (Equipe equipe in equipes)
+            {
+                cmd.Connection = Ado.OpenSqlConnection();
+                cmd.CommandText = "INSERT INTO equipe(categorie_equipe,ordre_equipe) VALUES(@categorie_equipe,@ordre_equipe))";
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@categorie_equipe", equipe.Categorie);
+                cmd.Parameters.AddWithValue("@ordre_equipe", equipe.Ordre_equipe);
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public static delete()
+        {
+            cmd.Connection = Ado.OpenSqlConnection();
+            cmd.CommandText = "DELETE FROM equipe";
+            cmd.ExecuteNonQuery();
         }
     }
 }
