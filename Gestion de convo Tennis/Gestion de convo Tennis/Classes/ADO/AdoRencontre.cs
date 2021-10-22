@@ -26,8 +26,8 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static delete()
         {
+            SqlCommand requete = new SqlCommand("DELETE FROM rencontre";
             cmd.Connection = Ado.OpenSqlConnection();
-            cmd.CommandText = "DELETE FROM rencontre";
             cmd.ExecuteNonQuery();
         }
     }

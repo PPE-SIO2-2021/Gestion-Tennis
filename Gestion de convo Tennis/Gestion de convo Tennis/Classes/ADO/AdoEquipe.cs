@@ -28,8 +28,9 @@ namespace Gestion_de_convo_Tennis.Classes
         {
             foreach (Equipe equipe in equipes)
             {
+
+                SqlCommand cmd = new SqlCommand("INSERT INTO equipe(categorie_equipe,ordre_equipe) VALUES(@categorie_equipe,@ordre_equipe))";
                 cmd.Connection = Ado.OpenSqlConnection();
-                cmd.CommandText = "INSERT INTO equipe(categorie_equipe,ordre_equipe) VALUES(@categorie_equipe,@ordre_equipe))";
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@categorie_equipe", equipe.Categorie);
                 cmd.Parameters.AddWithValue("@ordre_equipe", equipe.Ordre_equipe);
@@ -38,8 +39,8 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static delete()
         {
+            SqlCommand cmd = new SqlCommand("DELETE FROM equipe";
             cmd.Connection = Ado.OpenSqlConnection();
-            cmd.CommandText = "DELETE FROM equipe";
             cmd.ExecuteNonQuery();
         }
     }

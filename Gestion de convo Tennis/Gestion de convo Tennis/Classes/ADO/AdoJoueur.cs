@@ -28,8 +28,8 @@ namespace Gestion_de_convo_Tennis.Classes
         {
             foreach (Joueur joueur in joueurs)
             {
+                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,categorie_joueur, certificat, licence, fk_id_classement) VALUES(@nom,@prenom,@categorie_joueur, @certificat, @licence, @fk_id_classement))";
                 cmd.Connection = Ado.OpenSqlConnection();
-                cmd.CommandText = "INSERT INTO joueur(nom,prenom,age,categorie_joueur, certificat, licence, fk_id_classement) VALUES(@nom,@prenom,@categorie_joueur, @certificat, @licence, @fk_id_classement))";
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@nom", joueur.Nom);
                 cmd.Parameters.AddWithValue("@prenom", joueur.Prenom);
@@ -43,8 +43,8 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static delete()
         {
+            SqlCommand cmd = new SqlCommand("DELETE FROM joueur";
             cmd.Connection = Ado.OpenSqlConnection();
-            cmd.CommandText = "DELETE FROM joueur";
             cmd.ExecuteNonQuery();
         }
         // Méthode de supression

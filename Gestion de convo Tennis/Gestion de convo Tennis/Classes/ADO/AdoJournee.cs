@@ -25,10 +25,10 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static addJournee(List<Journee> journees)
         {
+            SqlCommand cmd = new SqlCommand("INSERT INTO journee(dte_journee,categorie_journee) VALUES(@dte_journee,@categorie_journee))";
             cmd.Connection = Ado.OpenSqlConnection();
-            cmd.CommandText = "INSERT INTO journee(dte_journee,categorie_journee) VALUES(@dte_journee,@categorie_journee))";
             cmd.Prepare();
-            foreach (var journee in journees)
+            foreach (Journee journee in journees)
             {
                 cmd.Parameters.AddWithValue("@dte_journee", journee.Dte);
                 cmd.Parameters.AddWithValue("@categorie_journee", journee.Categorie);
@@ -37,8 +37,8 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static addRencontre(List<Journee> journees)
         {
+            SqlCommand cmd = new SqlCommand("INSERT INTO journee(adversaire,lieu,dte_rencontre,heure,fk_id_journee,fk_id_equipe) VALUES(@adversaire,@lieu,@dte_rencontre,@heure,@fk_id_journee,@fk_id_equipe))";
             cmd.Connection = Ado.OpenSqlConnection();
-            cmd.CommandText = "INSERT INTO journee(adversaire,lieu,dte_rencontre,heure,fk_id_journee,fk_id_equipe) VALUES(@adversaire,@lieu,@dte_rencontre,@heure,@fk_id_journee,@fk_id_equipe))";
             cmd.Prepare();
             foreach (Journee journee in journees)
             {
@@ -59,8 +59,8 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static delete()
         {
+            SqlCommand cmd = new SqlCommand("DELETE FROM journee";
             cmd.Connection = Ado.OpenSqlConnection();
-            cmd.CommandText = "DELETE FROM journee";
             cmd.ExecuteNonQuery();
         }
     }
