@@ -75,21 +75,13 @@ namespace Gestion_de_convo_Tennis.Pages {
         
         #line 38 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ComboBox comboBoxCategorieJoueur;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 42 "..\..\..\Pages\JoueurPage.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox comboBoxClassementJoueur;
         
         #line default
         #line hidden
         
         
-        #line 49 "..\..\..\Pages\JoueurPage.xaml"
+        #line 45 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button buttonAjouterFichier;
         
@@ -97,7 +89,7 @@ namespace Gestion_de_convo_Tennis.Pages {
         #line hidden
         
         
-        #line 50 "..\..\..\Pages\JoueurPage.xaml"
+        #line 46 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button buttonValiderJoueur;
         
@@ -105,7 +97,7 @@ namespace Gestion_de_convo_Tennis.Pages {
         #line hidden
         
         
-        #line 63 "..\..\..\Pages\JoueurPage.xaml"
+        #line 59 "..\..\..\Pages\JoueurPage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button editerJoueur;
         
@@ -155,18 +147,15 @@ namespace Gestion_de_convo_Tennis.Pages {
             this.textBoxAgeJoueur = ((System.Windows.Controls.TextBox)(target));
             return;
             case 5:
-            this.comboBoxCategorieJoueur = ((System.Windows.Controls.ComboBox)(target));
-            return;
-            case 6:
             this.comboBoxClassementJoueur = ((System.Windows.Controls.ComboBox)(target));
             return;
-            case 7:
+            case 6:
             this.buttonAjouterFichier = ((System.Windows.Controls.Button)(target));
             return;
-            case 8:
+            case 7:
             this.buttonValiderJoueur = ((System.Windows.Controls.Button)(target));
             return;
-            case 9:
+            case 8:
             this.editerJoueur = ((System.Windows.Controls.Button)(target));
             return;
             }

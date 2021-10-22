@@ -23,6 +23,7 @@ namespace Gestion_de_convo_Tennis.Pages
         public JourneePage()
         {
             InitializeComponent();
+            gridValidateJoueur.Visibility = Visibility.Hidden;
             gridCalendrier.Visibility = Visibility.Hidden;
             
         }
@@ -39,6 +40,27 @@ namespace Gestion_de_convo_Tennis.Pages
             LabelTitreJournee.Content = "SAISIE DES JOURNEES SENIOR+";
             LabelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie senior+ :";
             gridCalendrier.Visibility = Visibility.Visible;
+        }
+
+        private void buttonValiderJournees_Click(object sender, RoutedEventArgs e)
+        {
+            gridValidateJoueur.Visibility = Visibility.Visible;
+        }
+
+        private void buttonConfirmerJournees_Click(object sender, RoutedEventArgs e)
+        {
+            switchValidateVisibility();
+        }
+        private void buttonAnnulerJournees_Click(object sender, RoutedEventArgs e)
+        {
+            switchValidateVisibility();
+        }
+        private void switchValidateVisibility()
+        {
+            if (gridCalendrier.Visibility == Visibility.Visible)
+            {
+                gridValidateJoueur.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

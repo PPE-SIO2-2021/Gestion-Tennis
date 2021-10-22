@@ -226,7 +226,7 @@
                 <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
             </Border.Effect>
         </Border>
-        <Grid Height="60" Width="185" Margin="12,10,608,380">
+        <Grid Height="60" Width="185" Margin="27,10,588,380">
             <Button x:Name="buttonSenior" Content="Senior"  HorizontalAlignment="Left" Width="70" Margin="0,30,0,0" Click="buttonSenior_Click"/>
             <Button x:Name="buttonSeniorPlus" Content="Senior +"  HorizontalAlignment="Left" Width="70" Margin="105,30,0,0" Click="buttonSeniorPlus_Click"/>
             <Label Content="Selectionnez une catégorie :" HorizontalAlignment="Center" FontWeight="Bold" Height="30" Margin="2,0,10,30"/>
@@ -247,20 +247,31 @@
             </Grid>
 
         </Grid>
-        <Button x:Name="buttonValiderJournees" Content="Valider"  HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30"/>
+        <Button x:Name="buttonValiderJournees" Content="Valider"  HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30" Click="buttonValiderJournees_Click"/>
         <DataGrid x:Name="DataGridRecapJournees" Height="340" Width="200" Margin="576,84,10,10" ScrollViewer.VerticalScrollBarVisibility="Auto">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Journées" Binding="{Binding Journees}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
-        <Grid Width="800" Height="450">
+        <Grid x:Name="gridValidateJoueur" Width="800" Height="450">
             <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
-            <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="350" Margin="241,38,250,62">
+            <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="350" Width="300" Margin="241,38,250,62">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
                 </Border.Effect>
             </Border>
+            <Grid Height="350" Width="300" Margin="246,38,254,62">
+                <Label Content="Voulez-vous vraiment valider ces journées ?" Height="30" Width="300" HorizontalContentAlignment="Center" Margin="0,0,0,320"/>
+                <DataGrid x:Name="DataGridValiderJournees" Width="250" Height="250" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,35,0,65">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Journées" Binding="{Binding Journees}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button x:Name="buttonConfirmerJournees" Content="Valider" HorizontalAlignment="Left" Width="70" Height="30" Margin="57,310,0,10" Click="buttonConfirmerJournees_Click"/>
+                <Button x:Name="buttonAnnulerJournees" Content="Annuler" HorizontalAlignment="Left" Width="70" Height="30" Margin="177,310,0,10" Click="buttonAnnulerJournees_Click"/>
+            </Grid>
+            
         </Grid>
     </Grid>
 </Page>
