@@ -16,7 +16,7 @@ namespace Gestion_de_convo_Tennis.Classes
 
         public Journee () {}
         
-        public Journee (Boolean id, DateTime dte, Boolean senior) {
+        public Journee (int id, DateTime dte, Boolean senior) {
             this.Id = id;
             this.Dte = dte;
             this.Categorie = senior;

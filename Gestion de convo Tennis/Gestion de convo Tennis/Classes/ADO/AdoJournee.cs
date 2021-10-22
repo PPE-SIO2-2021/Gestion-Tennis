@@ -18,14 +18,14 @@ namespace Gestion_de_convo_Tennis.Classes
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                 journees.Add(new Journee(reader.GetDateTime(1),reader.GetByte(2)));
+                 journees.Add(new Journee(reader.GetInt32(0),reader.GetDateTime(1),reader.GetBoolean(2)));
             }
             reader.Close();
             return journees;
         }
-        public static addJournee(List<Journee> journees)
+        public static void addJournee(List<Journee> journees)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO journee(dte_journee,categorie_journee) VALUES(@dte_journee,@categorie_journee))";
+            SqlCommand cmd = new SqlCommand("INSERT INTO journee(dte_journee,categorie_journee) VALUES(@dte_journee,@categorie_journee)");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.Prepare();
             foreach (Journee journee in journees)
@@ -35,31 +35,28 @@ namespace Gestion_de_convo_Tennis.Classes
                 cmd.ExecuteNonQuery();
             }
         }
-        public static addRencontre(List<Journee> journees)
+        public static void addRencontre(List<Journee> journees)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO journee(adversaire,lieu,dte_rencontre,heure,fk_id_journee,fk_id_equipe) VALUES(@adversaire,@lieu,@dte_rencontre,@heure,@fk_id_journee,@fk_id_equipe))";
+            SqlCommand cmd = new SqlCommand("INSERT INTO journee(adversaire,lieu,dte_rencontre,heure,fk_id_journee,fk_id_equipe) VALUES(@adversaire,@lieu,@dte_rencontre,@heure,@fk_id_journee,@fk_id_equipe)");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.Prepare();
             foreach (Journee journee in journees)
             {
-                foreach (Rencontre recontre in journee.Rencontres)
-                {
-                    foreach (Equipe equipe in recontre.Equipes)
-                    {
-                        cmd.Parameters.AddWithValue("@adversaire", recontre.Adversaire);
+                foreach (Rencontre rencontre in journee.Rencontres)
+                { 
+                        cmd.Parameters.AddWithValue("@adversaire", rencontre.Adversaire);
                         cmd.Parameters.AddWithValue("@lieu", rencontre.Lieu);
                         cmd.Parameters.AddWithValue("@dte_rencontre", rencontre.Dte); // Chercher juste la date
                         cmd.Parameters.AddWithValue("@heure", rencontre.Dte); // Chercher que l'heure
                         cmd.Parameters.AddWithValue("@fk_id_journee", journee.Id);
-                        cmd.Parameters.AddWithValue("@fk_id_equipe", equipe.Id);
+                        cmd.Parameters.AddWithValue("@fk_id_equipe", rencontre.Equipe.Id);
                         cmd.ExecuteNonQuery();
-                    }
                 }
             }
         }
-        public static delete()
+        public static void delete()
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM journee";
+            SqlCommand cmd = new SqlCommand("DELETE FROM journee");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.ExecuteNonQuery();
         }

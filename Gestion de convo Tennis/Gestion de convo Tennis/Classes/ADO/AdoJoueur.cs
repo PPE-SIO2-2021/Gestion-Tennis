@@ -19,16 +19,16 @@ namespace Gestion_de_convo_Tennis.Classes
             while (reader.Read())
             {
                 // Récupération du nom, prenom, age, license, certificat & categorie
-                joueurs.Add(new Joueur(reader.GetString(1),reader.GetString(2),reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetByte(6), MainWindow.classements.where(x => x.Id == reader.GetInt32(7)).first()));
+                joueurs.Add(new Joueur(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetBoolean(6), MainWindow.classements.Where(x => x.Id == reader.GetInt32(7)).First()));
             }
             reader.Close();
             return joueurs;
         }
-        public static addJoueur(List<Joueur> joueurs)
+        public static void addJoueur(List<Joueur> joueurs)
         {
             foreach (Joueur joueur in joueurs)
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,categorie_joueur, certificat, licence, fk_id_classement) VALUES(@nom,@prenom,@categorie_joueur, @certificat, @licence, @fk_id_classement))";
+                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,categorie_joueur, certificat, licence, fk_id_classement) VALUES(@nom,@prenom,@categorie_joueur, @certificat, @licence, @fk_id_classement)");
                 cmd.Connection = Ado.OpenSqlConnection();
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@nom", joueur.Nom);
@@ -41,9 +41,9 @@ namespace Gestion_de_convo_Tennis.Classes
                 cmd.ExecuteNonQuery();
             }
         }
-        public static delete()
+        public static void delete()
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM joueur";
+            SqlCommand cmd = new SqlCommand("DELETE FROM joueur");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.ExecuteNonQuery();
         }

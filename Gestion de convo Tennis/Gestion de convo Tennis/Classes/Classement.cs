@@ -15,7 +15,7 @@ namespace Gestion_de_convo_Tennis.Classes
 
         public Classement() { }
 
-        public Classement(int, id, int index, String rang)
+        public Classement(int id, int index, String rang)
         {
             this.Id = id;
             this.Index = index;
