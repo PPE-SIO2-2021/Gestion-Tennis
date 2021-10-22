@@ -8,7 +8,37 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="VuePage">
 
-    <Grid>
-        
+    <Grid Background="White" Width="800" Height="450">
+        <Grid Width="150" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+            <DataGrid x:Name="DataGridRecapJournees" Height="380" Width="150" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Journées" Binding="{Binding Journees}" Width="*"/>
+                    <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Width="300" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="170,20,0,20">
+            <Label Content="Rencontres" FontWeight="Bold" Width="300" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+            <DataGrid x:Name="DataGridRecapRencontres" Height="380" Width="300" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Adversaires" Binding="{Binding Adversaire}" Width="*"/>
+                    <DataGridTextColumn Header="Lieu" Binding="{Binding Lieu}" Width="*"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
+                    <DataGridTextColumn Header="Heure" Binding="{Binding Heure}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid  Width="310" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="480,20,0,20" >
+            <Label Content="Joueurs" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Height="30" Width="310"/>
+            <DataGrid x:Name="DataGridRecapJoueur" Height="380" Width="310" VerticalAlignment="Bottom" SelectionMode="Single">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
+                    <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>
+                    <DataGridTextColumn Header="Mail" Binding="{Binding Mail}" Width="*"/>
+                    <DataGridTextColumn Header="Classement" Binding="{Binding Classement}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </Page>

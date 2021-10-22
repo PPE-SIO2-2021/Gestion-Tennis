@@ -8,7 +8,29 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RencontrePage">
 
-    <Grid Background="White">
-        <TextBlock></TextBlock>
+    <Grid Background="White" Width="800" Height="450">
+        <Grid Width="150" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+            <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+            <DataGrid x:Name="DataGridRecapJournees" Height="380" Width="150" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Journées" Binding="{Binding Journees}" Width="*"/>
+                    <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid Width="280" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="170,0,0,0">
+            <Label Content="Joueurs disponibles" FontWeight="Bold" Width="200" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+            <DataGrid x:Name="DataGridJoueurs" Height="380" Width="280" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
+                    <DataGridTextColumn Header="Prénom" Binding="{Binding Prenom}" Width="*"/>
+                    <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="*"/>
+                    <DataGridTextColumn Header="Classement" Binding="{Binding Classement}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid x:Name="gridRencontres" Width="325" Height="420" Margin="465,20,28,230" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        
+        </Grid>
     </Grid>
 </Page>

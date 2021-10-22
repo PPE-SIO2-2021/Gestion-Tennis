@@ -14,9 +14,9 @@
                 <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
             </Border.Effect>
         </Border>
-        <Grid Height="400" Margin="10,27,576,23">
-            
-            <Label Content="CREER UN JOUEUR" Margin="49,-18,48,387" HorizontalAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2" />
+        <Grid Height="420" Margin="10,10,576,23">
+
+            <Label Content="CREER UN JOUEUR" Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2" />
             <Grid Height="30" Margin="0,17,0,353" >
                 <Label Content="Nom :" Margin="0,0,145,4"/>
                 <TextBox x:Name="textBoxNomJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,-1,0,4"/>
@@ -37,13 +37,13 @@
                 <Label Content="Classement :" />
                 <ComboBox x:Name="comboBoxClassementJoueur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="29" Margin="84,0,0,0"/>
             </Grid>
-            <DataGrid Margin="10,203,10,97" Grid.ColumnSpan="2">
+            <DataGrid Margin="10,207,10,93">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Fichiers" Binding="{Binding Fichier}" Width="250"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="buttonAjouterFichier" Content="Ajouter un fichier" HorizontalAlignment="Left" Margin="49,314,0,0" VerticalAlignment="Top" Width="116" Height="31"/>
-            <Button x:Name="buttonValiderJoueur" Content="Valider" HorizontalAlignment="Left" Margin="49,350,0,0" VerticalAlignment="Top" Width="116" Height="31"/>
+            <Button x:Name="buttonAjouterFichier" Content="Ajouter un fichier" HorizontalAlignment="Left" Margin="47,342,0,0" VerticalAlignment="Top" Width="116" Height="32"/>
+            <Button x:Name="buttonValiderJoueur" Content="Valider" HorizontalAlignment="Left" Margin="47,378,0,0" VerticalAlignment="Top" Width="116" Height="32"/>
         </Grid>
         <Grid Height="400" Width="550"  Margin="241,27,0,23">
             <DataGrid Margin="0,0,81,0">
