@@ -42,8 +42,10 @@
                     <DataGridTextColumn Header="Fichiers" Binding="{Binding Fichier}" Width="250"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="buttonAjouterFichier" Content="Ajouter un fichier" HorizontalAlignment="Left" Margin="47,342,0,0" VerticalAlignment="Top" Width="116" Height="32"/>
-            <Button x:Name="buttonValiderJoueur" Content="Valider" HorizontalAlignment="Left" Margin="47,378,0,0" VerticalAlignment="Top" Width="116" Height="32"/>
+            <Grid Width="150" Height="70" Margin="32,330,32,10">
+                <Button x:Name="buttonAjouterFichier" Content="Ajouter un fichier" HorizontalAlignment="Center" VerticalAlignment="Top" Width="116" Height="32"/>
+                <Button x:Name="buttonValiderJoueur" Content="Valider" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="116" Height="32"/>
+            </Grid>
         </Grid>
         <Grid Height="400" Width="550"  Margin="241,27,0,23">
             <DataGrid Margin="0,0,81,0">
@@ -56,7 +58,7 @@
                     <DataGridTextColumn Header="Fichier" Binding="{Binding Fichier}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="editerJoueur" Content="Editer" HorizontalAlignment="Left" Margin="474,10,0,0" VerticalAlignment="Top" Width="75" Height="31"/>
+            <Button x:Name="editerJoueur" Content="Editer" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Height="31"/>
         </Grid>
     </Grid>
 </Page>
