@@ -19,17 +19,17 @@ namespace Gestion_de_convo_Tennis.Classes
             while (reader.Read())
             {
                 // Récupération de la catégorie & de l'ordre de l'équipe
-                 equipes.Add(new Equipe(reader.GetByte(1),reader.GetInt32(2)));
+                 equipes.Add(new Equipe(reader.GetInt32(0),reader.GetBoolean(1),reader.GetInt32(2)));
             }
             reader.Close();
             return equipes;
         }
-        public static addEquipe(List<Equipe> equipes)
+        public static void addEquipe(List<Equipe> equipes)
         {
             foreach (Equipe equipe in equipes)
             {
 
-                SqlCommand cmd = new SqlCommand("INSERT INTO equipe(categorie_equipe,ordre_equipe) VALUES(@categorie_equipe,@ordre_equipe))";
+                SqlCommand cmd = new SqlCommand("INSERT INTO equipe(categorie_equipe,ordre_equipe) VALUES(@categorie_equipe,@ordre_equipe)");
                 cmd.Connection = Ado.OpenSqlConnection();
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@categorie_equipe", equipe.Categorie);
@@ -37,9 +37,9 @@ namespace Gestion_de_convo_Tennis.Classes
                 cmd.ExecuteNonQuery();
             }
         }
-        public static delete()
+        public static void delete()
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM equipe";
+            SqlCommand cmd = new SqlCommand("DELETE * FROM equipe");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.ExecuteNonQuery();
         }
