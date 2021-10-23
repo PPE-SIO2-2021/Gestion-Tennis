@@ -227,34 +227,36 @@
             </Border.Effect>
         </Border>
         <Grid Height="60" Width="185" Margin="27,10,588,380">
-            <Button x:Name="buttonSenior" Content="Senior"  HorizontalAlignment="Left" Width="70" Margin="0,30,0,0" Click="buttonSenior_Click"/>
-            <Button x:Name="buttonSeniorPlus" Content="Senior +"  HorizontalAlignment="Left" Width="70" Margin="105,30,0,0" Click="buttonSeniorPlus_Click"/>
             <Label Content="Selectionnez une catégorie :" HorizontalAlignment="Center" FontWeight="Bold" Height="30" Margin="2,0,10,30"/>
+            <Button x:Name="buttonSelectSenior" Content="Senior"  HorizontalAlignment="Left" Width="70" Margin="0,30,0,0" Click="buttonSelectSenior_Click"/>
+            <Button x:Name="buttonSelectSeniorPlus" Content="Senior +"  HorizontalAlignment="Left" Width="70" Margin="105,30,0,0" Click="buttonSelectSeniorPlus_Click"/>
         </Grid>
-        <Grid x:Name="gridCalendrier" Margin="27,84,323,26" Width="450" Height="340">
-            <Label x:Name="LabelTitreJournee" Content="SAISIE DES JOURNEES" HorizontalContentAlignment="Center" FontWeight="Bold" Height="30" Margin="0,0,0,310" Width="450" />
+        <Grid x:Name="gridCalendrierJournees" Margin="27,84,323,26" Width="450" Height="340">
+            <Label x:Name="labelTitreJournee" Content="SAISIE DES JOURNEES" HorizontalContentAlignment="Center" FontWeight="Bold" Height="30" Margin="0,0,0,310" Width="450" />
             <Grid x:Name="gridNbEquipes">
-                <Label x:Name="LabelNbEquipes" Content="Saisissez le nombre d'équipes :" HorizontalContentAlignment="Left" Height="30" Margin="0,30,0,280" />
+                <Label x:Name="labelNbEquipes" Content="Saisissez le nombre d'équipes :" HorizontalContentAlignment="Left" Height="30" Margin="0,30,0,280" />
                 <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Center" Width="50" Height="30" Margin="314,30,86,280"/>
             </Grid>
 
-            <Grid Height="280" Width="450" Margin="0,70,0,0" >
+            <Grid x:Name="gridSelectionJournees" Height="280" Width="450" Margin="0,70,0,0" >
                 <Label Content="Maintenez Ctrl et selectionnez les journées de rencontres :"/>
                 <Viewbox Height="260" Width="320" VerticalAlignment="Bottom" Stretch="Fill">
-                    <Calendar x:Name="CalendarJournees"  SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195" >
+                    <Calendar x:Name="calendarDateJournee"  SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195" >
                     </Calendar>
                 </Viewbox>
             </Grid>
 
         </Grid>
         <Button x:Name="buttonValiderJournees" Content="Valider"  HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30" Click="buttonValiderJournees_Click"/>
-        <DataGrid x:Name="DataGridRecapJournees" Height="340" Width="200" Margin="576,84,10,10" ScrollViewer.VerticalScrollBarVisibility="Auto">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Journées" Binding="{Binding Journees}" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
-
-        <Grid x:Name="gridValidateJoueur" Width="800" Height="450">
+        <Grid  Height="380" Width="200" Margin="576,50,10,10">
+            <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+            <DataGrid x:Name="dataGridRecapJournees"  Height="350" Width="195"  VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <Grid x:Name="gridDateValidationJoueur" Width="800" Height="450" >
             <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
             <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="350" Width="300" Margin="241,38,250,62">
                 <Border.Effect>
@@ -263,13 +265,15 @@
             </Border>
             <Grid Height="350" Width="300" Margin="246,38,254,62">
                 <Label Content="Voulez-vous vraiment valider ces journées ?" Height="30" Width="300" HorizontalContentAlignment="Center" Margin="0,0,0,320"/>
-                <DataGrid x:Name="DataGridValiderJournees" Width="250" Height="250" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,35,0,65">
+                <DataGrid x:Name="dataGridRecapValidationJournees" Width="250" Height="250" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,35,0,65">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Journées" Binding="{Binding Journees}" Width="*"/>
+                        <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <Button x:Name="buttonConfirmerJournees" Content="Valider" HorizontalAlignment="Left" Width="70" Height="30" Margin="57,310,0,10" Click="buttonConfirmerJournees_Click"/>
-                <Button x:Name="buttonAnnulerJournees" Content="Annuler" HorizontalAlignment="Left" Width="70" Height="30" Margin="177,310,0,10" Click="buttonAnnulerJournees_Click"/>
+                <Grid Width="180" Height="40" HorizontalAlignment="Center" Margin="60,300,60,10">
+                    <Button x:Name="buttonConfirmerJournees" Content="Valider" HorizontalAlignment="Left" Width="70" Height="30" Click="buttonConfirmerJournees_Click"/>
+                    <Button x:Name="buttonAnnulerJournees" Content="Annuler" HorizontalAlignment="Right" Width="70" Height="30" Click="buttonAnnulerJournees_Click"/>
+                </Grid>
             </Grid>
             
         </Grid>

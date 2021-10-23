@@ -12,7 +12,7 @@
 
         <Grid Height="430" Width="260" Margin="10,2,530,-2"  >
             <Label Content="Joueurs" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Height="30" />
-            <DataGrid Height="400" Width="250" VerticalAlignment="Bottom" SelectionMode="Single">
+            <DataGrid x:Name="dataGridAffichageJoueurs" Height="400" Width="250" VerticalAlignment="Bottom" SelectionMode="Single">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                     <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>
@@ -22,7 +22,7 @@
         </Grid>
         <Grid Height="430" Width="260" Margin="270,12,270,8"  >
             <Label Content="Journées" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Height="30"/>
-            <DataGrid Height="400" Width="250" VerticalAlignment="Bottom">
+            <DataGrid x:Name="dataGridAffichageJournees" Height="400" Width="250" VerticalAlignment="Bottom">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
                     <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="*"/>
@@ -31,27 +31,27 @@
             </DataGrid>
         </Grid>
         
-        <Grid Height="150" Width="250" Margin="540,12,10,288">
+        <Grid x:Name="gridRecapJoueur" Height="150" Width="250" Margin="540,12,10,288">
             <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="150" >
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
                 </Border.Effect>
             </Border >
             <Label Content="Informations Joueurs" VerticalAlignment="Top" FontWeight="Bold" Height="30"/>
-            <Label x:Name="LabelNomJoueur" Content="Nom :" HorizontalAlignment="left" Height="30" Margin="0,25,0,95" />
-            <Label x:Name="LabelPrenomJoueur" Content="Prenom :" HorizontalAlignment="left" Height="30" Margin="0,42,0,78" />
-            <Label x:Name="LabelAgeJoueur" Content="Age :" HorizontalAlignment="left" Height="30" Margin="0,60" />
-            <Label x:Name="LabelCategorieJoueur" Content="Catégorie :" HorizontalAlignment="left" Height="30" Margin="0,85,0,35"/>
-            <Label x:Name="LabelClassementJoueur" Content="Classement :" HorizontalAlignment="left" Height="30" Margin="0,110,0,10" />
-            <DataGrid Width="120" Margin="120,35,5,25">
+            <Label x:Name="labelNomJoueur" Content="Nom :" HorizontalAlignment="left" Height="30" Margin="0,25,0,95" />
+            <Label x:Name="labelPrenomJoueur" Content="Prenom :" HorizontalAlignment="left" Height="30" Margin="0,42,0,78" />
+            <Label x:Name="labelAgeJoueur" Content="Age :" HorizontalAlignment="left" Height="30" Margin="0,60" />
+            <Label x:Name="labelCategorieJoueur" Content="Catégorie :" HorizontalAlignment="left" Height="30" Margin="0,85,0,35"/>
+            <Label x:Name="labelClassementJoueur" Content="Classement :" HorizontalAlignment="left" Height="30" Margin="0,110,0,10" />
+            <DataGrid x:Name="dataGridFichiersJoueur" Width="120" Margin="120,35,5,25">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Fichiers" Binding="{Binding Fichier}" Width="250"/>
+                    <DataGridTextColumn Header="Fichiers" Binding="{Binding Fichiers}" Width="250"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
         <Grid  Height="260" Width="260" Margin="540,180,0,10">
             <Label Content="Disponibilitées du joueur" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Height="30" />
-            <DataGrid Height="230" Width="250" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <DataGrid x:Name="dataGridRecapJourneesJoueur" Height="230" Width="250" VerticalAlignment="Bottom" HorizontalAlignment="Left">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
                     <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="*"/>

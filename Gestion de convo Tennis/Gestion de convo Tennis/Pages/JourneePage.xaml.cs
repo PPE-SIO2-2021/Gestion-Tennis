@@ -23,28 +23,28 @@ namespace Gestion_de_convo_Tennis.Pages
         public JourneePage()
         {
             InitializeComponent();
-            gridValidateJoueur.Visibility = Visibility.Hidden;
-            gridCalendrier.Visibility = Visibility.Hidden;
+            gridDateValidationJoueur.Visibility = Visibility.Hidden;
+            gridCalendrierJournees.Visibility = Visibility.Hidden;
             
         }
 
-        private void buttonSenior_Click(object sender, RoutedEventArgs e)
+        private void buttonSelectSenior_Click(object sender, RoutedEventArgs e)
         {
-            LabelTitreJournee.Content = "SAISIE DES JOURNEES SENIOR";
-            LabelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie senior :";
-            gridCalendrier.Visibility = Visibility.Visible;
+            labelTitreJournee.Content = "SAISIE DES JOURNEES SENIOR";
+            labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie senior :";
+            gridCalendrierJournees.Visibility = Visibility.Visible;
         }
 
-        private void buttonSeniorPlus_Click(object sender, RoutedEventArgs e)
+        private void buttonSelectSeniorPlus_Click(object sender, RoutedEventArgs e)
         {
-            LabelTitreJournee.Content = "SAISIE DES JOURNEES SENIOR+";
-            LabelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie senior+ :";
-            gridCalendrier.Visibility = Visibility.Visible;
+            labelTitreJournee.Content = "SAISIE DES JOURNEES SENIOR+";
+            labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie senior+ :";
+            gridCalendrierJournees.Visibility = Visibility.Visible;
         }
 
         private void buttonValiderJournees_Click(object sender, RoutedEventArgs e)
         {
-            gridValidateJoueur.Visibility = Visibility.Visible;
+            gridDateValidationJoueur.Visibility = Visibility.Visible;
         }
 
         private void buttonConfirmerJournees_Click(object sender, RoutedEventArgs e)
@@ -57,9 +57,9 @@ namespace Gestion_de_convo_Tennis.Pages
         }
         private void switchValidateVisibility()
         {
-            if (gridCalendrier.Visibility == Visibility.Visible)
+            if (gridCalendrierJournees.Visibility == Visibility.Visible)
             {
-                gridValidateJoueur.Visibility = Visibility.Hidden;
+                gridDateValidationJoueur.Visibility = Visibility.Hidden;
             }
         }
     }
