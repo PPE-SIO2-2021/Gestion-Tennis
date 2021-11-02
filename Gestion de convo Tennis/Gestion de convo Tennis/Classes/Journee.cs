@@ -10,19 +10,19 @@ namespace Gestion_de_convo_Tennis.Classes
     {
         public List<Rencontre> Rencontres { get; set; }
         public Dictionary<Joueur,Boolean> Dispo { get; set; }
-        public DateTime Dte { get; set; }
-        public Boolean Categorie { get; set; }
+        public DateTime Date { get; set; }
+        public String Categorie { get; set; }
         public int Id { get; set; }
 
         public Journee () {}
         
-        public Journee (int id, DateTime dte, Boolean senior) {
+        public Journee (int id, DateTime dte, String categorie) {
             this.Id = id;
-            this.Dte = dte;
-            this.Categorie = senior;
+            this.Date = dte;
+            this.Categorie = categorie;
         }
         public override string ToString() {
-            return "Date de journée : " + this.Dte + "\nCatégorie : " + this.Categorie;
+            return "Date de journée : " + this.Date + "\nCatégorie : " + this.Categorie;
         }
     }
 }

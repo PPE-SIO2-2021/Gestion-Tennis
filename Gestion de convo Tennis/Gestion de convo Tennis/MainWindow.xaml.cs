@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Gestion_de_convo_Tennis.Classes;
 using Gestion_de_convo_Tennis.Pages;
+using System.ComponentModel;
 
 namespace Gestion_de_convo_Tennis
 {
@@ -33,19 +34,19 @@ namespace Gestion_de_convo_Tennis
             joueurs = AdoJoueur.all();
             equipes = AdoEquipe.all();
             journees = AdoJournee.all();
-            this.Content = new JoueurPage();
+            this.Content = new JourneePage();
         }
         private void JoueurPage(object sender, RoutedEventArgs e)
         {
             this.Content = new JoueurPage();
         }
-        private void DispoPage(object sender, RoutedEventArgs e)
-        {
-            this.Content = new DispoPage();
-        }
         private void JourneePage(object sender, RoutedEventArgs e)
         {
             this.Content = new JourneePage();
+        }
+        private void DispoPage(object sender, RoutedEventArgs e)
+        {
+            this.Content = new DispoPage();
         }
         private void RencontrePage(object sender, RoutedEventArgs e)
         {
@@ -54,6 +55,15 @@ namespace Gestion_de_convo_Tennis
         private void VuePage(object sender, RoutedEventArgs e)
         {
             this.Content = new VuePage();
+        }
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            AdoJoueur.addJoueur(joueurs);
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+           
         }
     }
 }

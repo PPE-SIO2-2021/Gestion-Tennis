@@ -44,18 +44,19 @@
             </DataGrid>
             <Grid Width="150" Height="70" Margin="32,330,32,10">
                 <Button x:Name="buttonAjouterFichier" Content="Ajouter un fichier" HorizontalAlignment="Center" VerticalAlignment="Top" Width="116" Height="32"/>
-                <Button x:Name="buttonValiderJoueur" Content="Valider" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="116" Height="32"/>
+                <Button x:Name="buttonValiderJoueur" Content="Valider" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="116" Height="32" Click="buttonValiderJoueur_Click"/>
             </Grid>
         </Grid>
-        <Grid Height="400" Width="550"  Margin="241,27,0,23">
-            <DataGrid x:Name="dataGridRecapJoueurs" Margin="0,0,81,0">
+        <Label x:Name="labelErreurJoueur" Width="350" Height="30" VerticalAlignment="Top" Margin="246,0,304,0" Foreground="Red"/>
+        <Grid Height="400" Width="550"  Margin="241,27,0,23" >
+            <DataGrid x:Name="dataGridRecapJoueurs" Margin="0,0,81,0" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                     <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>
                     <DataGridTextColumn Header="Mail" Binding="{Binding Mail}" Width="*"/>
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
                     <DataGridTextColumn Header="Classement" Binding="{Binding Classement}" Width="*"/>
-                    <DataGridTextColumn Header="Fichier" Binding="{Binding Fichier}" Width="*"/>
+                    <!-- <DataGridTextColumn Header="Fichier" Binding="{Binding Fichier}" Width="*"/>--> 
                 </DataGrid.Columns>
             </DataGrid>
             <Button x:Name="buttonEditerJoueurs" Content="Editer" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Height="31"/>

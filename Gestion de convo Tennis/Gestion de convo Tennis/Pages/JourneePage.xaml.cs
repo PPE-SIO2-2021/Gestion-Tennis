@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Gestion_de_convo_Tennis.Classes;
 
 namespace Gestion_de_convo_Tennis.Pages
 {
@@ -20,33 +21,52 @@ namespace Gestion_de_convo_Tennis.Pages
     /// </summary>
     public partial class JourneePage : Page
     {
+        public String categorie;
         public JourneePage()
         {
             InitializeComponent();
             gridDateValidationJoueur.Visibility = Visibility.Hidden;
             gridCalendrierJournees.Visibility = Visibility.Hidden;
-            
+            dataGridRecapJournees.ItemsSource = MainWindow.journees;
         }
 
+
+
+
+        //Visibilité des grids
         private void buttonSelectSenior_Click(object sender, RoutedEventArgs e)
         {
-            labelTitreJournee.Content = "SAISIE DES JOURNEES SENIOR";
-            labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie senior :";
+            labelTitreJournee.Content = "SAISIE DES JOURNEES "+ buttonSelectSenior.Content;
+            labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie " + buttonSelectSenior.Content + " :";
             gridCalendrierJournees.Visibility = Visibility.Visible;
+            categorie = "Senior";
         }
-
         private void buttonSelectSeniorPlus_Click(object sender, RoutedEventArgs e)
         {
-            labelTitreJournee.Content = "SAISIE DES JOURNEES SENIOR+";
-            labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie senior+ :";
+            labelTitreJournee.Content = "SAISIE DES JOURNEES " + buttonSelectSeniorPlus.Content;
+            labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie " + buttonSelectSeniorPlus.Content + " :";
             gridCalendrierJournees.Visibility = Visibility.Visible;
+            categorie = "Senior +";
         }
-
         private void buttonValiderJournees_Click(object sender, RoutedEventArgs e)
         {
-            gridDateValidationJoueur.Visibility = Visibility.Visible;
-        }
+            try
+            {
+                labelErreurJournees.Content = "";
+                Int32.Parse(textBoxNbEquipes.Text);
+                gridDateValidationJoueur.Visibility = Visibility.Visible;
+                foreach (DateTime date in calendarDateJournee.SelectedDates)
+                {
+                    MainWindow.journees.Add(new Journee(0, date, categorie));
+                }
+                dataGridRecapJournees.Items.Refresh();
 
+            }
+            catch (FormatException exception)
+            {
+                labelErreurJournees.Content = exception.Message;
+            }
+        }
         private void buttonConfirmerJournees_Click(object sender, RoutedEventArgs e)
         {
             switchValidateVisibility();

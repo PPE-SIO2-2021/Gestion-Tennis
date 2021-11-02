@@ -19,31 +19,24 @@ namespace Gestion_de_convo_Tennis.Classes
             while (reader.Read())
             {
                 // Récupération du nom, prenom, age, license, certificat & categorie
-                if (reader.IsDBNull(0))
-                {
-                    joueurs.Add(new Joueur(reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetBoolean(6), MainWindow.classements.Where(x => x.Id == reader.GetInt32(7)).First()));
-                    reader.Close();
-                    return joueurs;
-                }
-                else
-                {
-                    Console.Write("Aucun joueur n'a été détecter dans la BDD");
-                    return null;
-                }
+                joueurs.Add(new Joueur(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), MainWindow.classements.Where(x => x.Id == reader.GetInt32(8)).First())) ;
             }
-
+            reader.Close();
+            return joueurs;
         }
         public static void addJoueur(List<Joueur> joueurs)
         {
+            delete();
             foreach (Joueur joueur in joueurs)
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,categorie_joueur, certificat, licence, fk_id_classement) VALUES(@nom,@prenom,@categorie_joueur, @certificat, @licence, @fk_id_classement)");
+                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,mail,categorie,certificat,licence,fk_id_classement) VALUES(@nom,@prenom,@age,@mail,@categorie, @certificat, @licence, @fk_id_classement)");
                 cmd.Connection = Ado.OpenSqlConnection();
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@nom", joueur.Nom);
                 cmd.Parameters.AddWithValue("@prenom", joueur.Prenom);
                 cmd.Parameters.AddWithValue("@age", joueur.Age);
-                cmd.Parameters.AddWithValue("@categorie_joueur", joueur.Categorie);
+                cmd.Parameters.AddWithValue("@mail", joueur.Mail);
+                cmd.Parameters.AddWithValue("@categorie", joueur.Categorie);
                 cmd.Parameters.AddWithValue("@certificat", joueur.Certificat);
                 cmd.Parameters.AddWithValue("@licence", joueur.License);
                 cmd.Parameters.AddWithValue("@fk_id_classement", joueur.Classement.Id);

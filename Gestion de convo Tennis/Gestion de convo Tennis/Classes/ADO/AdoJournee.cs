@@ -18,7 +18,7 @@ namespace Gestion_de_convo_Tennis.Classes
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                 journees.Add(new Journee(reader.GetInt32(0),reader.GetDateTime(1),reader.GetBoolean(2)));
+                 journees.Add(new Journee(reader.GetInt32(0),reader.GetDateTime(1),reader.GetString(2)));
             }
             reader.Close();
             return journees;
@@ -30,7 +30,7 @@ namespace Gestion_de_convo_Tennis.Classes
             cmd.Prepare();
             foreach (Journee journee in journees)
             {
-                cmd.Parameters.AddWithValue("@dte_journee", journee.Dte);
+                cmd.Parameters.AddWithValue("@dte_journee", journee.Date);
                 cmd.Parameters.AddWithValue("@categorie_journee", journee.Categorie);
                 cmd.ExecuteNonQuery();
             }

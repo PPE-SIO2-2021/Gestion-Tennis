@@ -1,19 +1,8 @@
 ﻿
 using Gestion_de_convo_Tennis.Classes;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Gestion_de_convo_Tennis.Pages
 {
@@ -25,8 +14,52 @@ namespace Gestion_de_convo_Tennis.Pages
         public JoueurPage()
         {
             InitializeComponent();
-            
             comboBoxClassementJoueur.ItemsSource = AdoClassement.all();
+            dataGridRecapJoueurs.ItemsSource = MainWindow.joueurs;
+        }
+
+        private void buttonValiderJoueur_Click(object sender, RoutedEventArgs e)
+        {
+            //Création du joueur avec gestion des exceptions de conversion
+            try
+            {
+                labelErreurJoueur.Content = "";
+                int age = Int32.Parse(textBoxAgeJoueur.Text);
+                string categorie = "";
+                Joueur joueur = new Joueur();
+                if (age < 35)
+                {
+                    categorie = "Senior";
+                }
+                else
+                {
+                    categorie = "Senior +";
+                }
+                if (comboBoxClassementJoueur.SelectedItem == null)
+                {
+                    joueur = new Joueur(0, textBoxNomJoueur.Text, textBoxNomJoueur.Text, age, textBoxAgeJoueur.Text, "", "", categorie);
+                }
+                else
+                {
+                    joueur = new Joueur(0, textBoxNomJoueur.Text, textBoxNomJoueur.Text, age, textBoxAgeJoueur.Text, "", "", categorie, (Classement)comboBoxClassementJoueur.SelectedItem);
+                }
+                MainWindow.joueurs.Add(joueur);
+                dataGridRecapJoueurs.Items.Refresh();
+                unloadFormJoueur();
+
+            }
+            catch (FormatException exception)
+            {
+                labelErreurJoueur.Content = exception.Message;
+            }
+        }
+        private void unloadFormJoueur()
+        {
+            textBoxNomJoueur.Text = "";
+            textBoxPrenomJoueur.Text = "";
+            textBoxMailJoueur.Text = "";
+            textBoxAgeJoueur.Text = "";
+            comboBoxClassementJoueur.SelectedIndex = -1;
         }
     }
 }

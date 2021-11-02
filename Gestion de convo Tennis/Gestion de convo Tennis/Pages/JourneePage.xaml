@@ -231,6 +231,8 @@
             <Button x:Name="buttonSelectSenior" Content="Senior"  HorizontalAlignment="Left" Width="70" Margin="0,30,0,0" Click="buttonSelectSenior_Click"/>
             <Button x:Name="buttonSelectSeniorPlus" Content="Senior +"  HorizontalAlignment="Left" Width="70" Margin="105,30,0,0" Click="buttonSelectSeniorPlus_Click"/>
         </Grid>
+
+        <Label x:Name="labelErreurJournees" Width="350" Height="30" VerticalAlignment="Top" Margin="246,0,304,0" Foreground="Red"/>
         <Grid x:Name="gridCalendrierJournees" Margin="27,84,323,26" Width="450" Height="340">
             <Label x:Name="labelTitreJournee" Content="SAISIE DES JOURNEES" HorizontalContentAlignment="Center" FontWeight="Bold" Height="30" Margin="0,0,0,310" Width="450" />
             <Grid x:Name="gridNbEquipes">
@@ -241,7 +243,7 @@
             <Grid x:Name="gridSelectionJournees" Height="280" Width="450" Margin="0,70,0,0" >
                 <Label Content="Maintenez Ctrl et selectionnez les journées de rencontres :"/>
                 <Viewbox Height="260" Width="320" VerticalAlignment="Bottom" Stretch="Fill">
-                    <Calendar x:Name="calendarDateJournee"  SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195" >
+                    <Calendar x:Name="calendarDateJournee" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195" >
                     </Calendar>
                 </Viewbox>
             </Grid>
@@ -250,7 +252,7 @@
         <Button x:Name="buttonValiderJournees" Content="Valider"  HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30" Click="buttonValiderJournees_Click"/>
         <Grid  Height="380" Width="200" Margin="576,50,10,10">
             <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridRecapJournees"  Height="350" Width="195"  VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <DataGrid x:Name="dataGridRecapJournees"  Height="350" Width="195"  VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
                 </DataGrid.Columns>
