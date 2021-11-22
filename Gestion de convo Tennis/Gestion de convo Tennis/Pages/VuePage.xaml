@@ -11,7 +11,7 @@
     <Grid Background="White" Width="800" Height="450">
         <Grid Width="150" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
             <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridAffichageJournees" Height="380" Width="150" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <DataGrid x:Name="dataGridAffichageJournees" Height="380" Width="150" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
@@ -20,7 +20,7 @@
         </Grid>
         <Grid Width="300" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="170,20,0,20">
             <Label Content="Rencontres" FontWeight="Bold" Width="300" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridAffichageRencontresJournee" Height="380" Width="300" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <DataGrid x:Name="dataGridAffichageRencontresJournee" Height="380" Width="300" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Adversaire" Binding="{Binding Adversaire}" Width="*"/>
                     <DataGridTextColumn Header="Lieu" Binding="{Binding Lieu}" Width="*"/>
@@ -31,7 +31,7 @@
         </Grid>
         <Grid  Width="310" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="480,20,0,20" >
             <Label Content="Joueurs" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Height="30" Width="310"/>
-            <DataGrid x:Name="dataGridRecapJoueursRencontre" Height="380" Width="310" VerticalAlignment="Bottom" SelectionMode="Single">
+            <DataGrid x:Name="dataGridRecapJoueursRencontre" Height="380" Width="310" VerticalAlignment="Bottom" SelectionMode="Single" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                     <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>

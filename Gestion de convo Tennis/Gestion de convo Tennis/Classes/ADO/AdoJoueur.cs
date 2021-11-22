@@ -18,7 +18,7 @@ namespace Gestion_de_convo_Tennis.Classes
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                // Récupération du nom, prenom, age, license, certificat & categorie
+                // Récupération de l'id, nom, prenom, age, mail, license, certificat, categorie, classement
                 joueurs.Add(new Joueur(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), MainWindow.classements.Where(x => x.Id == reader.GetInt32(8)).First())) ;
             }
             reader.Close();

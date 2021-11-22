@@ -59,11 +59,8 @@ namespace Gestion_de_convo_Tennis
         private void Window_Closing(object sender, CancelEventArgs e)
         {
             AdoJoueur.addJoueur(joueurs);
-        }
-
-        private void Window_Closed(object sender, EventArgs e)
-        {
-           
+            AdoEquipe.addEquipe(equipes);
+            AdoJournee.addJournee(journees);
         }
     }
 }

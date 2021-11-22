@@ -37,7 +37,7 @@
                 <Label Content="Classement :" />
                 <ComboBox x:Name="comboBoxClassementJoueur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="29" Margin="84,0,0,0"/>
             </Grid>
-            <DataGrid x:Name="dataGridAffichageFichiersJoueur" Margin="10,207,10,93">
+            <DataGrid x:Name="dataGridAffichageFichiersJoueur" Margin="10,207,10,93" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Fichiers" Binding="{Binding Fichier}" Width="250"/>
                 </DataGrid.Columns>
@@ -49,7 +49,7 @@
         </Grid>
         <Label x:Name="labelErreurJoueur" Width="350" Height="30" VerticalAlignment="Top" Margin="246,0,304,0" Foreground="Red"/>
         <Grid Height="400" Width="550"  Margin="241,27,0,23" >
-            <DataGrid x:Name="dataGridRecapJoueurs" Margin="0,0,81,0" AutoGenerateColumns="False">
+            <DataGrid x:Name="dataGridRecapJoueurs" Margin="0,0,81,0" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                     <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>

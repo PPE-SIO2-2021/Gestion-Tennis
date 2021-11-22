@@ -233,11 +233,12 @@
         </Grid>
 
         <Label x:Name="labelErreurJournees" Width="350" Height="30" VerticalAlignment="Top" Margin="246,0,304,0" Foreground="Red"/>
+        
         <Grid x:Name="gridCalendrierJournees" Margin="27,84,323,26" Width="450" Height="340">
             <Label x:Name="labelTitreJournee" Content="SAISIE DES JOURNEES" HorizontalContentAlignment="Center" FontWeight="Bold" Height="30" Margin="0,0,0,310" Width="450" />
             <Grid x:Name="gridNbEquipes">
                 <Label x:Name="labelNbEquipes" Content="Saisissez le nombre d'équipes :" HorizontalContentAlignment="Left" Height="30" Margin="0,30,0,280" />
-                <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Center" Width="50" Height="30" Margin="314,30,86,280"/>
+                <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="50" Height="30" Margin="314,30,86,280"/>
             </Grid>
 
             <Grid x:Name="gridSelectionJournees" Height="280" Width="450" Margin="0,70,0,0" >
@@ -247,29 +248,49 @@
                     </Calendar>
                 </Viewbox>
             </Grid>
-
         </Grid>
-        <Button x:Name="buttonValiderJournees" Content="Valider"  HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30" Click="buttonValiderJournees_Click"/>
+        
+        <Button x:Name="buttonValiderJournees" Content="Valider" HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30" Click="buttonValiderJournees_Click"/>
+        
         <Grid  Height="380" Width="200" Margin="576,50,10,10">
             <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridRecapJournees"  Height="350" Width="195"  VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False">
+            <DataGrid x:Name="dataGridRecapJournees"  Height="350" Width="195"  VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
+                    <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <Grid x:Name="gridDateValidationJoueur" Width="800" Height="450" >
+
+        <Grid x:Name="gridValidationNbEquipes" Width="800" Height="450" Visibility="Hidden">
+            <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
+            <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Width="350" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
+                </Border.Effect>
+            </Border>
+            <Grid Width="350" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="labelValidationNbEquipes" Height="30" Width="350" FontSize="12" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,20,0,0"/>
+                <Label Content="Êtes-vous sûr de votre choix ?" Height="30" Width="350" FontSize="16" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+                <Grid Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                    <Button x:Name="buttonConfirmNbEquipes" Content="Je confirme !" Width="80" Height="30" Click="buttonConfirmNbEquipes_Click" HorizontalAlignment="Left"/>
+                    <Button x:Name="buttonAnnulerNbEquipes" Content="J'annule !" Width="80" Height="30" HorizontalAlignment="Right" Click="buttonAnnulerNbEquipes_Click"/>
+                </Grid>
+            </Grid>            
+        </Grid>
+        
+        <Grid x:Name="gridDateValidationJournees" Width="800" Height="450" Visibility="Hidden">
             <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
             <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="350" Width="300" Margin="241,38,250,62">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
                 </Border.Effect>
             </Border>
-            <Grid Height="350" Width="300" Margin="246,38,254,62">
+            <Grid Height="350" Width="300" Margin="246,38,254,62" >
                 <Label Content="Voulez-vous vraiment valider ces journées ?" Height="30" Width="300" HorizontalContentAlignment="Center" Margin="0,0,0,320"/>
-                <DataGrid x:Name="dataGridRecapValidationJournees" Width="250" Height="250" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,35,0,65">
+                <DataGrid x:Name="dataGridRecapValidationJournees" Width="250" Height="250" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,35,0,65" IsReadOnly="True" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
+                        <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Width="180" Height="40" HorizontalAlignment="Center" Margin="60,300,60,10">

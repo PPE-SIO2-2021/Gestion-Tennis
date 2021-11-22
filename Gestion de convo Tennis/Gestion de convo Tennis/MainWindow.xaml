@@ -9,7 +9,7 @@
         xmlns:local="clr-namespace:Gestion_de_convo_Tennis"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize"
-        Closing="Window_Closing" Closed="Window_Closed">
+        Closing="Window_Closing">
     <mah:MetroWindow.LeftWindowCommands >
         <mah:WindowCommands>
             <Button x:Name="buttonJoueur" Content="Joueurs" ToolTip="JoueurPage" Click="JoueurPage"/>

@@ -18,26 +18,27 @@ namespace Gestion_de_convo_Tennis.Classes
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                 journees.Add(new Journee(reader.GetInt32(0),reader.GetDateTime(1),reader.GetString(2)));
+                 journees.Add(new Journee(reader.GetInt32(0),reader.GetDateTime(1),reader.GetString(2).Trim()));
             }
             reader.Close();
             return journees;
         }
         public static void addJournee(List<Journee> journees)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO journee(dte_journee,categorie_journee) VALUES(@dte_journee,@categorie_journee)");
-            cmd.Connection = Ado.OpenSqlConnection();
-            cmd.Prepare();
+            delete();
             foreach (Journee journee in journees)
             {
-                cmd.Parameters.AddWithValue("@dte_journee", journee.Date);
-                cmd.Parameters.AddWithValue("@categorie_journee", journee.Categorie);
+                SqlCommand cmd = new SqlCommand("INSERT INTO journee(dte, categorie) VALUES(@dte, @categorie)");
+                cmd.Connection = Ado.OpenSqlConnection();
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@dte", journee.Date);
+                cmd.Parameters.AddWithValue("@categorie", journee.Categorie.Trim());
                 cmd.ExecuteNonQuery();
             }
         }
         public static void addRencontre(List<Journee> journees)
         {
-            SqlCommand cmd = new SqlCommand("INSERT INTO journee(adversaire,lieu,dte_rencontre,heure,fk_id_journee,fk_id_equipe) VALUES(@adversaire,@lieu,@dte_rencontre,@heure,@fk_id_journee,@fk_id_equipe)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO rencontre(adversaire,lieu,dte_rencontre,heure,fk_id_journee,fk_id_equipe) VALUES(@adversaire,@lieu,@dte_rencontre,@heure,@fk_id_journee,@fk_id_equipe)");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.Prepare();
             foreach (Journee journee in journees)

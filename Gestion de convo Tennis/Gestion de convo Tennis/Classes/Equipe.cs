@@ -10,15 +10,15 @@ namespace Gestion_de_convo_Tennis.Classes
     {
         public int Id { get; set; }
         public String Categorie {get;set;}
-        public int Ordre_equipe {get;set;}
+        public int Ordre {get;set;}
         public Equipe () {}
-        public Equipe (int id, String categorie, int ordre_equipe) {
+        public Equipe (int id, String categorie, int ordre) {
             this.Id = id;
             this.Categorie = categorie;
-            this.Ordre_equipe = ordre_equipe;
+            this.Ordre = ordre;
         }
         public override string ToString() {
-            return "Ordre de l'équipe : " + this.Ordre_equipe + "\nCatégorie : " + this.Categorie;
+            return "Ordre de l'équipe : " + this.Ordre + "\nCatégorie : " + this.Categorie;
         }
     }
 }
