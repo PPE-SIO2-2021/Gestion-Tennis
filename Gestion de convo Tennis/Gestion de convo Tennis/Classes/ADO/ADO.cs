@@ -31,8 +31,14 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         static private string GetConnectionString()
         {
-            return "Data Source=ROBINDUSTRIE;Initial Catalog=bd_tsatgd;Integrated Security=True";
+            return "Data Source=CHARON-IXX\\TEST;Initial Catalog=bd_tsatgd;Integrated Security=True";
         }
-        public static void CleanUp() { }
+        public static void CleanUp() 
+        {
+            AdoRencontre.delete();
+            AdoJournee.delete();
+            AdoEquipe.delete();
+            AdoJoueur.delete();
+        }
     }
 }
