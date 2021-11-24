@@ -61,5 +61,21 @@ namespace Gestion_de_convo_Tennis.Pages
             textBoxAgeJoueur.Text = "";
             comboBoxClassementJoueur.SelectedIndex = -1;
         }
+
+        private void buttonValiderJoueurs_Click(object sender, RoutedEventArgs e)
+        {
+            dataGridRecapJoueurs.Items.Refresh();
+        }
+
+        
+        private void dataGridRecapJoueurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Joueur j = (Joueur)dataGridRecapJoueurs.SelectedItem;
+            labelcreerunjoueur.Content = "MODIFIER UN JOUEUR";
+            textBoxNomJoueur.Text = j.Nom;
+            textBoxPrenomJoueur.Text = j.Prenom;
+            textBoxMailJoueur.Text = j.Mail;
+            textBoxAgeJoueur.Text = Convert.ToString(j.Age);
+        }
     }
 }
