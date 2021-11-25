@@ -33,7 +33,7 @@ namespace Gestion_de_convo_Tennis.Pages
             InitializeComponent();
             dataGridAffichageJoueurs.ItemsSource = MainWindow.joueurs;
         }
-
+        
     //Concernant la sélection d'un joueur
         private void dataGridAffichageJoueurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
