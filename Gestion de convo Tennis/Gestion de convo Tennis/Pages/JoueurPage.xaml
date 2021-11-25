@@ -56,7 +56,6 @@
                     <DataGridTextColumn Header="Mail" Binding="{Binding Mail}" Width="*"/>
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
                     <DataGridTextColumn Header="Classement" Binding="{Binding Classement}" Width="*"/>
-                    <!-- <DataGridTextColumn Header="Fichier" Binding="{Binding Fichier}" Width="*"/>--> 
                 </DataGrid.Columns>
             </DataGrid>
             <Button x:Name="buttonEditerJoueurs" Content="Editer" HorizontalAlignment="Right" VerticalAlignment="Top" Width="75" Height="31"/>

@@ -11,6 +11,7 @@ namespace Gestion_de_convo_Tennis.Classes
         public Equipe Equipe { get; set; }
         public List<Joueur> Joueurs { get; set; }
         public DateTime Dte { get; set; }
+        public DateTime Heure { get; set; }
         public String Lieu { get; set; }
         public String Adversaire { get; set; }
 

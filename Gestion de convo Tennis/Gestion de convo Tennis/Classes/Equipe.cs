@@ -9,8 +9,8 @@ namespace Gestion_de_convo_Tennis.Classes
     public class Equipe
     {
         public int Id { get; set; }
-        public String Categorie {get;set;}
-        public int Ordre {get;set;}
+        public String Categorie { get; set; }
+        public int Ordre { get; set; }
         public Equipe () {}
         public Equipe (int id, String categorie, int ordre) {
             this.Id = id;
