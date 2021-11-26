@@ -23,95 +23,141 @@ namespace Gestion_de_convo_Tennis.Pages
     {
         public String categorie;
         public int nbEquipes;
+        public int nbEquipeCategorie;
+        public Boolean validEquipes;
         List<Journee> journees = new List<Journee>();
+     
         public JourneePage()
         {
             InitializeComponent();
             gridValidationNbEquipes.Visibility = Visibility.Hidden;
             gridDateValidationJournees.Visibility = Visibility.Hidden;
             gridCalendrierJournees.Visibility = Visibility.Hidden;
-            dataGridRecapJournees.ItemsSource = MainWindow.journees;
+            dataGridRecapJournees.ItemsSource = MainWindow.journees.OrderBy(x => x.Categorie).ThenBy(y => y.Date);
         }
 
-    //Concernant les catégories
-        //Pour le bouton Senior
+    //CONCERNANT LES CATÉGORIES
+        //POUR LE BOUTON SENIOR
         private void buttonSelectSenior_Click(object sender, RoutedEventArgs e)
         {
-            textBoxNbEquipes.Text = "";
-            labelTitreJournee.Content = "SAISIE DES JOURNEES "+ buttonSelectSenior.Content;
-            labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie " + buttonSelectSenior.Content + " :";
-            gridCalendrierJournees.Visibility = Visibility.Visible;
             categorie = "Senior";
-        }
-        //Pour le bouton Senior + 
-        private void buttonSelectSeniorPlus_Click(object sender, RoutedEventArgs e)
-        {
-            textBoxNbEquipes.Text = "";
-            labelTitreJournee.Content = "SAISIE DES JOURNEES " + buttonSelectSeniorPlus.Content;
-            labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie " + buttonSelectSeniorPlus.Content + " :";
-            gridCalendrierJournees.Visibility = Visibility.Visible;
-            categorie = "Senior +";
+            AfficherGridNbEquipes(categorie);
+            SortJourneesByCategorie(categorie);
+            nbEquipeCategorie = FiltrerEquipeCategorie(categorie);
         }
 
-    //Validation des saisies
+        //POUR LE BOUTON SENIOR + 
+        private void buttonSelectSeniorPlus_Click(object sender, RoutedEventArgs e)
+        {
+            categorie = "Senior +";
+            AfficherGridNbEquipes(categorie);
+            SortJourneesByCategorie(categorie);
+            nbEquipeCategorie = FiltrerEquipeCategorie(categorie);
+        }
+
+        //VALIDATION DES SAISIES
         private void buttonValiderJournees_Click(object sender, RoutedEventArgs e)
         {
-            try
+            validEquipes = false;
+            if (calendarDateJournee.SelectedDates.Count() == 0)
             {
-                labelErreurJournees.Content = "";
-                nbEquipes = Int32.Parse(textBoxNbEquipes.Text);
-                gridValidationNbEquipes.Visibility = Visibility.Visible;
-                labelValidationNbEquipes.Content = "Vous allez creer " + nbEquipes + " equipes pour la categorie " + categorie + ".";
+                labelErreurJournees.Content = "Aucune date sélectionnée. Saisissez des dates !";
             }
-            catch (FormatException exception)
+            else if (categorie == "")
             {
-                labelErreurJournees.Content = exception.Message;
+                labelErreurJournees.Content = "Aucune catégorie sélectionnée !";
+            }
+            else
+            {
+                if (nbEquipeCategorie != nbEquipes)
+                {
+                    AfficherGridValiderNbEquipes(categorie);
+                }
+                else
+                {   
+                    gridDateValidationJournees.Visibility = Visibility.Visible;
+                    foreach (DateTime date in calendarDateJournee.SelectedDates)
+                    {
+                        journees.Add(new Journee(0, date, categorie));
+                    }
+                }
             }
         }
-    
-    //Concernant le nombre d'équipes
-        //Confirmation du nombre d'équipes
-        private void buttonConfirmNbEquipes_Click(object sender, RoutedEventArgs e)
+
+    //CONCERNANT LE NOMBRE D'ÉQUIPES (GRIDVALIDATIONEQUIPES)
+        //CONFIRMATION DU NOMBRE D'ÉQUIPES
+        private void buttonValiderNbEquipes_Click(object sender, RoutedEventArgs e)
         {
-            //Ajout des journées dans une collection
-            gridDateValidationJournees.Visibility = Visibility.Visible;
-            foreach (DateTime date in calendarDateJournee.SelectedDates)
+            validEquipes = true;
+            AfficherGridValiderNbEquipes(categorie);
+        }
+        private void buttonConfirmNbEquipes_Click(object sender, RoutedEventArgs ev)
+        {
+            if (validEquipes == true)
             {
-                journees.Add(new Journee(0, date, categorie));
+                MainWindow.equipes.RemoveAll(
+                    delegate (Equipe e)
+                    {
+                        return e.Categorie == categorie;
+                    });
+                for (int i = 0; i < nbEquipes; i++)
+                {
+                    MainWindow.equipes.Add(new Equipe(0, categorie, i));
+                }
+                gridValidationNbEquipes.Visibility = Visibility.Hidden;
             }
-            dataGridRecapValidationJournees.ItemsSource = journees;
+            else if (validEquipes == false)
+            {
+                //AJOUT DES JOURNÉES DANS UNE COLLECTION
+                MainWindow.equipes = new List<Equipe>();
+                for (int i = 0; i < nbEquipes; i++)
+                {
+                    MainWindow.equipes.Add(new Equipe(0, categorie, i));
+                }
+                gridValidationNbEquipes.Visibility = Visibility.Hidden;
+                gridDateValidationJournees.Visibility = Visibility.Visible;
+                foreach (DateTime date in calendarDateJournee.SelectedDates)
+                {
+                    journees.Add(new Journee(0, date, categorie));
+                }
+            }
+            
+            dataGridRecapValidationJournees.ItemsSource = journees.OrderBy(x => x.Date);
             dataGridRecapJournees.Items.Refresh();
         }
-        //Annulation du nombre d'équipes
+        //ANNULATION DU NOMBRE D'ÉQUIPES
         private void buttonAnnulerNbEquipes_Click(object sender, RoutedEventArgs e)
         {
-            textBoxNbEquipes.Text = "";
+            if (nbEquipes <= 0)
+            {
+                textBoxNbEquipes.Text = "";
+            }
             nbEquipes = 0;
             gridValidationNbEquipes.Visibility = Visibility.Hidden;
         }
 
-    //Concernant les journées
-        //Confirmation des journées sélectionnées
+    //CONCERNANT LES JOURNÉES (GRIDVALIDATIONJOURNEES)
+        //CONFIRMATION DES JOURNÉES SÉLECTIONNÉES
         private void buttonConfirmerJournees_Click(object sender, RoutedEventArgs e)
         {
-            //Création du nombre d'équipes saisi pour la catégorie
+            //CRÉATION DU NOMBRE D'ÉQUIPES SAISI POUR LA CATÉGORIE
             for (int i = 0; i < nbEquipes; i++)
             {
                 MainWindow.equipes.Add(new Equipe(0, categorie, i));
             }
             gridValidationNbEquipes.Visibility = Visibility.Hidden;
-            //Création des journées sélectionnées pour la catégorie
+            //CRÉATION DES JOURNÉES SÉLECTIONNÉES POUR LA CATÉGORIE
             foreach (Journee journee in journees)
             {
                 MainWindow.journees.Add(journee);
             }
             journees = new List<Journee>();
-            dataGridRecapJournees.Items.Refresh();
+            dataGridRecapJournees.ItemsSource = MainWindow.journees.OrderBy(x => x.Categorie).ThenBy(y => y.Date);
             textBoxNbEquipes.Text = "";
             gridCalendrierJournees.Visibility = Visibility.Hidden;
             gridDateValidationJournees.Visibility = Visibility.Hidden;
         }
-        //Annulation des journées sélectionnées
+        //ANNULATION DES JOURNÉES SÉLECTIONNÉES
         private void buttonAnnulerJournees_Click(object sender, RoutedEventArgs e)
         {
             journees = new List<Journee>();
@@ -121,6 +167,64 @@ namespace Gestion_de_convo_Tennis.Pages
             gridDateValidationJournees.Visibility = Visibility.Hidden;
         }
 
-        
+    // FONCTIONS DRY
+        private void SortJourneesByCategorie(String cat)
+        {
+            dataGridRecapJournees.ItemsSource = MainWindow.journees.FindAll(
+            delegate (Journee j)
+            {
+                return j.Categorie == cat;
+            }).OrderBy(x => x.Date);
+            dataGridRecapJournees.Items.Refresh();
+        }
+        public int FiltrerEquipeCategorie(String cat)
+        {
+            int nbEquipesBD = MainWindow.equipes.FindAll(
+                delegate (Equipe e)
+                {
+                    return e.Categorie == cat;
+                }).Count();
+            return nbEquipesBD;
+        }
+        private void AfficherGridNbEquipes(String cat)
+        {
+            int nbEquipesBD = FiltrerEquipeCategorie(cat);
+
+            labelTitreJournee.Content = "SAISIE DES JOURNEES " + cat;
+
+            if (nbEquipesBD > 0)
+            {
+                labelNbEquipes.Content = "Vous avez inscris ce nombre d'équipe pour la catégorie " + cat ;
+                textBoxNbEquipes.Text = nbEquipesBD.ToString();
+            }
+            else
+            {
+                labelNbEquipes.Content = "Saisissez le nombre d'équipes pour la catégorie " + cat + " :";
+                textBoxNbEquipes.Text = "";
+            }
+
+            gridCalendrierJournees.Visibility = Visibility.Visible;
+        }
+        private void AfficherGridValiderNbEquipes(String cat)
+        {
+            try
+            {
+                labelErreurJournees.Content = "";
+                nbEquipes = Int32.Parse(textBoxNbEquipes.Text);
+                if (nbEquipes != 0)
+                {
+                    gridValidationNbEquipes.Visibility = Visibility.Visible;
+                    labelValidationNbEquipes.Content = "Vous allez creer " + nbEquipes + " equipes pour la categorie " + cat + ".";
+                }
+                else
+                {
+                    labelErreurJournees.Content = "Le nombre d'équipe indiqué est nul. Saisissez un chiffre non-null.";
+                }
+            }
+            catch (FormatException exception)
+            {
+                labelErreurJournees.Content = exception.Message;
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace Gestion_de_convo_Tennis.Classes
     public class Journee
     {
         public List<Rencontre> Rencontres { get; set; }
-        public Dictionary<Joueur,Boolean> Dispo { get; set; }
+        public Dictionary<Joueur, Boolean> Dispo { get; set; }
         public DateTime Date { get; set; }
         public String Categorie { get; set; }
         public int Id { get; set; }
@@ -20,6 +20,7 @@ namespace Gestion_de_convo_Tennis.Classes
             this.Id = id;
             this.Date = dte;
             this.Categorie = categorie;
+            this.Dispo = new Dictionary<Joueur, Boolean>();
         }
         public override string ToString() {
             return "Date de journée : " + this.Date + "\nCatégorie : " + this.Categorie;

@@ -233,12 +233,13 @@
         </Grid>
 
         <Label x:Name="labelErreurJournees" Width="350" Height="30" VerticalAlignment="Top" Margin="246,0,304,0" Foreground="Red"/>
-        
+
         <Grid x:Name="gridCalendrierJournees" Margin="27,84,323,26" Width="450" Height="340">
             <Label x:Name="labelTitreJournee" Content="SAISIE DES JOURNEES" HorizontalContentAlignment="Center" FontWeight="Bold" Height="30" Margin="0,0,0,310" Width="450" />
-            <Grid x:Name="gridNbEquipes">
-                <Label x:Name="labelNbEquipes" Content="Saisissez le nombre d'équipes :" HorizontalContentAlignment="Left" Height="30" Margin="0,30,0,280" />
-                <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="50" Height="30" Margin="314,30,86,280"/>
+            <Grid x:Name="gridNbEquipes" Width="450" Height="30" Margin="0,0,0,270">
+                <Label x:Name="labelNbEquipes" Content="Saisissez le nombre d'équipes :" VerticalAlignment="Center" HorizontalContentAlignment="Left" Height="30" />
+                <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Width="50" Height="30" Margin="0,0,45,0"/>
+                <Button x:Name="buttonValiderNbEquipes" Content="✓" FontSize="18" Foreground="Green" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,0,10,0" Click="buttonValiderNbEquipes_Click"/>
             </Grid>
 
             <Grid x:Name="gridSelectionJournees" Height="280" Width="450" Margin="0,70,0,0" >
@@ -249,9 +250,9 @@
                 </Viewbox>
             </Grid>
         </Grid>
-        
+
         <Button x:Name="buttonValiderJournees" Content="Valider" HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30" Click="buttonValiderJournees_Click"/>
-        
+
         <Grid  Height="380" Width="200" Margin="576,50,10,10">
             <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
             <DataGrid x:Name="dataGridRecapJournees"  Height="350" Width="195"  VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="True" AutoGenerateColumns="False">
@@ -262,7 +263,7 @@
             </DataGrid>
         </Grid>
 
-        <Grid x:Name="gridValidationNbEquipes" Width="800" Height="450" Visibility="Hidden">
+        <Grid x:Name="gridValidationNbEquipes" Width="800" Height="450" Visibility="Visible">
             <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
             <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Width="350" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Border.Effect>
@@ -276,9 +277,9 @@
                     <Button x:Name="buttonConfirmNbEquipes" Content="Je confirme !" Width="80" Height="30" Click="buttonConfirmNbEquipes_Click" HorizontalAlignment="Left"/>
                     <Button x:Name="buttonAnnulerNbEquipes" Content="J'annule !" Width="80" Height="30" HorizontalAlignment="Right" Click="buttonAnnulerNbEquipes_Click"/>
                 </Grid>
-            </Grid>            
+            </Grid>
         </Grid>
-        
+
         <Grid x:Name="gridDateValidationJournees" Width="800" Height="450" Visibility="Hidden">
             <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
             <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="350" Width="300" Margin="241,38,250,62">
@@ -298,7 +299,7 @@
                     <Button x:Name="buttonAnnulerJournees" Content="Annuler" HorizontalAlignment="Right" Width="70" Height="30" Click="buttonAnnulerJournees_Click"/>
                 </Grid>
             </Grid>
-            
+
         </Grid>
     </Grid>
 </Page>

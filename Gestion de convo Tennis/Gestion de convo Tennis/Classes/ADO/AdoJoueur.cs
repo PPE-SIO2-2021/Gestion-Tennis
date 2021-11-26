@@ -32,11 +32,11 @@ namespace Gestion_de_convo_Tennis.Classes
                 SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,mail,categorie,certificat,licence,fk_id_classement) VALUES(@nom,@prenom,@age,@mail,@categorie, @certificat, @licence, @fk_id_classement)");
                 cmd.Connection = Ado.OpenSqlConnection();
                 cmd.Prepare();
-                cmd.Parameters.AddWithValue("@nom", joueur.Nom);
-                cmd.Parameters.AddWithValue("@prenom", joueur.Prenom);
+                cmd.Parameters.AddWithValue("@nom", joueur.Nom.Trim());
+                cmd.Parameters.AddWithValue("@prenom", joueur.Prenom.Trim());
                 cmd.Parameters.AddWithValue("@age", joueur.Age);
-                cmd.Parameters.AddWithValue("@mail", joueur.Mail);
-                cmd.Parameters.AddWithValue("@categorie", joueur.Categorie);
+                cmd.Parameters.AddWithValue("@mail", joueur.Mail.Trim());
+                cmd.Parameters.AddWithValue("@categorie", joueur.Categorie.Trim());
                 cmd.Parameters.AddWithValue("@certificat", joueur.Certificat);
                 cmd.Parameters.AddWithValue("@licence", joueur.License);
                 cmd.Parameters.AddWithValue("@fk_id_classement", joueur.Classement.Id);

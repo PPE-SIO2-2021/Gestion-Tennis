@@ -37,11 +37,11 @@ namespace Gestion_de_convo_Tennis.Pages
                 }
                 if (comboBoxClassementJoueur.SelectedItem == null)
                 {
-                    joueur = new Joueur(0, textBoxNomJoueur.Text, textBoxNomJoueur.Text, age, textBoxAgeJoueur.Text, "", "", categorie);
+                    joueur = new Joueur(0, textBoxNomJoueur.Text, textBoxPrenomJoueur.Text, age, textBoxMailJoueur.Text, "", "", categorie);
                 }
                 else
                 {
-                    joueur = new Joueur(0, textBoxNomJoueur.Text, textBoxNomJoueur.Text, age, textBoxAgeJoueur.Text, "", "", categorie, (Classement)comboBoxClassementJoueur.SelectedItem);
+                    joueur = new Joueur(0, textBoxNomJoueur.Text, textBoxPrenomJoueur.Text, age, textBoxMailJoueur.Text, "", "", categorie, (Classement)comboBoxClassementJoueur.SelectedItem);
                 }
                 MainWindow.joueurs.Add(joueur);
                 dataGridRecapJoueurs.Items.Refresh();
