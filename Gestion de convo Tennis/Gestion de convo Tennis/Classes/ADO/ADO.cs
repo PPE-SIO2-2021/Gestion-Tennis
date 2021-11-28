@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -31,7 +30,7 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         static private string GetConnectionString()
         {
-            return "Data Source=CHARON-IXX\\TEST;Initial Catalog=bd_tsatgd;Integrated Security=True";
+            return "Data Source=LAPTOP-IH3M9RRL;Initial Catalog=bd_tsatgd;Integrated Security=True";
         }
         public static void CleanUp() 
         {
