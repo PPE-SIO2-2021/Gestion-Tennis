@@ -22,6 +22,7 @@ namespace Gestion_de_convo_Tennis.Pages
     public partial class DispoPage : Page
     {
         Joueur joueur = new Joueur();
+        List<Journee> journees = MainWindow.journees;
         List<Journee> journeesSenior = MainWindow.journees.FindAll(
             delegate(Journee j)
             {
@@ -50,32 +51,43 @@ namespace Gestion_de_convo_Tennis.Pages
             if (joueur.Categorie.Trim() != "Senior")
             {
                 dataGridAffichageJournees.ItemsSource = MainWindow.journees;
-                dataGridAffichageJournees.Items.Refresh();
+                AffichageDisposJoueur(MainWindow.journees);
             }
             else
             {
                 dataGridAffichageJournees.ItemsSource = journeesSenior;
-                dataGridAffichageJournees.Items.Refresh();
+                AffichageDisposJoueur(journeesSenior);
             }
-        }
 
+            dataGridRecapJourneesJoueur.Items.Refresh();  
+            dataGridAffichageJournees.Items.Refresh();
+        }
         
         private void CheckBoxIsDispo(object sender, RoutedEventArgs e)
         {
             Journee journee = (Journee)dataGridAffichageJournees.SelectedItem;
             journee.Dispo.Add(joueur, true);
-            foreach (Journee j in MainWindow.journees)
-            {
-                if (j.Id == journee.Id)
-                {
-                    int index = MainWindow.journees.FindIndex(s => s == j);
-                    MainWindow.journees[index] = journee;
-                }
-            }
+            int index = MainWindow.journees.FindIndex(x => x.Id == journee.Id);
+            MainWindow.journees[index] = journee;
+
         }
         private void CheckBoxIsNotDispo(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        public void AffichageDisposJoueur(List<Journee> journees)
+        {
+            List<Journee> j = new List<Journee>();
+            bool disponible = true;
+            foreach (Journee journee in journees)
+            {
+                if (journee.Dispo.TryGetValue(joueur, out disponible))
+                {
+                    j.Add(journee);
+                }
+            }
+            dataGridRecapJourneesJoueur.ItemsSource = j;
         }
     }
 }

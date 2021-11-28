@@ -29,7 +29,7 @@
                     <DataGridTemplateColumn Header="Dispo">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox IsChecked="{Binding Dispo}" HorizontalAlignment="Center" Checked="CheckBoxIsDispo" Unchecked="CheckBoxIsNotDispo"/>
+                                <CheckBox x:Name="checkBoxDispo" Content="{Binding Path=Checked}" HorizontalAlignment="Center" Checked="CheckBoxIsDispo" Unchecked="CheckBoxIsNotDispo"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

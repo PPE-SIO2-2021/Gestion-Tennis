@@ -176,7 +176,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Classement.cs" />
-    <Compile Include="Classes\Disponible.cs" />
     <Compile Include="Classes\Equipe.cs" />
     <Compile Include="Classes\Joueur.cs" />
     <Compile Include="Classes\Journee.cs" />

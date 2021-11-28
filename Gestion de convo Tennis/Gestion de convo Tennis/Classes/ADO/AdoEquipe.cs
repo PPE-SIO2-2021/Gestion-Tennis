@@ -39,7 +39,7 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static void delete()
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM equipe");
+            SqlCommand cmd = new SqlCommand("DELETE FROM equipe; DBCC CHECKIDENT (equipe, RESEED, 0);");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.ExecuteNonQuery();
         }

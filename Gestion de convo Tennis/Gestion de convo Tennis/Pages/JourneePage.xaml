@@ -232,20 +232,24 @@
             <Button x:Name="buttonSelectSeniorPlus" Content="Senior +"  HorizontalAlignment="Left" Width="70" Margin="105,30,0,0" Click="buttonSelectSeniorPlus_Click"/>
         </Grid>
 
-        <Label x:Name="labelErreurJournees" Width="350" Height="30" VerticalAlignment="Top" Margin="246,0,304,0" Foreground="Red"/>
+        <Label x:Name="labelErreurJournees" Width="540" Height="30" VerticalAlignment="Top" Margin="200,0,0,0" Foreground="Red"/>
 
         <Grid x:Name="gridCalendrierJournees" Margin="27,84,323,26" Width="450" Height="340">
             <Label x:Name="labelTitreJournee" Content="SAISIE DES JOURNEES" HorizontalContentAlignment="Center" FontWeight="Bold" Height="30" Margin="0,0,0,310" Width="450" />
             <Grid x:Name="gridNbEquipes" Width="450" Height="30" Margin="0,0,0,270">
                 <Label x:Name="labelNbEquipes" Content="Saisissez le nombre d'équipes :" VerticalAlignment="Center" HorizontalContentAlignment="Left" Height="30" />
-                <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Width="50" Height="30" Margin="0,0,45,0"/>
+                <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Width="50" Margin="0,0,45,0" TextChanged="textBoxNbEquipes_TextChanged"/>
                 <Button x:Name="buttonValiderNbEquipes" Content="✓" FontSize="18" Foreground="Green" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,0,10,0" Click="buttonValiderNbEquipes_Click"/>
             </Grid>
 
             <Grid x:Name="gridSelectionJournees" Height="280" Width="450" Margin="0,70,0,0" >
                 <Label Content="Maintenez Ctrl et selectionnez les journées de rencontres :"/>
                 <Viewbox Height="260" Width="320" VerticalAlignment="Bottom" Stretch="Fill">
-                    <Calendar x:Name="calendarDateJournee" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195" >
+                    <Calendar x:Name="calendarDateJourneeSenior" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195">
+                    </Calendar>
+                </Viewbox>
+                <Viewbox Height="260" Width="320" VerticalAlignment="Bottom" Stretch="Fill">
+                    <Calendar x:Name="calendarDateJourneeSeniorP" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195">
                     </Calendar>
                 </Viewbox>
             </Grid>
@@ -259,11 +263,18 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
+                    <DataGridTemplateColumn Header="❌">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="buttonSupprimerJournee" Content="✗" Width="14" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" FontSize="9" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Padding="0,0,0,0" Click="buttonSupprimerJournee_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
 
-        <Grid x:Name="gridValidationNbEquipes" Width="800" Height="450" Visibility="Visible">
+        <Grid x:Name="gridValidationNbEquipes" Width="800" Height="450" Visibility="Hidden">
             <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
             <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Width="350" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <Border.Effect>
@@ -280,7 +291,7 @@
             </Grid>
         </Grid>
 
-        <Grid x:Name="gridDateValidationJournees" Width="800" Height="450" Visibility="Hidden">
+        <Grid x:Name="gridValidationJournees" Width="800" Height="450" Visibility="Hidden">
             <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
             <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="350" Width="300" Margin="241,38,250,62">
                 <Border.Effect>

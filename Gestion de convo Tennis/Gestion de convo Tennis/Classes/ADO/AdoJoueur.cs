@@ -19,7 +19,17 @@ namespace Gestion_de_convo_Tennis.Classes
             while (reader.Read())
             {
                 // Récupération de l'id, nom, prenom, age, mail, license, certificat, categorie, classement
-                joueurs.Add(new Joueur(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), MainWindow.classements.Where(x => x.Id == reader.GetInt32(8)).First())) ;
+                joueurs.Add(new Joueur(
+                    reader.GetInt32(0),         //id
+                    reader.GetString(1),        //nom
+                    reader.GetString(2),        //prenom
+                    reader.GetInt32(3),         //age
+                    reader.GetString(4),        //mail
+                    reader.GetString(5),        //licence
+                    reader.GetString(6),        //certificat
+                    reader.GetString(7),        //categorie
+                    MainWindow.classements.Where(x => x.Id == reader.GetInt32(8)).First())); //classement
+
             }
             reader.Close();
             return joueurs;
@@ -45,7 +55,7 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static void delete()
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM joueur");
+            SqlCommand cmd = new SqlCommand("DELETE FROM joueur; DBCC CHECKIDENT (joueur, RESEED, 0);");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.ExecuteNonQuery();
         }

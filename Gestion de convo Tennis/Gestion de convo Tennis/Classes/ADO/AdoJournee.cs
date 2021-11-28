@@ -13,14 +13,43 @@ namespace Gestion_de_convo_Tennis.Classes
         public static List<Journee> all()
         {
             List<Journee> journees = new List<Journee>();
-            SqlCommand requete = new SqlCommand("SELECT * FROM journee");
-            requete.Connection = Ado.OpenSqlConnection();
-            SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
-            while (reader.Read())
+            SqlCommand requeteJournee = new SqlCommand("SELECT * FROM journee");
+            requeteJournee.Connection = Ado.OpenSqlConnection();
+            SqlDataReader  readerJournee = requeteJournee.ExecuteReader(); // Exécution de la requête SQL
+            while (readerJournee.Read())
             {
-                 journees.Add(new Journee(reader.GetInt32(0),reader.GetDateTime(1),reader.GetString(2).Trim()));
+                Journee j = new Journee(
+                     readerJournee.GetInt32(0),            //id
+                     readerJournee.GetDateTime(1),         //date
+                     readerJournee.GetString(2).Trim());   //categorie  
+
+                //RÉCUPÉRATION DES DISPONIBILITÉS
+                SqlCommand requeteDispo = new SqlCommand("SELECT * FROM disponible");
+                requeteDispo.Connection = Ado.OpenSqlConnection();
+                SqlDataReader readerDispo = requeteDispo.ExecuteReader();
+
+                while (readerDispo.Read())
+                {
+                    if (readerDispo.GetInt32(1) == j.Id)
+                    {
+                       
+                        bool dispo;
+                        if (readerDispo.GetByte(2) == 0)
+                        {
+                            dispo = false;
+                        }
+                        else
+                        {
+                            dispo = true;
+                        }
+                        j.Dispo.Add(MainWindow.joueurs.Where(x => x.Id == readerDispo.GetInt32(0)).First(), dispo);
+                    }
+                }
+                readerDispo.Close();
+                journees.Add(j);                
             }
-            reader.Close();
+            readerJournee.Close();
+            
             return journees;
         }
         public static void addJournee(List<Journee> journees)
@@ -57,7 +86,7 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static void delete()
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM journee");
+            SqlCommand cmd = new SqlCommand("DELETE FROM journee; DELETE FROM disponible; DBCC CHECKIDENT (journee, RESEED, 0);");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.ExecuteNonQuery();
         }
