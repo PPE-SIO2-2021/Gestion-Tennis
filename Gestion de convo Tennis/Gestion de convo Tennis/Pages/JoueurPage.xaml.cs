@@ -11,6 +11,8 @@ namespace Gestion_de_convo_Tennis.Pages
     /// </summary>
     public partial class JoueurPage : Page 
     {
+        bool state = false;
+        Joueur j = new Joueur();
         public JoueurPage()
         {
             InitializeComponent();
@@ -20,13 +22,38 @@ namespace Gestion_de_convo_Tennis.Pages
 
         private void buttonValiderJoueur_Click(object sender, RoutedEventArgs e)
         {
-            //Création du joueur avec gestion des exceptions de conversion
-            try
+            Console.WriteLine("j",j);
+            Console.WriteLine("NEW",new Joueur());
+            Console.WriteLine("test" + (j != new Joueur()));
+            Console.WriteLine("test2" + (j == new Joueur()));
+            string categorie = "";
+            if (state)
+            {
+                j.Nom = textBoxNomJoueur.Text;
+                j.Prenom = textBoxPrenomJoueur.Text;
+                j.Mail = textBoxMailJoueur.Text;
+                j.Age = Convert.ToInt32(textBoxAgeJoueur.Text);
+                if (j.Age < 35)
+                {
+                    categorie = "Senior";
+                }
+                else
+                {
+                    categorie = "Senior +";
+                }
+                j.Categorie = categorie;
+                MainWindow.joueurs.Find(
+                    delegate (Joueur jou)
+                    {
+                        return jou.Id == j.Id;
+                    });
+            }
+            else
             {
                 labelErreurJoueur.Content = "";
                 int age = Int32.Parse(textBoxAgeJoueur.Text);
-                string categorie = "";
                 Joueur joueur = new Joueur();
+                Console.WriteLine("0");
                 if (age < 35)
                 {
                     categorie = "Senior";
@@ -35,6 +62,7 @@ namespace Gestion_de_convo_Tennis.Pages
                 {
                     categorie = "Senior +";
                 }
+                Console.WriteLine("1");
                 if (comboBoxClassementJoueur.SelectedItem == null)
                 {
                     joueur = new Joueur(0, textBoxNomJoueur.Text, textBoxPrenomJoueur.Text, age, textBoxMailJoueur.Text, "", "", categorie);
@@ -43,15 +71,11 @@ namespace Gestion_de_convo_Tennis.Pages
                 {
                     joueur = new Joueur(0, textBoxNomJoueur.Text, textBoxPrenomJoueur.Text, age, textBoxMailJoueur.Text, "", "", categorie, (Classement)comboBoxClassementJoueur.SelectedItem);
                 }
+                Console.WriteLine("2");
                 MainWindow.joueurs.Add(joueur);
-                dataGridRecapJoueurs.Items.Refresh();
-                unloadFormJoueur();
-
             }
-            catch (FormatException exception)
-            {
-                labelErreurJoueur.Content = exception.Message;
-            }
+            dataGridRecapJoueurs.Items.Refresh();
+            unloadFormJoueur();
         }
         private void unloadFormJoueur()
         {
@@ -60,6 +84,7 @@ namespace Gestion_de_convo_Tennis.Pages
             textBoxMailJoueur.Text = "";
             textBoxAgeJoueur.Text = "";
             comboBoxClassementJoueur.SelectedIndex = -1;
+            dataGridRecapJoueurs.Items.Refresh();
         }
 
         private void buttonValiderJoueurs_Click(object sender, RoutedEventArgs e)
@@ -70,12 +95,17 @@ namespace Gestion_de_convo_Tennis.Pages
         
         private void dataGridRecapJoueurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            Joueur j = (Joueur)dataGridRecapJoueurs.SelectedItem;
+            state = true;
+            j = (Joueur)dataGridRecapJoueurs.SelectedItem;
             labelcreerunjoueur.Content = "MODIFIER UN JOUEUR";
             textBoxNomJoueur.Text = j.Nom;
             textBoxPrenomJoueur.Text = j.Prenom;
             textBoxMailJoueur.Text = j.Mail;
             textBoxAgeJoueur.Text = Convert.ToString(j.Age);
+        }
+        private void buttonResetJoueur_Click(object sender, RoutedEventArgs e)
+        {
+            unloadFormJoueur();
         }
     }
 }
