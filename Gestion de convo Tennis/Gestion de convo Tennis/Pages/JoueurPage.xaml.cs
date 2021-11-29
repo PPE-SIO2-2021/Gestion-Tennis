@@ -16,7 +16,7 @@ namespace Gestion_de_convo_Tennis.Pages
         public JoueurPage()
         {
             InitializeComponent();
-            comboBoxClassementJoueur.ItemsSource = AdoClassement.all();
+            comboBoxClassementJoueur.ItemsSource = MainWindow.classements;
             dataGridRecapJoueurs.ItemsSource = MainWindow.joueurs;
         }
 
