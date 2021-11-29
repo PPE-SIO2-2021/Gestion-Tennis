@@ -35,7 +35,7 @@
             </Grid>
             <Grid Height="30" Margin="0,162,0,208" >
                 <Label Content="Classement :" />
-                <ComboBox x:Name="comboBoxClassementJoueur"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="29" Margin="84,0,0,0"/>
+                <ComboBox x:Name="comboBoxClassementJoueur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="29" Margin="84,0,0,0"/>
             </Grid>
             <DataGrid x:Name="dataGridAffichageFichiersJoueur" Margin="10,207,10,93" AutoGenerateColumns="False">
                 <DataGrid.Columns>

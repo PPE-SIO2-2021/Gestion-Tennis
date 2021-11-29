@@ -20,14 +20,14 @@ namespace Gestion_de_convo_Tennis.Classes
             {
                 // Récupération de l'id, nom, prenom, age, mail, license, certificat, categorie, classement
                 joueurs.Add(new Joueur(
-                    reader.GetInt32(0),         //id
-                    reader.GetString(1),        //nom
-                    reader.GetString(2),        //prenom
-                    reader.GetInt32(3),         //age
-                    reader.GetString(4),        //mail
-                    reader.GetString(5),        //licence
-                    reader.GetString(6),        //certificat
-                    reader.GetString(7),        //categorie
+                    reader.GetInt32(0),                 //id
+                    reader.GetString(1).Trim(),        //nom
+                    reader.GetString(2).Trim(),        //prenom
+                    reader.GetInt32(3),                 //age
+                    reader.GetString(4).Trim(),        //mail
+                    reader.GetString(5).Trim(),        //licence
+                    reader.GetString(6).Trim(),        //certificat
+                    reader.GetString(7).Trim(),        //categorie
                     MainWindow.classements.Where(x => x.Id == reader.GetInt32(8)).First())); //classement
 
             }

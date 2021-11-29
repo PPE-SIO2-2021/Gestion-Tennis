@@ -57,12 +57,25 @@ namespace Gestion_de_convo_Tennis.Classes
             delete();
             foreach (Journee journee in journees)
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO journee(dte, categorie) VALUES(@dte, @categorie)");
-                cmd.Connection = Ado.OpenSqlConnection();
-                cmd.Prepare();
-                cmd.Parameters.AddWithValue("@dte", journee.Date);
-                cmd.Parameters.AddWithValue("@categorie", journee.Categorie.Trim());
-                cmd.ExecuteNonQuery();
+                SqlCommand cmdJournee = new SqlCommand("INSERT INTO journee(dte, categorie) VALUES(@dte, @categorie)");
+                cmdJournee.Connection = Ado.OpenSqlConnection();
+                cmdJournee.Prepare();
+                cmdJournee.Parameters.AddWithValue("@dte", journee.Date);
+                cmdJournee.Parameters.AddWithValue("@categorie", journee.Categorie.Trim());
+                cmdJournee.ExecuteNonQuery();
+
+                foreach(var j in journee.Dispo)
+                {
+                    SqlCommand cmdDispo = new SqlCommand("INSERT INTO disponible(fk_id_joueur, fk_id_journee, is_dispo) VALUES (@id_joueur, @id_journee, @dispo);");
+                    cmdDispo.Connection = Ado.OpenSqlConnection();
+                    cmdDispo.Prepare();
+                    cmdDispo.Parameters.AddWithValue("@id_joueur", j.Key.Id);
+                    cmdDispo.Parameters.AddWithValue("@id_journee", journee.Id);
+                    cmdDispo.Parameters.AddWithValue("@dispo", j.Value);
+                    cmdDispo.ExecuteNonQuery();
+                    cmdDispo.Connection.Close();
+                }
+                cmdJournee.Connection.Close();
             }
         }
         public static void addRencontre(List<Journee> journees)

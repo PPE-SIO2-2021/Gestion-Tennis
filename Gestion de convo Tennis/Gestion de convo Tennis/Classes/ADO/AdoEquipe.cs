@@ -18,8 +18,11 @@ namespace Gestion_de_convo_Tennis.Classes
             SqlDataReader  reader = requete.ExecuteReader(); // Exécution de la requête SQL
             while (reader.Read())
             {
-                // Récupération de la catégorie & de l'ordre de l'équipe
-                 equipes.Add(new Equipe(reader.GetInt32(0),reader.GetString(1).Trim(),reader.GetInt32(2)));
+                // Récupération de l'id , de la catégorie & de l'ordre de l'équipe
+                 equipes.Add(new Equipe(
+                     reader.GetInt32(0),            //Id
+                     reader.GetString(1).Trim(),    //Categorie
+                     reader.GetInt32(2)));          //Ordre
             }
             reader.Close();
             return equipes;
