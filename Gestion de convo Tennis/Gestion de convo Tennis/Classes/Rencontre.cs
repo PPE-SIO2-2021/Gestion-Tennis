@@ -10,20 +10,19 @@ namespace Gestion_de_convo_Tennis.Classes
     {
         public Equipe Equipe { get; set; }
         public List<Joueur> Joueurs { get; set; }
-        public DateTime Dte { get; set; }
-        public DateTime Heure { get; set; }
+        public DateTime DteHeure { get; set; }
         public String Lieu { get; set; }
         public String Adversaire { get; set; }
 
         public Rencontre(){}
 
         public Rencontre(DateTime dte,String lieu, String adversaire) {
-            this.Dte = dte;
+            this.DteHeure = dte;
             this.Lieu = lieu;
             this.Adversaire = adversaire;
         }
         public override string ToString() {
-            return "Date de rencontre : " + this.Dte + "\nLieu de rencontre : " + this.Lieu + "\nAdversaire : " + this.Adversaire;
+            return "Date de rencontre : " + this.DteHeure + "\nLieu de rencontre : " + this.Lieu + "\nAdversaire : " + this.Adversaire;
         }
     }
 }
