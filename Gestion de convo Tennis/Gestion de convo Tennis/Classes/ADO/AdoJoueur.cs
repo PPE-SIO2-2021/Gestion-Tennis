@@ -39,7 +39,7 @@ namespace Gestion_de_convo_Tennis.Classes
             delete();
             foreach (Joueur joueur in joueurs)
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,mail,categorie,certificat,licence,fk_id_classement) VALUES(@nom,@prenom,@age,@mail,@categorie, @certificat, @licence, @fk_id_classement)");
+                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,mail,categorie,certificat,licence,fk_id_classement) VALUES(@nom, @prenom, @age, @mail, @categorie, @certificat, @licence, @fk_id_classement);SELECT SCOPE_IDENTITY();");
                 cmd.Connection = Ado.OpenSqlConnection();
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@nom", joueur.Nom.Trim());
@@ -50,7 +50,7 @@ namespace Gestion_de_convo_Tennis.Classes
                 cmd.Parameters.AddWithValue("@certificat", joueur.Certificat);
                 cmd.Parameters.AddWithValue("@licence", joueur.License);
                 cmd.Parameters.AddWithValue("@fk_id_classement", joueur.Classement.Id);
-                cmd.ExecuteNonQuery();
+                joueur.Id= Convert.ToInt32(cmd.ExecuteScalar());
             }
         }
         public static void delete()

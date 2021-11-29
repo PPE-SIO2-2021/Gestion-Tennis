@@ -21,6 +21,16 @@ namespace Gestion_de_convo_Tennis.Classes
 
         public Joueur(){}
 
+        public Joueur(String nom, String prenom, int age, String mail, String license, String certificat, String categorie)
+        {
+            this.Nom = nom;
+            this.Prenom = prenom;
+            this.Age = age;
+            this.Mail = mail;
+            this.License = license;
+            this.Certificat = certificat;
+            this.Categorie = categorie;
+        }
         public Joueur(int id, String nom, String prenom, int age, String mail, String license, String certificat, String categorie)
         {
             this.Id = id;
@@ -32,9 +42,20 @@ namespace Gestion_de_convo_Tennis.Classes
             this.Certificat = certificat;
             this.Categorie = categorie;
         }
-        public Joueur(int id, String nom, String prenom, int age, String mail, String license, String certificat, String categorie, Classement classement)
+        public Joueur(int id,String nom, String prenom, int age, String mail, String license, String certificat, String categorie, Classement classement)
         {
             this.Id = id;
+            this.Classement = classement;
+            this.Nom = nom;
+            this.Prenom = prenom;
+            this.Age = age;
+            this.Mail = mail;
+            this.License = license;
+            this.Certificat = certificat;
+            this.Categorie = categorie;
+        }
+        public Joueur(String nom, String prenom, int age, String mail, String license, String certificat, String categorie, Classement classement)
+        {
             this.Classement = classement;
             this.Nom = nom;
             this.Prenom = prenom;

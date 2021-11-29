@@ -15,7 +15,14 @@ namespace Gestion_de_convo_Tennis.Classes
         public int Id { get; set; }
 
         public Journee () {}
-        
+
+        public Journee(DateTime dte, String categorie)
+        {
+            this.Date = dte;
+            this.Categorie = categorie;
+            this.Dispo = new Dictionary<Joueur, Boolean>();
+        }
+
         public Journee (int id, DateTime dte, String categorie) {
             this.Id = id;
             this.Date = dte;

@@ -48,7 +48,7 @@
                 <Button x:Name="buttonResetJoueur"    Content="🗑" FontSize="20" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="50" Height="50" Click="buttonResetJoueur_Click"/>
             </Grid>
         </Grid>
-        <Label x:Name="labelErreurJoueur" Width="350" Height="30" VerticalAlignment="Top" Margin="246,0,304,0" Foreground="Red"/>
+        <Label x:Name="labelErreurJoueur" Width="550" Height="30" VerticalAlignment="Top" Margin="230,0,0,0" Foreground="Red"/>
         <Grid Height="400" Width="547"  Margin="230,27,0,23" >
             <DataGrid x:Name="dataGridRecapJoueurs" IsReadOnly="True" AutoGenerateColumns="False" SelectionChanged="dataGridRecapJoueurs_SelectionChanged">
                 <DataGrid.Columns>
@@ -58,6 +58,13 @@
                     <DataGridTextColumn Header="Age" Binding="{Binding Age}" Width="50"/>
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="70"/>
                     <DataGridTextColumn Header="Classement" Binding="{Binding Classement}" Width="70"/>
+                    <DataGridTemplateColumn Header="❌">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="buttonSupprimerJoueur" Content="✗" Width="14" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" FontSize="9" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Padding="0,0,0,0" Click="buttonSupprimerJoueur_Click"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
