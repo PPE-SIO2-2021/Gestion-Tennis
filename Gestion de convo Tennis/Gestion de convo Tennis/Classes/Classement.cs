@@ -10,15 +10,15 @@ namespace Gestion_de_convo_Tennis.Classes
     {
         public List<Joueur> Joueurs { get; set; }
         public int Id { get; set; }
-        public int Index { get; set; }
+        public int Ordre { get; set; }
         public String Rang { get; set; }
 
         public Classement() { }
 
-        public Classement(int id, int index, String rang)
+        public Classement(int id, int ordre, String rang)
         {
             this.Id = id;
-            this.Index = index;
+            this.Ordre = ordre;
             this.Rang = rang;
         }
         public override string ToString()

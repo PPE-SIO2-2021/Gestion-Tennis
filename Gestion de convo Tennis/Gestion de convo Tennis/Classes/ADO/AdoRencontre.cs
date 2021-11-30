@@ -26,7 +26,7 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         public static void delete()
         {
-            SqlCommand cmd = new SqlCommand("DELETE FROM rencontre");
+            SqlCommand cmd = new SqlCommand("DELETE FROM rencontre; DBCC CHECKIDENT (rencontre, RESEED, 0);");
             cmd.Connection = Ado.OpenSqlConnection();
             cmd.ExecuteNonQuery();
         }

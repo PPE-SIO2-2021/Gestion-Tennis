@@ -21,61 +21,55 @@ namespace Gestion_de_convo_Tennis.Pages
     /// </summary>
     public partial class DispoPage : Page
     {
+        String categorie;
         Joueur joueur = new Joueur();
-        List<Journee> journeesSenior = MainWindow.journees.FindAll(
-            delegate(Journee j)
-            {
-                return j.Categorie == "Senior";
-            });
-
+        Journee journee = new Journee();
         public DispoPage()
         {
             InitializeComponent();
             dataGridAffichageJoueurs.ItemsSource = MainWindow.joueurs;
         }
-        
-    //Concernant la sélection d'un joueur
+
         private void dataGridAffichageJoueurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //Affichage du joueur sélectionné dans gridRecapJoueur
             joueur = (Joueur)dataGridAffichageJoueurs.SelectedItem;
-            labelNomJoueur.Content = "Nom : " + joueur.Nom;
-            labelPrenomJoueur.Content = "Prenom : " + joueur.Prenom;
-            labelAgeJoueur.Content = "Age : " + joueur.Age;
-            labelCategorieJoueur.Content = "Categorie : " + joueur.Categorie;
-            labelClassementJoueur.Content = "Classement : " + joueur.Classement.Rang;
-            
-
-            //Filtre de dataGridAffichageJournees selon la catégorie du joueur
-            if (joueur.Categorie.Trim() != "Senior")
-            {
-                dataGridAffichageJournees.ItemsSource = MainWindow.journees;
-                dataGridAffichageJournees.Items.Refresh();
-            }
-            else
-            {
-                dataGridAffichageJournees.ItemsSource = journeesSenior;
-                dataGridAffichageJournees.Items.Refresh();
-            }
+            categorie = joueur.Categorie.ToString();
+            AffichagesJournees();
         }
 
-        
-        private void CheckBoxIsDispo(object sender, RoutedEventArgs e)
+        private void checkBoxDispo_Unchecked(object sender, RoutedEventArgs e)
         {
-            Journee journee = (Journee)dataGridAffichageJournees.SelectedItem;
+            journee = (Journee)dataGridRecapJourneesJoueur.SelectedItem;
+            journee.Dispo.Remove(joueur);
+            AffichagesJournees();            
+        }
+
+        private void checkBoxDispo_Checked(object sender, RoutedEventArgs e)
+        {
+            journee = (Journee)dataGridAffichageJournees.SelectedItem;
             journee.Dispo.Add(joueur, true);
-            foreach (Journee j in MainWindow.journees)
-            {
-                if (j.Id == journee.Id)
-                {
-                    int index = MainWindow.journees.FindIndex(s => s == j);
-                    MainWindow.journees[index] = journee;
-                }
-            }
+            AffichagesJournees();
         }
-        private void CheckBoxIsNotDispo(object sender, RoutedEventArgs e)
-        {
 
+        private void AffichagesJournees()
+        {
+            //AFFICHAGE DES JOURNEES OU LE JOUEUR N'EST PAS DISPONIBLE FILTRER SELON LA CATEGORIE
+            if (categorie == "Senior")
+            {
+                dataGridAffichageJournees.ItemsSource = MainWindow.journees.Where(
+                    x => !x.Dispo.ContainsKey(joueur) && x.Categorie == categorie
+                    ).OrderBy(x => x.Date);
+            }
+            else if (categorie == "Senior +")
+            {
+                dataGridAffichageJournees.ItemsSource = MainWindow.journees.Where(
+                    x => !x.Dispo.ContainsKey(joueur)
+                    ).OrderBy(x => x.Categorie).ThenBy(x => x.Date);
+            }
+
+            //AFFICHAGE DES JOURNEES OU LE JOUEUR EST DISPONIBLE
+            dataGridRecapJourneesJoueur.ItemsSource = MainWindow.journees.Where(
+                x => x.Dispo.ContainsKey(joueur));
         }
     }
 }

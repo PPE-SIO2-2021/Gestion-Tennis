@@ -34,7 +34,7 @@ namespace Gestion_de_convo_Tennis
             joueurs = AdoJoueur.all();
             equipes = AdoEquipe.all();
             journees = AdoJournee.all();
-            this.Content = new JourneePage();
+            this.Content = new JoueurPage();
         }
         private void JoueurPage(object sender, RoutedEventArgs e)
         {

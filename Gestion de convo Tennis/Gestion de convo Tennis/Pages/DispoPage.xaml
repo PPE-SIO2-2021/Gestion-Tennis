@@ -29,14 +29,14 @@
                     <DataGridTemplateColumn Header="Dispo">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox IsChecked="{Binding Dispo}" HorizontalAlignment="Center" Checked="CheckBoxIsDispo" Unchecked="CheckBoxIsNotDispo"/>
+                                <CheckBox x:Name="checkBoxDispo" Content="{Binding Path=Checked}" HorizontalAlignment="Center" Checked="checkBoxDispo_Checked"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        
+
         <Grid x:Name="gridRecapJoueur" Height="150" Width="250" Margin="540,12,10,288">
             <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="150" >
                 <Border.Effect>
@@ -61,10 +61,15 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
                     <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="*"/>
-                    <DataGridTextColumn Header="Dispo" Binding="{Binding Dispo}" Width="*"/>
+                    <DataGridTemplateColumn Header="Dispo">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox x:Name="checkBoxDispo" IsChecked="True" Content="{Binding Path=Checked}" HorizontalAlignment="Center" Unchecked="checkBoxDispo_Unchecked"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
     </Grid>
-
 </Page>
