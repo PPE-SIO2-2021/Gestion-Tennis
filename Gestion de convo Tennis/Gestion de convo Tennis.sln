@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestion de convo Tennis", "Gestion de convo Tennis\Gestion de convo Tennis.csproj", "{6DA132FF-F17E-437C-9CC2-140D7676296B}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{3AE7D097-BAAB-4EA2-88DE-8D54D9FED478}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{6DA132FF-F17E-437C-9CC2-140D7676296B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DA132FF-F17E-437C-9CC2-140D7676296B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DA132FF-F17E-437C-9CC2-140D7676296B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE7D097-BAAB-4EA2-88DE-8D54D9FED478}.Debug|Any CPU.ActiveCfg = Debug
+		{3AE7D097-BAAB-4EA2-88DE-8D54D9FED478}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
