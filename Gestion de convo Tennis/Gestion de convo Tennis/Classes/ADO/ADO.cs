@@ -30,7 +30,7 @@ namespace Gestion_de_convo_Tennis.Classes
         }
         static private string GetConnectionString()
         {
-            return "Data Source=LAPTOP-IH3M9RRL;Initial Catalog=bd_tsatgd;Integrated Security=True";
+            return "Data Source=sql.reseau-labo.fr;Initial Catalog=bd_tsatgd;User ID=user_lrt;Password=pokeland";
         }
         public static void CleanUp() 
         {

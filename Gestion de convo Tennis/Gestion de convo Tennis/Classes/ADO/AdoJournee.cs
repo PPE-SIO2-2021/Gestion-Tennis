@@ -30,10 +30,9 @@ namespace Gestion_de_convo_Tennis.Classes
 
                 while (readerDispo.Read())
                 {
-                    if (readerDispo.GetInt32(0) == j.Id)
+                    if (readerDispo.GetInt32(1) == j.Id)
                     {
-                        bool dispo = true;
-                        int i = readerDispo.GetInt32(1);
+                        int i = readerDispo.GetInt32(0);
                         j.Dispo.Add(MainWindow.joueurs.Find(x => x.Id == i), Convert.ToBoolean(readerDispo.GetByte(2)));
                     }
                 }
