@@ -48,6 +48,29 @@ namespace Gestion_de_convo_Tennis.Classes
             delete();
             foreach (Journee journee in journees)
             {
+                SqlCommand cmd = new SqlCommand("INSERT INTO journee(dte, categorie) VALUES(@dte, @categorie)");
+                cmd.Connection = Ado.OpenSqlConnection();
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@dte", journee.Date);
+                cmd.Parameters.AddWithValue("@categorie", journee.Categorie.Trim());
+                cmd.ExecuteNonQuery();
+            }
+        }
+        public static void addRencontre(List<Journee> journees)
+        {
+            SqlCommand cmd = new SqlCommand("INSERT INTO rencontre(adversaire,lieu,dte_rencontre,fk_id_journee,fk_id_equipe) VALUES(@adversaire,@lieu,@dte_rencontre,@heure,@fk_id_journee,@fk_id_equipe)");
+            cmd.Connection = Ado.OpenSqlConnection();
+            cmd.Prepare();
+            foreach (Journee journee in journees)
+            {
+                foreach (Rencontre rencontre in journee.Rencontres)
+                { 
+                        cmd.Parameters.AddWithValue("@adversaire", rencontre.Adversaire);
+                        cmd.Parameters.AddWithValue("@lieu", rencontre.Lieu);
+                        cmd.Parameters.AddWithValue("@dte_rencontre", rencontre.DteHeure); // Chercher juste la date // Chercher que l'heure
+                        cmd.Parameters.AddWithValue("@fk_id_journee", journee.Id);
+                        cmd.Parameters.AddWithValue("@fk_id_equipe", rencontre.Equipe.Id);
+                        cmd.ExecuteNonQuery();
                 SqlCommand cmdJournee = new SqlCommand("INSERT INTO journee(dte, categorie) VALUES(@dte, @categorie); SELECT SCOPE_IDENTITY();");
                 cmdJournee.Connection = Ado.OpenSqlConnection();
                 cmdJournee.Prepare();

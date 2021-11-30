@@ -11,7 +11,7 @@
     <Grid Background="White" Width="800" Height="450">
         <Grid Width="150" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
             <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridAffichageJournees" Height="380" Width="150" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False">
+            <DataGrid x:Name="dataGridAffichageJournees" IsReadOnly="True" Height="380" Width="150" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" SelectionChanged="dataGridAffichageJournees_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
@@ -20,7 +20,7 @@
         </Grid>
         <Grid Width="280" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="170,0,0,0">
             <Label Content="Joueurs disponibles" FontWeight="Bold" Width="200" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridAffichageJoueursJournee" Height="380" Width="280" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False">
+            <DataGrid x:Name="dataGridAffichageJoueursJournee" Height="380" Width="280" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" SelectionChanged="dataGridAffichageJoueursJournee_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                     <DataGridTextColumn Header="Prénom" Binding="{Binding Prenom}" Width="*"/>
@@ -29,8 +29,8 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <Grid x:Name="gridRencontres" Width="325" Height="420" Margin="465,20,28,230" ScrollViewer.VerticalScrollBarVisibility="Auto">
-                        
-        </Grid>
+        <ScrollViewer HorizontalAlignment="Left" Height="380" Margin="472,50,0,0" VerticalAlignment="Top" Width="310">
+            <StackPanel x:Name="stackPanelRencontre" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="310"/>
+        </ScrollViewer>
     </Grid>
 </Page>
