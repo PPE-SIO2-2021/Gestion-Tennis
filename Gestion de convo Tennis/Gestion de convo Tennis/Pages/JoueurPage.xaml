@@ -37,14 +37,19 @@
                 <Label Content="Classement :" />
                 <ComboBox x:Name="comboBoxClassementJoueur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="29" Margin="84,0,0,0"/>
             </Grid>
-            <DataGrid x:Name="dataGridAffichageFichiersJoueur" Margin="10,207,10,93" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Fichiers" Binding="{Binding Fichier}" Width="250"/>
-                </DataGrid.Columns>
-            </DataGrid>
-            <Grid Width="190" Height="70" Margin="0,330,0,10">
-                <Button x:Name="buttonAjouterFichier" Content="Ajouter un fichier" HorizontalAlignment="Left" VerticalAlignment="Top" Width="116" Height="32"/>
-                <Button x:Name="buttonValiderJoueur" Content="Valider" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="116" Height="32" Click="buttonValiderJoueur_Click"/>
+            <Grid Height="30" Margin="0,220,0,170">
+                <Label Content="Certificat :"/>
+                <Button x:Name="buttonVisualiserCertificat" Content="Voir" Width="60" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonVisualiserCertificat_Click" />
+                <Button x:Name="buttonAjouterCertificat" Content="Ajouter" Width="60" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Click="buttonAjouterCertificat_Click"/>
+            </Grid>
+            <Grid Height="30" Margin="0,260,0,130">
+                <Label Content="Licence :"/>
+                <Button x:Name="buttonVisualiserLicence" Content="Voir" Width="60" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Click="buttonVisualiserLicence_Click" Margin="77,0" />
+                <Button x:Name="buttonAjouterLicence" Content="Ajouter" Width="60" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0" Click="buttonAjouterLicence_Click"/>
+            </Grid>
+            <Label x:Name="labelErreurFichierJoueur" Width="200" Height="60" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,65" />
+            <Grid Width="190" Height="50" Margin="0,360,0,10">
+                <Button x:Name="buttonValiderJoueur" Content="Valider" Width="110" HorizontalAlignment="Left" VerticalAlignment="Center"  Height="50" Click="buttonValiderJoueur_Click"/>
                 <Button x:Name="buttonResetJoueur"    Content="🗑" FontSize="20" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="50" Height="50" Click="buttonResetJoueur_Click"/>
             </Grid>
         </Grid>
@@ -68,6 +73,6 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        
+
     </Grid>
 </Page>

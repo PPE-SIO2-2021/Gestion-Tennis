@@ -166,5 +166,25 @@ namespace Gestion_de_convo_Tennis.Pages
             unloadFormJoueur();
             dataGridRecapJoueurs.Items.Refresh();
         }
+
+        private void buttonAjouterCertificat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonVisualiserCertificat_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonAjouterLicence_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void buttonVisualiserLicence_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
