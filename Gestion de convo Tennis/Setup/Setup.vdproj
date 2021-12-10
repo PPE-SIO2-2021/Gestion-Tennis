@@ -646,12 +646,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_CAFF44932122FB2BEDB10C7236DD7B18"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_DF21C208E5814D6EABDA6FA801E66A91"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -871,6 +865,12 @@
         "OwnerKey" = "8:_0FCA4C752874982B503FE0D377E94344"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CAFF44932122FB2BEDB10C7236DD7B18"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -889,6 +889,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -905,6 +921,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -2167,22 +2191,22 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Setup"
-        "ProductCode" = "8:{3B2AB557-2C83-4AE5-B96D-7617859CCDE5}"
-        "PackageCode" = "8:{9ABFA214-95ED-4BD1-8CFF-B957303DB54E}"
+        "ProductName" = "8:TSATGD Convocations"
+        "ProductCode" = "8:{C1E2C9DA-C52E-45CE-B58D-486BF0BDC543}"
+        "PackageCode" = "8:{81CDE01C-43CB-4D75-AB76-AB47EFB6C98D}"
         "UpgradeCode" = "8:{081B2D07-C8B9-4DAF-8D2B-24B81BF08615}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Tristan.reiss@hotmail.com"
+        "InstallAllUsers" = "11:TRUE"
+        "ProductVersion" = "8:1.0.21"
+        "Manufacturer" = "8:LRT"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Tristan.reiss@hotmail.com"
+        "ARPCONTACT" = "8:LRT"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
@@ -2718,7 +2742,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DF21C208E5814D6EABDA6FA801E66A91"
             {
-            "SourcePath" = "8:..\\Gestion de convo Tennis\\obj\\Release\\Gestion de convo Tennis.exe"
+            "SourcePath" = "8:..\\Gestion de convo Tennis\\obj\\Debug\\Gestion de convo Tennis.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_BB896CC4F7C744D3989F0D321FEC16C4"

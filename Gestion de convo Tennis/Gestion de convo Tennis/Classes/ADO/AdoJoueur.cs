@@ -20,14 +20,14 @@ namespace Gestion_de_convo_Tennis.Classes
             {
                 // Récupération de l'id, nom, prenom, age, mail, license, certificat, categorie, classement
                 joueurs.Add(new Joueur(
-                    reader.GetInt32(0),                 //id
+                    reader.GetInt32(0),                //id
                     reader.GetString(1).Trim(),        //nom
                     reader.GetString(2).Trim(),        //prenom
-                    reader.GetInt32(3),                 //age
+                    reader.GetInt32(3),                //age
                     reader.GetString(4).Trim(),        //mail
-                    reader.GetString(5).Trim(),        //licence
+                    reader.GetString(5).Trim(),        //categorie
                     reader.GetString(6).Trim(),        //certificat
-                    reader.GetString(7).Trim(),        //categorie
+                    reader.GetString(7).Trim(),        //licence
                     MainWindow.classements.Where(x => x.Id == reader.GetInt32(8)).First())); //classement
 
             }
@@ -39,7 +39,17 @@ namespace Gestion_de_convo_Tennis.Classes
             delete();
             foreach (Joueur joueur in joueurs)
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom,prenom,age,mail,categorie,certificat,licence,fk_id_classement) VALUES(@nom, @prenom, @age, @mail, @categorie, @certificat, @licence, @fk_id_classement);SELECT SCOPE_IDENTITY();");
+                SqlCommand cmd = new SqlCommand("INSERT INTO joueur(nom, prenom, age, mail, categorie, certificat, licence, fk_id_classement) " +
+                    "VALUES(" +
+                        "@nom, " +
+                        "@prenom, " +
+                        "@age, " +
+                        "@mail, " +
+                        "@categorie, " +
+                        "@certificat, " +
+                        "@licence, " +
+                        "@fk_id_classement);" +
+                    "SELECT SCOPE_IDENTITY();");
                 cmd.Connection = Ado.OpenSqlConnection();
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@nom", joueur.Nom.Trim());
@@ -47,8 +57,8 @@ namespace Gestion_de_convo_Tennis.Classes
                 cmd.Parameters.AddWithValue("@age", joueur.Age);
                 cmd.Parameters.AddWithValue("@mail", joueur.Mail.Trim());
                 cmd.Parameters.AddWithValue("@categorie", joueur.Categorie.Trim());
-                cmd.Parameters.AddWithValue("@certificat", joueur.Certificat);
-                cmd.Parameters.AddWithValue("@licence", joueur.License);
+                cmd.Parameters.AddWithValue("@certificat", joueur.Certificat.Trim());
+                cmd.Parameters.AddWithValue("@licence", joueur.Licence.Trim());
                 cmd.Parameters.AddWithValue("@fk_id_classement", joueur.Classement.Id);
                 joueur.Id= Convert.ToInt32(cmd.ExecuteScalar());
             }
