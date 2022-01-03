@@ -129,7 +129,7 @@ namespace Gestion_de_convo_Tennis.Pages
             }
             catch (FormatException)
             {
-                labelErreurJoueur.Content = "Erreur : Le nombre d'équipe doit être saisi en chiffres.";
+                labelErreurJoueur.Content = "Erreur : L'âge n'est pas au bon format. Saisissez un chiffre.";
             }
         }
         private void buttonSupprimerJoueur_Click(object sender, RoutedEventArgs e)
@@ -177,6 +177,7 @@ namespace Gestion_de_convo_Tennis.Pages
             labelLicenceJoueur.Content = "";
             certificat = "";
             licence = "";
+            labelErreurFichierJoueur.Content = "";
         }
         
         private void dataGridRecapJoueurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -189,7 +190,7 @@ namespace Gestion_de_convo_Tennis.Pages
             j = (Joueur)dataGridRecapJoueurs.SelectedItem;
             if (!joueurSupprimer)
             {
-                labelcreerunjoueur.Content = "MODIFIER UN JOUEUR";
+                LabelCreerJoueur.Content = "MODIFIER UN JOUEUR";
                 textBoxNomJoueur.Text = j.Nom;
                 textBoxPrenomJoueur.Text = j.Prenom;
                 textBoxMailJoueur.Text = j.Mail;

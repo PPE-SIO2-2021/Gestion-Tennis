@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="BorderFormulaire"
+           TargetType="{x:Type Border}">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="BorderBrush" Value="#D2007B"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+</ResourceDictionary>

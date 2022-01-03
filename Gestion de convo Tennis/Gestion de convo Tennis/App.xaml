@@ -4,6 +4,17 @@
              xmlns:local="clr-namespace:Gestion_de_convo_Tennis"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Ressources/BorderFormulaireRessource.xaml"/>
+                <ResourceDictionary Source="Ressources/ButtonRessource.xaml"/>
+                <ResourceDictionary Source="Ressources/CalendarRessource.xaml"/>
+                <ResourceDictionary Source="Ressources/ComboBoxRessource.xaml"/>
+                <ResourceDictionary Source="Ressources/DataGridRessource.xaml"/>
+                <ResourceDictionary Source="Ressources/LabelErreurRessource.xaml"/>
+                <ResourceDictionary Source="Ressources/LabelTitreRessource.xaml"/>
+                <ResourceDictionary Source="Ressources/TextBoxRessource.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

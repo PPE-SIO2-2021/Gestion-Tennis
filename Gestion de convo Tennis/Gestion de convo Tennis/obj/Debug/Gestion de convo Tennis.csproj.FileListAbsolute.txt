@@ -547,3 +547,147 @@ C:\Users\Robin\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis
 C:\Users\Robin\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.CopyComplete
 C:\Users\Robin\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.exe
 C:\Users\Robin\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.exe.config
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.exe
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\ControlzEx.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BootstrapIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BoxIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Codicons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Coolicons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Entypo.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.EvaIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FeatherIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FileIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontaudio.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontisto.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.ForkAwesome.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Ionicons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.JamIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialDesign.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialLight.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Microns.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Modern.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Octicons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PicolIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PixelartIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RadixIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RemixIcon.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RPGAwesome.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.SimpleIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Typicons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Unicons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.VaadinIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.WeatherIcons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Zondicons.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Microsoft.Xaml.Behaviors.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\ControlzEx.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\ControlzEx.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BootstrapIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BootstrapIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BoxIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BoxIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Codicons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Codicons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Coolicons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Coolicons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Entypo.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Entypo.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.EvaIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.EvaIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FeatherIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FeatherIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FileIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FileIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontaudio.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontaudio.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontisto.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontisto.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.ForkAwesome.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.ForkAwesome.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Ionicons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Ionicons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.JamIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.JamIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialDesign.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialDesign.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialLight.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialLight.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Microns.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Microns.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Modern.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Modern.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Octicons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Octicons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PicolIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PicolIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PixelartIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PixelartIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RadixIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RadixIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RemixIcon.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RemixIcon.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RPGAwesome.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RPGAwesome.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.SimpleIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.SimpleIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Typicons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Typicons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Unicons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Unicons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.VaadinIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.VaadinIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.WeatherIcons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.WeatherIcons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Zondicons.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Zondicons.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Microsoft.Xaml.Behaviors.xml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\de\MahApps.Metro.resources.dll
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.AssemblyReference.cache
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\BorderFormulaireRessource.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\MainWindow.g.cs
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\DispoPage.g.cs
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\RencontrePage.g.cs
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JoueurPage.g.cs
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JourneePage.g.cs
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\VuePage.g.cs
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\App.g.cs
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis_MarkupCompile.cache
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis_MarkupCompile.lref
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\App.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\MainWindow.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\DispoPage.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\RencontrePage.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JoueurPage.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JourneePage.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\VuePage.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.g.resources
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion_de_convo_Tennis.Properties.Resources.resources
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.GenerateResource.cache
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.CoreCompileInputs.cache
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.CopyComplete
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.exe
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.pdb
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\ButtonRessource.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\LabelTitreRessource.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\TextBoxRessource.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\ComboBoxRessource.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\CalendarRessource.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\LabelErreurRessource.baml
+D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\DataGridRessource.baml

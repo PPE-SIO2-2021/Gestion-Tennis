@@ -9,10 +9,25 @@
       Title="DispoPage">
 
     <Grid Background="White">
-
-        <Grid Height="430" Width="260" Margin="10,2,530,-2"  >
-            <Label Content="Joueurs" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Height="30" />
-            <DataGrid x:Name="dataGridAffichageJoueurs" Height="400" Width="250" VerticalAlignment="Bottom" SelectionMode="Single" AutoGenerateColumns="False" IsReadOnly="True" SelectionChanged="dataGridAffichageJoueurs_SelectionChanged">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="210*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" 
+                   Content="Joueurs"
+                   Style="{StaticResource LabelTitre}" />
+            <DataGrid Grid.Row="1" x:Name="dataGridAffichageJoueurs" 
+                      Height="400" 
+                      SelectionMode="Single" 
+                      Margin="10"
+                      SelectionChanged="dataGridAffichageJoueurs_SelectionChanged"
+                      Style="{StaticResource DataGridStyle}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                     <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>
@@ -20,9 +35,19 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <Grid Height="430" Width="260" Margin="270,12,270,8"  >
-            <Label Content="Journées" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Height="30"/>
-            <DataGrid x:Name="dataGridAffichageJournees" Height="400" Width="250" VerticalAlignment="Bottom" IsReadOnly="True" AutoGenerateColumns="False">
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*"/>
+                <RowDefinition Height="210*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"
+                   Content="Journées" 
+                   Style="{StaticResource LabelTitre}"/>
+            <DataGrid Grid.Row="1" 
+                      x:Name="dataGridAffichageJournees" 
+                      Height="400"
+                      Margin="10"
+                      Style="{StaticResource DataGridStyle}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
                     <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="*"/>
@@ -37,39 +62,70 @@
             </DataGrid>
         </Grid>
 
-        <Grid x:Name="gridRecapJoueur" Height="150" Width="250" Margin="540,12,10,288">
-            <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="150" >
-                <Border.Effect>
-                    <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
-                </Border.Effect>
+        <Grid Grid.Column="2" 
+              x:Name="gridRecapJoueur">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="179*"/>
+                <RowDefinition Height="271*"/>
+            </Grid.RowDefinitions>
+            <Border Margin="10"
+                    Style="{StaticResource BorderFormulaire}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="10"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                           Content="Informations Joueurs" 
+                           Style="{StaticResource LabelTitre}"/>
+                    <Label Grid.Row="1" 
+                           x:Name="labelNomJoueur" 
+                           Content="Nom : "/>
+                    <Label Grid.Row="2" 
+                           x:Name="labelPrenomJoueur" 
+                           Content="Prenom : "/>
+                    <Label Grid.Row="3" 
+                           x:Name="labelAgeJoueur" 
+                           Content="Age : "/>
+                    <Label Grid.Row="4" 
+                           x:Name="labelCategorieJoueur" 
+                           Content="Catégorie : "/>
+                    <Label Grid.Row="5" 
+                           x:Name="labelClassementJoueur" 
+                           Content="Classement : "/>
+                </Grid>
             </Border >
-            <Label Content="Informations Joueurs" VerticalAlignment="Top" FontWeight="Bold" Height="30"/>
-            <Label x:Name="labelNomJoueur" Content="Nom : " HorizontalAlignment="left" Height="30" Margin="0,25,0,95" />
-            <Label x:Name="labelPrenomJoueur" Content="Prenom : " HorizontalAlignment="left" Height="30" Margin="0,42,0,78" />
-            <Label x:Name="labelAgeJoueur" Content="Age : " HorizontalAlignment="left" Height="30" Margin="0,60" />
-            <Label x:Name="labelCategorieJoueur" Content="Catégorie : " HorizontalAlignment="left" Height="30" Margin="0,85,0,35"/>
-            <Label x:Name="labelClassementJoueur" Content="Classement : " HorizontalAlignment="left" Height="30" Margin="0,110,0,10" />
-            <DataGrid x:Name="dataGridFichiersJoueur" Width="120" Margin="120,35,5,25" IsReadOnly="True" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Fichiers" Binding="{Binding Fichiers}" Width="250"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </Grid>
-        <Grid  Height="260" Width="260" Margin="540,180,0,10">
-            <Label Content="Disponibilitées du joueur" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Height="30" />
-            <DataGrid x:Name="dataGridRecapJourneesJoueur" Height="230" Width="250" VerticalAlignment="Bottom" HorizontalAlignment="Left" IsReadOnly="True" AutoGenerateColumns="False">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
-                    <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="*"/>
-                    <DataGridTemplateColumn Header="Dispo">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <CheckBox x:Name="checkBoxDispo" IsChecked="True" Content="{Binding Path=Checked}" HorizontalAlignment="Center" Unchecked="checkBoxDispo_Unchecked"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" 
+                       Content="Disponibilitées du joueur" 
+                       Style="{StaticResource LabelTitre}"/>
+                <DataGrid Grid.Row="1" 
+                          x:Name="dataGridRecapJourneesJoueur" 
+                          Height="220" 
+                          Margin="10"
+                          Style="{StaticResource DataGridStyle}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
+                        <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="*"/>
+                        <DataGridTemplateColumn Header="Dispo">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox x:Name="checkBoxDispo" IsChecked="True" Content="{Binding Path=Checked}" HorizontalAlignment="Center" Unchecked="checkBoxDispo_Unchecked"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
         </Grid>
     </Grid>
 </Page>

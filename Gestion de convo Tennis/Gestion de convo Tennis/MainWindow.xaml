@@ -10,8 +10,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize"
         Closing="Window_Closing">
-    <mah:MetroWindow.LeftWindowCommands >
-        <mah:WindowCommands>
+    <mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands Background="Gray">
             <Button x:Name="buttonJoueur" Content="Joueurs" ToolTip="JoueurPage" Click="JoueurPage"/>
             <Button x:Name="buttonJournee" Content="Journees" ToolTip="JourneePage" Click="JourneePage"/>
             <Button x:Name="buttonDispo" Content="Disponibilités" ToolTip="DispoPage" Click="DispoPage"/>

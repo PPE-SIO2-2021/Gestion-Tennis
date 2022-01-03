@@ -7,310 +7,285 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="JourneePage">
-    <Page.Resources>
-        <Style x:Key="CalendarButtonStyle1" TargetType="{x:Type CalendarButton}">
-            <Setter Property="Background" Value="#FFBADDE9"/>
-            <Setter Property="MinWidth" Value="35"/>
-            <Setter Property="MinHeight" Value="10"/>
-            <Setter Property="FontSize" Value="10"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type CalendarButton}">
-                        <Grid>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0:0:0.1"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Normal"/>
-                                    <VisualState x:Name="MouseOver">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To=".5" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Background"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Pressed">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To=".5" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Background"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="SelectionStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Unselected"/>
-                                    <VisualState x:Name="Selected">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To=".75" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="SelectedBackground"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="ActiveStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Active"/>
-                                    <VisualState x:Name="Inactive">
-                                        <Storyboard>
-                                            <ColorAnimation Duration="0" To="#FF777777" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="NormalText"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="CalendarButtonFocusStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="CalendarButtonFocused">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="CalendarButtonFocusVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="CalendarButtonUnfocused">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="CalendarButtonFocusVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Collapsed</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <Rectangle x:Name="SelectedBackground" Fill="{TemplateBinding Background}" Opacity="0" RadiusY="1" RadiusX="1"/>
-                            <Rectangle x:Name="Background" Fill="{TemplateBinding Background}" Opacity="0" RadiusY="1" RadiusX="1"/>
-                            <ContentPresenter x:Name="NormalText" TextElement.Foreground="#FF333333" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="1,0,1,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            <Rectangle x:Name="CalendarButtonFocusVisual" IsHitTestVisible="false" RadiusY="1" RadiusX="1" Stroke="#FF45D6FA" Visibility="Collapsed"/>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsFocused" Value="True">
-                                <Setter Property="Visibility" TargetName="CalendarButtonFocusVisual" Value="Visible"/>
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="CalendarDayButtonStyle1" TargetType="{x:Type CalendarDayButton}">
-            <Setter Property="MinWidth" Value="30"/>
-            <Setter Property="MinHeight" Value="20"/>
-            <Setter Property="FontSize" Value="12"/>
-            <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="VerticalContentAlignment" Value="Center"/>
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type CalendarDayButton}">
-                        <Grid>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup x:Name="CommonStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0:0:0.1"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Normal"/>
-                                    <VisualState x:Name="MouseOver">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="HighlightBackground"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Pressed">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To="0.5" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="HighlightBackground"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Disabled">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To="0" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="HighlightBackground"/>
-                                            <DoubleAnimation Duration="0" To=".35" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="NormalText"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="SelectionStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Unselected"/>
-                                    <VisualState x:Name="Selected">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To=".75" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="SelectedBackground"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="CalendarButtonFocusStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="CalendarButtonFocused">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="DayButtonFocusVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="CalendarButtonUnfocused">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Visibility" Storyboard.TargetName="DayButtonFocusVisual">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Collapsed</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="ActiveStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="Active"/>
-                                    <VisualState x:Name="Inactive">
-                                        <Storyboard>
-                                            <ColorAnimation Duration="0" To="#FF777777" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="NormalText"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="DayStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="RegularDay"/>
-                                    <VisualState x:Name="Today">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To="1" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="TodayBackground"/>
-                                            <ColorAnimation Duration="0" To="#FFFFFFFF" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="NormalText"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup x:Name="BlackoutDayStates">
-                                    <VisualStateGroup.Transitions>
-                                        <VisualTransition GeneratedDuration="0"/>
-                                    </VisualStateGroup.Transitions>
-                                    <VisualState x:Name="NormalDay"/>
-                                    <VisualState x:Name="BlackoutDay">
-                                        <Storyboard>
-                                            <DoubleAnimation Duration="0" To=".2" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Blackout"/>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-                            <Rectangle x:Name="TodayBackground" Fill="#FFAAAAAA" Opacity="0" RadiusY="1" RadiusX="1"/>
-                            <Rectangle x:Name="SelectedBackground" Fill="#FFBADDE9" Opacity="0" RadiusY="1" RadiusX="1"/>
-                            <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}"/>
-                            <Rectangle x:Name="HighlightBackground" Fill="#FFBADDE9" Opacity="0" RadiusY="1" RadiusX="1"/>
-                            <ContentPresenter x:Name="NormalText" TextElement.Foreground="#FF333333" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="5,1,5,1" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            <Path x:Name="Blackout" Data="M8.1772461,11.029181 L10.433105,11.029181 L11.700684,12.801641 L12.973633,11.029181 L15.191895,11.029181 L12.844727,13.999395 L15.21875,17.060919 L12.962891,17.060919 L11.673828,15.256231 L10.352539,17.060919 L8.1396484,17.060919 L10.519043,14.042364 z" Fill="#FF000000" HorizontalAlignment="Stretch" Margin="3" Opacity="0" RenderTransformOrigin="0.5,0.5" Stretch="Fill" VerticalAlignment="Stretch"/>
-                            <Rectangle x:Name="DayButtonFocusVisual" IsHitTestVisible="false" RadiusY="1" RadiusX="1" Stroke="#FF45D6FA" Visibility="Collapsed"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-    </Page.Resources>
+    <Grid>
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="5"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
-    <Grid Background="White">
-        <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Width="450" Height="350" Margin="12,84,320,16">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
-            </Border.Effect>
-        </Border>
-        <Grid Height="60" Width="185" Margin="27,10,588,380">
-            <Label Content="Selectionnez une catégorie :" HorizontalAlignment="Center" FontWeight="Bold" Height="30" Margin="2,0,10,30"/>
-            <Button x:Name="buttonSelectSenior" Content="Senior"  HorizontalAlignment="Left" Width="70" Margin="0,30,0,0" Click="buttonSelectSenior_Click"/>
-            <Button x:Name="buttonSelectSeniorPlus" Content="Senior +"  HorizontalAlignment="Left" Width="70" Margin="105,30,0,0" Click="buttonSelectSeniorPlus_Click"/>
-        </Grid>
+            <!--Ligne 1, Colonne 1 : Sélection de la catégorie voulue-->
+            <Border Grid.Column="0" Grid.Row="0" 
+                    Margin="5" 
+                    Padding="2"
+                    Style="{StaticResource BorderFormulaire}" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.ColumnSpan="3" 
+                           Content="Selectionnez une catégorie :" 
+                           Style="{StaticResource LabelTitre}"/>
+                    <Button Grid.Column="0" Grid.Row="2" 
+                            x:Name="buttonSelectSenior" 
+                            Content="Senior"
+                            Click="buttonSelectSenior_Click"
+                            Style="{StaticResource ButtonStyle}"/>
+                    <Button Grid.Column="2" Grid.Row="2" 
+                            x:Name="buttonSelectSeniorPlus" 
+                            Content="Senior +" 
+                            Click="buttonSelectSeniorPlus_Click"
+                            Style="{StaticResource ButtonStyle}"/>
+                </Grid>
+            </Border>
 
-        <Label x:Name="labelErreurJournees" Width="540" Height="30" VerticalAlignment="Top" Margin="200,0,0,0" Foreground="Red"/>
+            <!--Ligne 1, Colonne 2-3 : Affichage des erreurs-->
+            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" 
+                   x:Name="labelErreurJournees" 
+                   Foreground="Red" 
+                   Margin="10"/>
 
-        <Grid x:Name="gridCalendrierJournees" Margin="27,84,323,26" Width="450" Height="340">
-            <Label x:Name="labelTitreJournee" Content="SAISIE DES JOURNEES" HorizontalContentAlignment="Center" FontWeight="Bold" Height="30" Margin="0,0,0,310" Width="450" />
-            <Grid x:Name="gridNbEquipes" Width="450" Height="30" Margin="0,0,0,270">
-                <Label x:Name="labelNbEquipes" Content="Saisissez le nombre d'équipes :" VerticalAlignment="Center" HorizontalContentAlignment="Left" Height="30" />
-                <TextBox x:Name="textBoxNbEquipes" HorizontalAlignment="Right" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  Width="50" Margin="0,0,45,0" TextChanged="textBoxNbEquipes_TextChanged"/>
-                <Button x:Name="buttonValiderNbEquipes" Content="✓" FontSize="18" Foreground="Green" VerticalAlignment="Center" HorizontalAlignment="Right" Width="30" Height="30" Margin="0,0,10,0" Click="buttonValiderNbEquipes_Click"/>
-            </Grid>
+            <!--Ligne 3, Colone 1-2 : Containeur du calendrier-->
+            <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
+                    Margin="5"
+                    Style="{StaticResource BorderFormulaire}" 
+                    >
+                <Grid x:Name="gridCalendrierJournees">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
 
-            <Grid x:Name="gridSelectionJournees" Height="280" Width="450" Margin="0,70,0,0" >
-                <Label Content="Maintenez Ctrl et selectionnez les journées de rencontres :"/>
-                <Viewbox Height="260" Width="320" VerticalAlignment="Bottom" Stretch="Fill">
-                    <Calendar x:Name="calendarDateJourneeSenior" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195">
-                    </Calendar>
-                </Viewbox>
-                <Viewbox Height="260" Width="320" VerticalAlignment="Bottom" Stretch="Fill">
-                    <Calendar x:Name="calendarDateJourneeSeniorP" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195">
-                    </Calendar>
-                </Viewbox>
-            </Grid>
-        </Grid>
+                    <!--Ligne 1 : Titre du Formulaire-->
+                    <Label Grid.Row="0"
+                           x:Name="labelTitreJournee" 
+                           Content="SAISIE DES JOURNEES"
+                           Style="{StaticResource LabelTitre}"/>
 
-        <Button x:Name="buttonValiderJournees" Content="Valider" HorizontalAlignment="Left" Width="70" Margin="496,220,0,200" Height="30" Click="buttonValiderJournees_Click"/>
+                    <!--Ligne 2 : Modification du nombre d'équipes-->
+                    <Grid Grid.Row="1"
+                          x:Name="gridNbEquipes">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="407*"/>
+                            <ColumnDefinition Width="41*"/>
+                            <ColumnDefinition Width="40*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" 
+                               x:Name="labelNbEquipes" 
+                               Content="Saisissez le nombre d'équipes :" 
+                               HorizontalContentAlignment="Right"/>
+                        <TextBox Grid.Column="1" 
+                                 x:Name="textBoxNbEquipes"
+                                 TextChanged="textBoxNbEquipes_TextChanged"
+                                 Style="{StaticResource TextBoxStyle}"/>
+                        <Button Grid.Column="2" 
+                                x:Name="buttonValiderNbEquipes"
+                                Content="✓" 
+                                Margin="5,0,5,0" 
+                                Click="buttonValiderNbEquipes_Click"
+                                Style="{StaticResource ButtonStyle}"/>
+                    </Grid>
 
-        <Grid  Height="380" Width="200" Margin="576,50,10,10">
-            <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridRecapJournees"  Height="350" Width="195"  VerticalAlignment="Bottom" ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="True" AutoGenerateColumns="False">
+                    <!--Ligne 3 : Sélection des journées de rencontre-->
+                    <Grid Grid.Row="2"
+                          x:Name="gridSelectionJournees">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" 
+                               Content="Maintenez Ctrl et selectionnez les journées de rencontres :"/>
+                    
+                        <!--Calendrier de sélection des journées Senior-->
+                        <Viewbox Grid.Row="1" Height="260" Width="320" >
+                            <Calendar x:Name="calendarDateJourneeSenior" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195">
+                            </Calendar>
+                        </Viewbox>
+                    
+                        <!--Calendrier de sélection des journées Senior +-->
+                        <Viewbox Grid.Row="1" Height="260" Width="320">
+                            <Calendar x:Name="calendarDateJourneeSeniorP" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195" Style="{DynamicResource CalendarStyle1}">
+                            </Calendar>
+                        </Viewbox>
+                    </Grid>
+                </Grid>
+            </Border>
+        
+            <!--Ligne 3, colonne 3 : Bouton de validation des journées sélectionnées-->
+            <Button Grid.Column="2" Grid.Row="2"
+                    x:Name="buttonValiderJournees" 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Padding="10"
+                    Content="Valider" 
+                    Click="buttonValiderJournees_Click" 
+                    Style="{StaticResource ButtonStyle}"/>
+        
+            <!--Ligne 1, colonne 4 : Titre de la liste des journées-->
+            <Label Grid.Column="3" Grid.Row="0" 
+                   Content="Journées" 
+                   VerticalAlignment="Bottom" 
+                   HorizontalContentAlignment="Center" 
+                   FontWeight="Bold" />
+            <!--Ligne 3, colonne 4 : Liste des journées de rencontre-->
+            <DataGrid Grid.Column="3" Grid.Row="2"
+                      x:Name="dataGridRecapJournees"  
+                      Height="365"
+                      Margin="5"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                      IsReadOnly="True" 
+                      AutoGenerateColumns="False"
+                      Style="{DynamicResource DataGridStyle}">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
+                    <DataGridTextColumn Header="Date" 
+                                        Width="*"
+                                        Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" />
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
                     <DataGridTemplateColumn Header="❌">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="buttonSupprimerJournee" Content="✗" Width="14" Height="14" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Red" FontSize="9" HorizontalContentAlignment="Center" VerticalContentAlignment="Top" Padding="0,0,0,0" Click="buttonSupprimerJournee_Click"></Button>
+                                <Button x:Name="buttonSupprimerJournee" 
+                                        Content="✗"
+                                        Width="14"
+                                        Height="14" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        Foreground="Red" 
+                                        FontSize="9" 
+                                        HorizontalContentAlignment="Center" 
+                                        VerticalContentAlignment="Top"
+                                        Click="buttonSupprimerJournee_Click"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-
-        <Grid x:Name="gridValidationNbEquipes" Width="800" Height="450" Visibility="Hidden">
-            <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
-            <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Width="350" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Border.Effect>
-                    <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
-                </Border.Effect>
-            </Border>
-            <Grid Width="350" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Label x:Name="labelValidationNbEquipes" Height="30" Width="350" FontSize="12" FontWeight="DemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,20,0,0"/>
-                <Label Content="Êtes-vous sûr de votre choix ?" Height="30" Width="350" FontSize="16" FontWeight="DemiBold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-                <Grid Width="200" Height="50" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                    <Button x:Name="buttonConfirmNbEquipes" Content="Je confirme !" Width="80" Height="30" Click="buttonConfirmNbEquipes_Click" HorizontalAlignment="Left"/>
-                    <Button x:Name="buttonAnnulerNbEquipes" Content="J'annule !" Width="80" Height="30" HorizontalAlignment="Right" Click="buttonAnnulerNbEquipes_Click"/>
+        
+        <!--Formulaire de validation de modification du nombre d'équipe-->
+        <Grid x:Name="gridValidationNbEquipes" 
+              Visibility="Hidden">
+            <!--Fond gris isolant la fonctionnalité à la validation du nombre d'équipe-->
+            <Grid Background="Gray" Opacity="0.2"/>
+            <Border Width="350" 
+                    Height="170"
+                    Style="{StaticResource BorderFormulaire}">
+                <Grid Width="350" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <!--Titre dynamique-->
+                    <Label Grid.Row="0"
+                           x:Name="labelValidationNbEquipes"
+                           VerticalAlignment="Center"
+                           Style="{StaticResource LabelTitre}"/>
+                    <Label Grid.Row="1" 
+                           Content="Êtes-vous sûr de votre choix ?" 
+                           FontSize="16" 
+                           Style="{StaticResource LabelTitre}"/>
+                    <!--Boutons de Confirmation-->
+                    <Grid Grid.Row="2" 
+                          HorizontalAlignment="Center" 
+                          VerticalAlignment="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <!--Confirmation-->
+                        <Button Grid.Column="0"
+                                x:Name="buttonConfirmNbEquipes" 
+                                Content="Je confirme !" 
+                                Padding="10"
+                                FontSize="14"
+                                Click="buttonConfirmNbEquipes_Click"
+                                Style="{StaticResource ButtonStyle}"/>
+                        <!--Annulation-->
+                        <Button Grid.Column="1" 
+                                x:Name="buttonAnnulerNbEquipes" 
+                                Content="J'annule !" 
+                                Padding="10"
+                                FontSize="14"
+                                Background="Gray"
+                                Click="buttonAnnulerNbEquipes_Click"
+                                Style="{StaticResource ButtonStyle}"/>
+                    </Grid>
                 </Grid>
-            </Grid>
+            </Border>
         </Grid>
 
-        <Grid x:Name="gridValidationJournees" Width="800" Height="450" Visibility="Hidden">
-            <Grid Background="Gray" Opacity="0.5" Width="800" Height="450"></Grid>
-            <Border Background="LightGray" BorderBrush="Gray" BorderThickness="2" CornerRadius="10" Height="350" Width="300" Margin="241,38,250,62">
-                <Border.Effect>
-                    <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
-                </Border.Effect>
-            </Border>
-            <Grid Height="350" Width="300" Margin="246,38,254,62" >
-                <Label Content="Voulez-vous vraiment valider ces journées ?" Height="30" Width="300" HorizontalContentAlignment="Center" Margin="0,0,0,320"/>
-                <DataGrid x:Name="dataGridRecapValidationJournees" Width="250" Height="250" ScrollViewer.VerticalScrollBarVisibility="Auto" Margin="0,35,0,65" IsReadOnly="True" AutoGenerateColumns="False">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-                <Grid Width="180" Height="40" HorizontalAlignment="Center" Margin="60,300,60,10">
-                    <Button x:Name="buttonConfirmerJournees" Content="Valider" HorizontalAlignment="Left" Width="70" Height="30" Click="buttonConfirmerJournees_Click"/>
-                    <Button x:Name="buttonAnnulerJournees" Content="Annuler" HorizontalAlignment="Right" Width="70" Height="30" Click="buttonAnnulerJournees_Click"/>
+        <!--Formulaire de validation de modificaiton des journées sélectionnés-->
+        <Grid Grid.ColumnSpan="4" Grid.RowSpan="3"
+              x:Name="gridValidationJournees" 
+              Visibility="Hidden" >
+            <!--Fond gris isolant la fonctionnalité à la validation des journées-->
+            <Grid Background="Gray" Opacity="0.2"/>
+            <Border Width="300" 
+                    Height="350"                     
+                    Style="{StaticResource BorderFormulaire}">
+                <Grid Height="350" Width="300">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="70"/>
+                    </Grid.RowDefinitions>
+                    <!--Titre-->
+                    <Label Grid.Row="0" 
+                           Content="Voulez-vous vraiment valider ces journées ?" 
+                           Style="{StaticResource LabelTitre}"/>
+                    <!--Liste des journées sélectionnées-->
+                    <DataGrid Grid.Row="1" 
+                              x:Name="dataGridRecapValidationJournees" 
+                              Height="250" 
+                              Margin="10,0"
+                              AutoGenerateColumns="False"
+                              Style="{DynamicResource DataGridStyle}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Date" 
+                                                Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" 
+                                                Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <!--Boutons de validation-->
+                    <Grid Grid.Row="2" HorizontalAlignment="Center" Margin="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <!--Confirmation-->
+                        <Button Grid.Column="0" 
+                                x:Name="buttonConfirmerJournees" 
+                                Content="Valider" 
+                                Padding="10"
+                                FontSize="14"
+                                Click="buttonConfirmerJournees_Click"
+                                Style="{StaticResource ButtonStyle}"/>
+                        <!--Annulation-->
+                        <Button Grid.Column="1"
+                                x:Name="buttonAnnulerJournees" 
+                                Content="Annuler"
+                                Padding="10"
+                                FontSize="14"
+                                Background="Gray"
+                                Click="buttonAnnulerJournees_Click"
+                                Style="{StaticResource ButtonStyle}"/>
+                    </Grid>
                 </Grid>
-            </Grid>
-
+            </Border>
         </Grid>
     </Grid>
 </Page>

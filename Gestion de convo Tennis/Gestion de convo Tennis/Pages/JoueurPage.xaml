@@ -9,55 +9,183 @@
       Title="Joueur">
 
     <Grid Background="White">
-        <Border Background="LightGray" Width="220" Height="440" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" BorderBrush="Gray" BorderThickness="2" CornerRadius="10">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="5" Opacity="0.5" ShadowDepth="5" Direction="290" />
-            </Border.Effect>
-        </Border>
-        <Grid Width="220" Height="440" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.RowSpan="2"
+              Grid.Column="0"
+              Margin="0,10,0,0"
+              Width="220">
+            <Border Style="{StaticResource BorderFormulaire}">
+                <Grid>
+                    <!--Définition des lignes et colonnes du formulaire Joueur-->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="39*"/>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0"
+                           Grid.ColumnSpan="3"
+                           Name="LabelCreerJoueur" 
+                           Content="CREER UN JOUEUR"
+                           Style="{DynamicResource LabelTitre}"
+                           />
 
-            <Label Name="labelcreerunjoueur" Content="CREER UN JOUEUR" Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Center" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.ColumnSpan="2" />
-            <Grid Height="30" Margin="0,17,0,353" >
-                <Label Content="Nom :" Margin="0,0,145,4"/>
-                <TextBox x:Name="textBoxNomJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,-1,0,4"/>
-            </Grid>
-            <Grid Height="30" Margin="0,52,0,318">
-                <Label Content="Prenom :" Margin="0,0,145,4"/>
-                <TextBox x:Name="textBoxPrenomJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,-1,0,4"/>
-            </Grid>
-            <Grid Height="30" Margin="0,87,0,283">
-                <Label Content="Mail :" Margin="0,2,145,-2"/>
-                <TextBox x:Name="textBoxMailJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,0.295"/>
-            </Grid>
-            <Grid Height="30" Margin="0,120,0,237">
-                <Label Content="Age :"/>
-                <TextBox x:Name="textBoxAgeJoueur" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" TextAlignment="Left" VerticalContentAlignment="Center" Width="141" Margin="63,0,0,2"/>
-            </Grid>
-            <Grid Height="30" Margin="0,162,0,208" >
-                <Label Content="Classement :" />
-                <ComboBox x:Name="comboBoxClassementJoueur" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="29" Margin="84,0,0,0"/>
-            </Grid>
-            <Grid Height="60" Margin="0,205,0,155">
-                <Label x:Name="labelCertificatJoueur" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                <Label  Content="Certificat :" Width="70" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Button x:Name="buttonVisualiserCertificat" Content="Voir" Width="60" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Click="buttonVisualiserCertificat_Click" />
-                <Button x:Name="buttonAjouterCertificat" Content="Ajouter" Width="60" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,10,0" Click="buttonAjouterCertificat_Click"/>
-            </Grid>
-            <Grid Height="60" Margin="0,265,0,95">
-                <Label x:Name="labelLicenceJoueur" Width="200" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-                <Label  Content="Licence :" Width="70" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <Button x:Name="buttonVisualiserLicence" Content="Voir" Width="60" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Click="buttonVisualiserLicence_Click" />
-                <Button x:Name="buttonAjouterLicence" Content="Ajouter" Width="60" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,10,0" Click="buttonAjouterLicence_Click"/>
-            </Grid>
-            <Label x:Name="labelErreurFichierJoueur" Width="200" Height="60" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,40" Foreground="Red" FontSize="12" />
-            <Grid Width="150" Height="30" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10">
-                <Button x:Name="buttonValiderJoueur" Content="Valider" Width="110" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="buttonValiderJoueur_Click"/>
-                <Button x:Name="buttonResetJoueur" Content="🗑" Width="30" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18" Click="buttonResetJoueur_Click"/>
-            </Grid>
+                    <!--Ligne 1 : Nom de joueur-->
+                    <Label Grid.Column="0" Grid.Row="1" 
+                           Content="Nom :"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" 
+                             x:Name="textBoxNomJoueur" 
+                             Style="{DynamicResource TextBoxStyle}"/>
+
+                    <!--Ligne 2 : Prenom du Joueur-->
+                    <Label Grid.Column="0" Grid.Row="2" 
+                           Content="Prenom :"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" 
+                             x:Name="textBoxPrenomJoueur" 
+                             Style="{DynamicResource TextBoxStyle}"/>
+
+                    <!--Ligne 3 : Mail du joueur-->
+                    <Label Grid.Column="0" Grid.Row="3" 
+                           Content="Mail :"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" 
+                             x:Name="textBoxMailJoueur" 
+                                 Style="{DynamicResource TextBoxStyle}"/>
+
+                    <!--Ligne 4 : Age du Joueur-->
+                    <Label Grid.Column="0" Grid.Row="4" 
+                           Content="Age :"/>
+                    <TextBox Grid.Column="1" Grid.Row="4"
+                             x:Name="textBoxAgeJoueur" 
+                             Style="{DynamicResource TextBoxStyle}"/>
+
+                    <!--Ligne 5 : Classement du Joueur-->
+                    <Label Grid.Column="0" Grid.Row="5"
+                           Content="Classement :" />
+                    <ComboBox Grid.Column="1" Grid.Row="5" 
+                              x:Name="comboBoxClassementJoueur"
+                              Margin="2" 
+                              Style="{DynamicResource ComboBoxStyle}"
+                              ItemContainerStyle="{StaticResource ComboBoxItemStyle1}"/>
+
+                    <!--Ligne 6 : Certificat du Joueur-->
+                    <Grid Grid.Row="6" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0"
+                               Content="Certificat :"/>
+                        <Button Grid.Row="0" Grid.Column="1" 
+                                x:Name="buttonVisualiserCertificat" 
+                                Content="Voir"
+                                Click="buttonVisualiserCertificat_Click"
+                                Style="{DynamicResource ButtonStyle}"/>
+                        <Button Grid.Row="0" Grid.Column="2" 
+                                x:Name="buttonAjouterCertificat" 
+                                Content="Ajouter"
+                                Click="buttonAjouterCertificat_Click"
+                                Style="{DynamicResource ButtonStyle}"/>
+                        
+                        <Label Grid.Row="1" Grid.ColumnSpan="3"
+                           x:Name="labelCertificatJoueur"/>
+                    </Grid>
+                    
+                    <!--Label 7 : Licence du Joueur-->
+                    <Grid Grid.Row="7" Grid.ColumnSpan="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0"
+                               Content="Licence :"/>
+                        <Button Grid.Column="1" Grid.Row="0" 
+                                x:Name="buttonVisualiserLicence" 
+                                Content="Voir"
+                                Click="buttonVisualiserLicence_Click"
+                                Margin="2"
+                                Style="{DynamicResource ButtonStyle}"/>
+                        <Button Grid.Column="2" Grid.Row="0" 
+                                x:Name="buttonAjouterLicence" 
+                                Content="Ajouter" 
+                                Click="buttonAjouterLicence_Click"
+                                Margin="2"
+                                Style="{DynamicResource ButtonStyle}"/>
+                        <Label Grid.Row="1" Grid.ColumnSpan="3"
+                               x:Name="labelLicenceJoueur"/>
+                    </Grid>
+                    
+                    <!--Ligne 8 : Alerte d'erreur-->
+                    <Label Grid.Row="8" Grid.ColumnSpan="2" 
+                           x:Name="labelErreurFichierJoueur" 
+                           Style="{DynamicResource LabelErreurStyle}"/>
+                    <!--Ligne 9 : Validation du formulaire-->
+                    <Button Grid.Column="0" Grid.Row="9" Grid.ColumnSpan="2" 
+                            x:Name="buttonValiderJoueur"
+                            Content="Valider" 
+                            HorizontalAlignment="Left"
+                            Width="150"
+                            Margin="10,2,2,2"
+                            Click="buttonValiderJoueur_Click"
+                            Style="{DynamicResource ButtonStyle}"
+                            />
+                    <Button Grid.Column="1" Grid.Row="9" 
+                            x:Name="buttonResetJoueur" 
+                            Content="🗑" 
+                            Width="40"
+                            HorizontalAlignment="Right"
+                            Margin="0,0,10,0"
+                            FontSize="22" 
+                            Click="buttonResetJoueur_Click"
+                            Style="{DynamicResource ButtonStyle}"/>
+                </Grid>
+            </Border>
         </Grid>
-        <Label x:Name="labelErreurJoueur" Width="550" Height="30" VerticalAlignment="Top" Margin="230,0,0,0" Foreground="Red"/>
-        <Grid Height="400" Width="547"  Margin="230,27,0,23" >
-            <DataGrid x:Name="dataGridRecapJoueurs" IsReadOnly="True" AutoGenerateColumns="False" SelectionChanged="dataGridRecapJoueurs_SelectionChanged">
+        
+        <!--Ligne 1, colonne 3 : Affichage des erreurs de modifications d'un joueur-->
+        <Label Grid.Row="0" Grid.Column="2"
+               x:Name="labelErreurJoueur"
+               Style="{DynamicResource LabelErreurStyle}"/>
+        
+        <!--Ligne 2, colonne 3 : Liste des joueurs-->
+        <Grid Grid.Column="2" Grid.Row="1">
+            <DataGrid x:Name="dataGridRecapJoueurs"
+                      SelectionChanged="dataGridRecapJoueurs_SelectionChanged" 
+                      Style="{DynamicResource DataGridStyle}">
+                <!--Colonnes-->
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                     <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>
@@ -65,6 +193,7 @@
                     <DataGridTextColumn Header="Age" Binding="{Binding Age}" Width="50"/>
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="70"/>
                     <DataGridTextColumn Header="Classement" Binding="{Binding Classement}" Width="70"/>
+                    <!--Colonne de suppression-->
                     <DataGridTemplateColumn Header="❌">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
