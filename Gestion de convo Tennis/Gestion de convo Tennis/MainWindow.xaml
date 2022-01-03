@@ -19,7 +19,7 @@
             <Button x:Name="buttonVue" Content="Recapitulatif" ToolTip="VuePage" Click="VuePage"/>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
-    <Page Margin="0,0,0,0"/>
+    <Page/>
 </mah:MetroWindow>
 
     

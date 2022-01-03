@@ -5,22 +5,50 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Gestion_de_convo_Tennis.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
       Title="RencontrePage">
 
-    <Grid Background="White" Width="800" Height="450">
-        <Grid Width="150" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0">
-            <Label Content="Journées" FontWeight="Bold" Width="150" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridAffichageJournees" IsReadOnly="True" Height="380" Width="150" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" SelectionChanged="dataGridAffichageJournees_SelectionChanged">
+    <Grid Background="White"
+      Width="800"
+      Height="470">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0"
+                   Content="Journées" 
+                   Style="{StaticResource LabelTitre}"/>
+            <DataGrid Grid.Row="1" Grid.Column="0" 
+                      x:Name="dataGridAffichageJournees" 
+                      Margin="10"
+                      SelectionMode="Single" 
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      SelectionChanged="dataGridAffichageJournees_SelectionChanged"
+                      Style="{StaticResource DataGridStyle}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Date" Binding="{Binding Date, StringFormat=\{0:dd/MM/yy\}}" Width="*"/>
                     <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
-        </Grid>
-        <Grid Width="280" Height="410" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="170,0,0,0">
-            <Label Content="Joueurs disponibles" FontWeight="Bold" Width="200" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
-            <DataGrid x:Name="dataGridAffichageJoueursJournee" Height="380" Width="280" VerticalAlignment="Bottom" SelectionMode="Single" ScrollViewer.VerticalScrollBarVisibility="Auto" AutoGenerateColumns="False" SelectionChanged="dataGridAffichageJoueursJournee_SelectionChanged">
+
+            <Label Grid.Row="0" Grid.Column="1"
+                   Content="Joueurs disponibles" 
+                   Style="{StaticResource LabelTitre}"/>
+            <DataGrid Grid.Row="1" Grid.Column="1" 
+                      x:Name="dataGridAffichageJoueursJournee" 
+                      Margin="10"
+                      SelectionMode="Single"
+                      ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                      SelectionChanged="dataGridAffichageJoueursJournee_SelectionChanged"
+                      Style="{StaticResource DataGridStyle}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                     <DataGridTextColumn Header="Prénom" Binding="{Binding Prenom}" Width="*"/>
@@ -29,8 +57,9 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <ScrollViewer HorizontalAlignment="Left" Height="380" Margin="472,50,0,0" VerticalAlignment="Top" Width="310">
-            <StackPanel x:Name="stackPanelRencontre" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="310"/>
-        </ScrollViewer>
+        <StackPanel Grid.Column="1"
+                    x:Name="stackPanelRencontre" 
+                    Margin="10"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"/>
     </Grid>
 </Page>

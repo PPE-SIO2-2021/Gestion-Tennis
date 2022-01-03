@@ -10,21 +10,21 @@
     <Grid>
         <Grid Background="White">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="262.4"/>
+                <ColumnDefinition Width="237.6"/>
                 <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="70"/>
+                <RowDefinition Height="75"/>
                 <RowDefinition Height="5"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
             <!--Ligne 1, Colonne 1 : Sélection de la catégorie voulue-->
             <Border Grid.Column="0" Grid.Row="0" 
-                    Margin="5" 
-                    Padding="2"
+                    Margin="10,10,0,0" 
+                    Padding="5"
                     Style="{StaticResource BorderFormulaire}" >
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -52,14 +52,15 @@
             </Border>
 
             <!--Ligne 1, Colonne 2-3 : Affichage des erreurs-->
-            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" 
+            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" 
                    x:Name="labelErreurJournees" 
                    Foreground="Red" 
-                   Margin="10"/>
+                   Margin="10,10,10,20"/>
 
             <!--Ligne 3, Colone 1-2 : Containeur du calendrier-->
             <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" 
-                    Margin="5"
+                    Margin="10"
+                    Padding="5"
                     Style="{StaticResource BorderFormulaire}" 
                     >
                 <Grid x:Name="gridCalendrierJournees">
@@ -108,13 +109,13 @@
                         </Grid.RowDefinitions>
                         <Label Grid.Row="0" 
                                Content="Maintenez Ctrl et selectionnez les journées de rencontres :"/>
-                    
+
                         <!--Calendrier de sélection des journées Senior-->
                         <Viewbox Grid.Row="1" Height="260" Width="320" >
                             <Calendar x:Name="calendarDateJourneeSenior" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195">
                             </Calendar>
                         </Viewbox>
-                    
+
                         <!--Calendrier de sélection des journées Senior +-->
                         <Viewbox Grid.Row="1" Height="260" Width="320">
                             <Calendar x:Name="calendarDateJourneeSeniorP" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195" Style="{DynamicResource CalendarStyle1}">
@@ -123,7 +124,7 @@
                     </Grid>
                 </Grid>
             </Border>
-        
+
             <!--Ligne 3, colonne 3 : Bouton de validation des journées sélectionnées-->
             <Button Grid.Column="2" Grid.Row="2"
                     x:Name="buttonValiderJournees" 
@@ -132,19 +133,18 @@
                     Padding="10"
                     Content="Valider" 
                     Click="buttonValiderJournees_Click" 
-                    Style="{StaticResource ButtonStyle}"/>
-        
+                    Style="{StaticResource ButtonStyle}" Height="36" Margin="21,168.8,21,169.6" Width="58"/>
+
             <!--Ligne 1, colonne 4 : Titre de la liste des journées-->
             <Label Grid.Column="3" Grid.Row="0" 
                    Content="Journées" 
                    VerticalAlignment="Bottom" 
                    HorizontalContentAlignment="Center" 
-                   FontWeight="Bold" />
+                   FontWeight="Bold" Height="25" Margin="0,0,0,0.4" />
             <!--Ligne 3, colonne 4 : Liste des journées de rencontre-->
             <DataGrid Grid.Column="3" Grid.Row="2"
-                      x:Name="dataGridRecapJournees"  
-                      Height="365"
-                      Margin="5"
+                      x:Name="dataGridRecapJournees"
+                      Margin="10"
                       ScrollViewer.VerticalScrollBarVisibility="Auto" 
                       IsReadOnly="True" 
                       AutoGenerateColumns="False"
@@ -159,22 +159,16 @@
                             <DataTemplate>
                                 <Button x:Name="buttonSupprimerJournee" 
                                         Content="✗"
-                                        Width="14"
-                                        Height="14" 
-                                        VerticalAlignment="Center" 
-                                        HorizontalAlignment="Center" 
-                                        Foreground="Red" 
-                                        FontSize="9" 
-                                        HorizontalContentAlignment="Center" 
-                                        VerticalContentAlignment="Top"
-                                        Click="buttonSupprimerJournee_Click"/>
+                                        Foreground="White" 
+                                        Click="buttonSupprimerJournee_Click"
+                                        Style="{StaticResource ButtonStyle}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        
+
         <!--Formulaire de validation de modification du nombre d'équipe-->
         <Grid x:Name="gridValidationNbEquipes" 
               Visibility="Hidden">

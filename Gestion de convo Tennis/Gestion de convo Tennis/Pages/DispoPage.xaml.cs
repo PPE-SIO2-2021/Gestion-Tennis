@@ -33,6 +33,11 @@ namespace Gestion_de_convo_Tennis.Pages
         private void dataGridAffichageJoueurs_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             joueur = (Joueur)dataGridAffichageJoueurs.SelectedItem;
+            labelNomJoueur.Content = "Nom : " + joueur.Nom;
+            labelPrenomJoueur.Content = "Prenom : " + joueur.Prenom;
+            labelAgeJoueur.Content = "Age : " + joueur.Age;
+            labelCategorieJoueur.Content = "Catégorie : " + joueur.Categorie;
+            labelClassementJoueur.Content = "Classement : " + joueur.Classement;
             categorie = joueur.Categorie.ToString();
             AffichagesJournees();
         }

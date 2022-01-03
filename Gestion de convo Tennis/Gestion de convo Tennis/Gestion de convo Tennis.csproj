@@ -225,6 +225,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Ressources\CheckBoxRessource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Ressources\ComboBoxRessource.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

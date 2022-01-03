@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="Ressources/BorderFormulaireRessource.xaml"/>
                 <ResourceDictionary Source="Ressources/ButtonRessource.xaml"/>
                 <ResourceDictionary Source="Ressources/CalendarRessource.xaml"/>
+                <ResourceDictionary Source="Ressources/CheckBoxRessource.xaml"/>
                 <ResourceDictionary Source="Ressources/ComboBoxRessource.xaml"/>
                 <ResourceDictionary Source="Ressources/DataGridRessource.xaml"/>
                 <ResourceDictionary Source="Ressources/LabelErreurRessource.xaml"/>

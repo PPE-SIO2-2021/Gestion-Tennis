@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\
+C:\Users\dayan\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\
 Gestion_de_convo_Tennis
 none
 false
 DEBUG;TRACE
-D:\VS Projects\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\App.xaml
-14-2047732655
+C:\Users\dayan\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\App.xaml
+15533257111
 
 221781744772
-55-1402156436
-MainWindow.xaml;Pages\DispoPage.xaml;Pages\RencontrePage.xaml;Pages\JoueurPage.xaml;Pages\JourneePage.xaml;Pages\VuePage.xaml;Ressources\BorderFormulaireRessource.xaml;Ressources\ButtonRessource.xaml;Ressources\CalendarRessource.xaml;Ressources\ComboBoxRessource.xaml;Ressources\DataGridRessource.xaml;Ressources\LabelErreurRessource.xaml;Ressources\LabelTitreRessource.xaml;Ressources\TextBoxRessource.xaml;
+5543292693
+MainWindow.xaml;Pages\DispoPage.xaml;Pages\RencontrePage.xaml;Pages\JoueurPage.xaml;Pages\JourneePage.xaml;Pages\VuePage.xaml;Ressources\BorderFormulaireRessource.xaml;Ressources\ButtonRessource.xaml;Ressources\CalendarRessource.xaml;Ressources\CheckBoxRessource.xaml;Ressources\ComboBoxRessource.xaml;Ressources\DataGridRessource.xaml;Ressources\LabelErreurRessource.xaml;Ressources\LabelTitreRessource.xaml;Ressources\TextBoxRessource.xaml;
 
 False
 
