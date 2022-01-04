@@ -112,7 +112,12 @@
 
                         <!--Calendrier de sélection des journées Senior-->
                         <Viewbox Grid.Row="1" Height="260" Width="320" >
-                            <Calendar x:Name="calendarDateJourneeSenior" SelectionMode="MultipleRange" IsTodayHighlighted="True" CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" Height="195">
+                            <Calendar x:Name="calendarDateJourneeSenior" 
+                                      SelectionMode="MultipleRange" 
+                                      IsTodayHighlighted="True" 
+                                      CalendarButtonStyle="{DynamicResource CalendarButtonStyle1}" 
+                                      CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle1}" 
+                                      Height="195">
                             </Calendar>
                         </Viewbox>
 

@@ -8,8 +8,8 @@
       Title="RencontrePage">
 
     <Grid Background="White"
-      Width="800"
-      Height="470">
+      MinWidth="800"
+      MinHeight="470">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition/>
@@ -45,14 +45,12 @@
             <DataGrid Grid.Row="1" Grid.Column="1" 
                       x:Name="dataGridAffichageJoueursJournee" 
                       Margin="10"
-                      SelectionMode="Single"
-                      ScrollViewer.VerticalScrollBarVisibility="Auto" 
                       SelectionChanged="dataGridAffichageJoueursJournee_SelectionChanged"
                       Style="{StaticResource DataGridStyle}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
-                    <DataGridTextColumn Header="Prénom" Binding="{Binding Prenom}" Width="*"/>
-                    <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="*"/>
+                    <DataGridTextColumn Header="Prénom" Binding="{Binding Prenom}" Width="0.5*"/>
+                    <DataGridTextColumn Header="Catégorie" Binding="{Binding Categorie}" Width="0.5*"/>
                     <DataGridTextColumn Header="Classement" Binding="{Binding Classement}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>

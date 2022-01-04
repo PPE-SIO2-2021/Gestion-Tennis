@@ -25,7 +25,8 @@
         <Grid Grid.RowSpan="2"
               Grid.Column="0"
               Margin="0,10,0,0"
-              Width="220">
+              Width="220"
+              MaxHeight="450">
             <Border Style="{StaticResource BorderFormulaire}">
                 <Grid>
                     <!--Définition des lignes et colonnes du formulaire Joueur-->

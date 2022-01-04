@@ -137,11 +137,11 @@ namespace Gestion_de_convo_Tennis.Pages
             state = false;
             joueurSupprimer = true;
             String dossierJoueur = dossierJoueurs + @"\" + j.Nom + "_" + j.Prenom;
-            if (j.Certificat != "")
+            if (j.Certificat != "" && File.Exists(j.Certificat))
             {
                 File.Delete(j.Certificat);
             }
-            if (j.Licence != "")
+            if (j.Licence != "" && File.Exists(j.Licence))
             {
                 File.Delete(j.Licence);
             }
@@ -261,15 +261,15 @@ namespace Gestion_de_convo_Tennis.Pages
 
         private void buttonVisualiserLicence_Click(object sender, RoutedEventArgs e)
         {
-            if (state = false && licence != "")
+            if (state = false && licence != "" && j.Licence != "")
             {
                 Process.Start(licence);
             }
-            else if (state == true && j.Licence != "")
+            else if (state == true && j.Licence != "" && j.Licence != "")
             {
                 Process.Start(j.Licence);
             }
-            else if (licence == "")
+            else if (licence == "" || j.Licence == "")
             {
                 System.Windows.MessageBox.Show("Pas de Licence à visualiser", "Erreur");
             }
@@ -332,10 +332,10 @@ namespace Gestion_de_convo_Tennis.Pages
                 //CREATION DU DOSSIER DU JOUEUR
                 if (!Directory.Exists(dossierJoueurs + @"\" + dossierJoueur))
                 {
-                    Directory.CreateDirectory(dossierJoueurs + @"\" + dossierJoueur);
+                    Directory.CreateDirectory(dossierJoueurs + @"\" + dossierJoueur,securityRules);
                 }
 
-                //COPY DU FICHIER SELECTIONNE
+                //COPIE DU FICHIER SELECTIONNE
                 File.Copy(chemin, cheminFichier, true);
                 return cheminFichier;
             }
@@ -344,13 +344,13 @@ namespace Gestion_de_convo_Tennis.Pages
         private void AjoutFichiersJoueur()
         {
             //AJOUT DES FICHIERS
-            if (certificat != "")
+            if (certificat != "" && (String)labelCertificatJoueur.Content != j.Certificat )
             {
-                j.Certificat = EnregistrerFichierJoueur(labelCertificatJoueur.Content.ToString(), "Certificat");
+                j.Certificat = EnregistrerFichierJoueur((String)labelCertificatJoueur.Content, "Certificat");
             }
-            if (licence != "")
+            if (licence != "" && (String)labelLicenceJoueur.Content != j.Licence)
             {
-                j.Licence = EnregistrerFichierJoueur(labelLicenceJoueur.Content.ToString(), "Licence");
+                j.Licence = EnregistrerFichierJoueur(licence, "Licence");
             }
         }
     }

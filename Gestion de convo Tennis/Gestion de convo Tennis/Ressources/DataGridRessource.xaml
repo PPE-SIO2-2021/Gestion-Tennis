@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
 
     <SolidColorBrush x:Key="Border.Static.Background" Color="White"/>
+    <SolidColorBrush x:Key="Header.Static.Foreground" Color="White"/>
     <SolidColorBrush x:Key="Border.Static.BorderBursh" Color="#D2007B"/>
     <SolidColorBrush x:Key="Item.Selected.Background" Color="#FB4BB2"/>
     <SolidColorBrush x:Key="Item.Static.Border" Color="#DFDFDF"/>
@@ -95,13 +96,14 @@
 
     <Style x:Key="DataGridColumnHeaderStyle" TargetType="{x:Type DataGridColumnHeader}">
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource Header.Static.Foreground}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
                     <Grid>
                         <Themes:DataGridHeaderBorder BorderBrush="{StaticResource Border.Static.BorderBursh}" 
-                                                     BorderThickness="3,0,1,1"                                                      
-                                                     Background="{StaticResource Border.Static.Background}" 
+                                                     BorderThickness="1"                                                      
+                                                     Background="{StaticResource Border.Static.BorderBursh}" 
                                                      IsClickable="{TemplateBinding CanUserSort}" 
                                                      IsPressed="{TemplateBinding IsPressed}" 
                                                      IsHovered="{TemplateBinding IsMouseOver}" 

@@ -8,7 +8,7 @@
         xmlns:iconPacks="clr-namespace:MahApps.Metro.IconPacks;assembly=MahApps.Metro.IconPacks.Modern"
         xmlns:local="clr-namespace:Gestion_de_convo_Tennis"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize"
+        Title="MainWindow" MinHeight="500" MinWidth="800" ResizeMode="CanResize"
         Closing="Window_Closing">
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands Background="Gray">
