@@ -72,6 +72,16 @@ namespace Gestion_de_convo_Tennis.Pages
                 gridJoueur.Margin = new Thickness(0, 100, 0, 10);
                 gridJoueur.Width = 255;
                 gridJoueur.Height = Double.NaN;
+                gridJoueur.IsReadOnly = true;
+                try
+                {
+                    gridJoueur.ItemsSource = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[i].Joueurs;
+
+                }
+                catch (Exception error)
+                {
+
+                }
 
                 // Grid joueur 
                 DataGridTextColumn textColumn = new DataGridTextColumn();
