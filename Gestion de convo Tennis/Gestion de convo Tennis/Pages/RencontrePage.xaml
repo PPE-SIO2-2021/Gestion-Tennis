@@ -55,9 +55,9 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <StackPanel Grid.Column="1"
-                    x:Name="stackPanelRencontre" 
-                    Margin="10"
-                    ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="380" Margin="472,50,0,0" VerticalAlignment="Top" Width="310">
+            <StackPanel x:Name="stackPanelRencontre" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="310"/>
+        </ScrollViewer>
+        <StackPanel x:Name="stackPanelToEquipe" HorizontalAlignment="Left" Height="42" Margin="170,388,0,0" VerticalAlignment="Top" Width="280" Orientation="Horizontal"/>
     </Grid>
 </Page>

@@ -21,6 +21,7 @@ namespace Gestion_de_convo_Tennis.Classes
             this.Date = dte;
             this.Categorie = categorie;
             this.Dispo = new Dictionary<Joueur, Boolean>();
+            this.Rencontres = new List<Rencontre>();
         }
 
         public Journee (int id, DateTime dte, String categorie) {
@@ -28,6 +29,11 @@ namespace Gestion_de_convo_Tennis.Classes
             this.Date = dte;
             this.Categorie = categorie;
             this.Dispo = new Dictionary<Joueur, Boolean>();
+            this.Rencontres = new List<Rencontre>();
+        }
+        public void addRencontre()
+        {
+            this.Rencontres.Add(new Rencontre(DateTime.Now, "adv", "lieux"));
         }
         public override string ToString() {
             return "Date de journée : " + this.Date + "\nCatégorie : " + this.Categorie;
