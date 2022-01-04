@@ -836,3 +836,148 @@ C:\Users\dayan\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de co
 C:\Users\dayan\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.exe
 C:\Users\dayan\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.pdb
 C:\Users\dayan\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\CheckBoxRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csprojAssemblyReference.cache
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\BorderFormulaireRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\ButtonRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\CalendarRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\CheckBoxRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\ComboBoxRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\DataGridRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\LabelErreurRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\LabelTitreRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Ressources\TextBoxRessource.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\MainWindow.g.cs
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\DispoPage.g.cs
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\RencontrePage.g.cs
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JoueurPage.g.cs
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JourneePage.g.cs
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\VuePage.g.cs
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\App.g.cs
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis_MarkupCompile.cache
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis_MarkupCompile.lref
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.exe.config
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.exe
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Gestion de convo Tennis.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\ControlzEx.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BootstrapIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BoxIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Codicons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Coolicons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Core.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Entypo.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.EvaIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FeatherIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FileIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontaudio.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontisto.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.ForkAwesome.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Ionicons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.JamIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialDesign.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialLight.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Microns.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Modern.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Octicons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PicolIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PixelartIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RadixIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RemixIcon.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RPGAwesome.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.SimpleIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Typicons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Unicons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.VaadinIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.WeatherIcons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Zondicons.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\ControlzEx.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\ControlzEx.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BootstrapIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BootstrapIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BoxIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.BoxIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Codicons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Codicons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Coolicons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Coolicons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Core.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Core.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Entypo.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Entypo.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.EvaIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.EvaIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FeatherIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FeatherIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FileIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FileIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontaudio.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontaudio.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.FontAwesome.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontisto.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Fontisto.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.ForkAwesome.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.ForkAwesome.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Ionicons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Ionicons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.JamIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.JamIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialDesign.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialDesign.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialLight.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.MaterialLight.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Microns.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Microns.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Modern.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Modern.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Octicons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Octicons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PicolIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PicolIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PixelartIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.PixelartIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RadixIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RadixIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RemixIcon.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RemixIcon.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RPGAwesome.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.RPGAwesome.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.SimpleIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.SimpleIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Typicons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Typicons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Unicons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Unicons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.VaadinIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.VaadinIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.WeatherIcons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.WeatherIcons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Zondicons.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\MahApps.Metro.IconPacks.Zondicons.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\bin\Debug\de\MahApps.Metro.resources.dll
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\App.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\MainWindow.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\DispoPage.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\RencontrePage.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JoueurPage.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\JourneePage.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Pages\VuePage.baml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.g.resources
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion_de_convo_Tennis.Properties.Resources.resources
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.GenerateResource.cache
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.csproj.CopyComplete
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.exe
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Debug\Gestion de convo Tennis.pdb

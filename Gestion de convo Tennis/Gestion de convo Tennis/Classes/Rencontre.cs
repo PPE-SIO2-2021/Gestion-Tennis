@@ -20,6 +20,8 @@ namespace Gestion_de_convo_Tennis.Classes
             this.DteHeure = dte;
             this.Lieu = lieu;
             this.Adversaire = adversaire;
+            this.Joueurs = new List<Joueur>();
+
         }
         public override string ToString() {
             return "Date de rencontre : " + this.DteHeure + "\nLieu de rencontre : " + this.Lieu + "\nAdversaire : " + this.Adversaire;

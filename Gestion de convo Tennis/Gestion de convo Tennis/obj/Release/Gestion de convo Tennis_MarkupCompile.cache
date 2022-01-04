@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\dayan\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Release\
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\obj\Release\
 Gestion_de_convo_Tennis
 none
 false
 TRACE
-C:\Users\dayan\Source\Repos\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\App.xaml
+C:\Users\Lucas\Source\Repos\PPE-SIO2-2021\Gestion-Tennis\Gestion de convo Tennis\Gestion de convo Tennis\App.xaml
 15533257111
 
 221781744772
-5543292693
+55-2064463853
 MainWindow.xaml;Pages\DispoPage.xaml;Pages\RencontrePage.xaml;Pages\JoueurPage.xaml;Pages\JourneePage.xaml;Pages\VuePage.xaml;Ressources\BorderFormulaireRessource.xaml;Ressources\ButtonRessource.xaml;Ressources\CalendarRessource.xaml;Ressources\CheckBoxRessource.xaml;Ressources\ComboBoxRessource.xaml;Ressources\DataGridRessource.xaml;Ressources\LabelErreurRessource.xaml;Ressources\LabelTitreRessource.xaml;Ressources\TextBoxRessource.xaml;
 
 True
