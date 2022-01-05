@@ -22,6 +22,15 @@ namespace Gestion_de_convo_Tennis.Pages
     /// </summary>
     public partial class RencontrePage : Page
     {
+        // Importation des ressources de style
+        ResourceDictionary bordureStyle = (ResourceDictionary)Application.LoadComponent(new Uri("Ressources/BorderFormulaireRessource.xaml", UriKind.Relative));
+        ResourceDictionary buttonStyle = (ResourceDictionary)Application.LoadComponent(new Uri("Ressources/ButtonRessource.xaml", UriKind.Relative));
+        ResourceDictionary dataGridStyle = (ResourceDictionary)Application.LoadComponent(new Uri("Ressources/DataGridRessource.xaml", UriKind.Relative));
+        ResourceDictionary labelTitreStyle = (ResourceDictionary)Application.LoadComponent(new Uri("Ressources/LabelTitreRessource.xaml", UriKind.Relative));
+        ResourceDictionary textBoxStyle = (ResourceDictionary)Application.LoadComponent(new Uri("Ressources/TextBoxRessource.xaml", UriKind.Relative));
+
+        int nbrEquipe;
+
         public RencontrePage()
         {
             InitializeComponent();
@@ -32,131 +41,134 @@ namespace Gestion_de_convo_Tennis.Pages
         {
             Journee journee = (Journee)dataGridAffichageJournees.SelectedItem;
             dataGridAffichageJoueursJournee.ItemsSource = journee.Dispo.Keys;
-            int nbrEquipe = MainWindow.equipes.FindAll(x => x.Categorie == journee.Categorie).Count();
+            nbrEquipe = MainWindow.equipes.FindAll(x => x.Categorie == journee.Categorie).Count();
+
             stackPanelRencontre.Children.Clear();
-            stackPanelToEquipe.Children.Clear();
+            stackPanelButtonEquipe.Children.Clear();
+
             // Création des différents éléments
-            for (int i = 0; i < nbrEquipe; i++)
+            for (int numEquipe = 0; numEquipe < nbrEquipe; numEquipe++)
             {
+                int nbLignes = 5;
                 // Création des différents éléments
-                Grid grid = new Grid();
-                Grid gridAdv = new Grid();
-                Grid gridDateHeure = new Grid();
-                Grid gridLieu = new Grid();
-                DataGrid gridJoueur = new DataGrid();
-                Label lbl = new Label();
-                Label lbl2 = new Label();
-                Label lbl3 = new Label();
-                TextBox txtb = new TextBox();
-                TextBox txtb2 = new TextBox();
-                TextBox txtb3 = new TextBox();
-                var B1 = new Border();
-
-                // Mise en place des settings
-                gridAdv.Width = 255;
-                gridAdv.Height = 30;
-                gridAdv.VerticalAlignment = VerticalAlignment.Center;
-                gridAdv.Margin = new Thickness(0, -80, 0, 0);
-
-                gridLieu.Width = 255;
-                gridLieu.Height = 30;
-                gridLieu.Margin = new Thickness(0, -20, 0, 0);
-                gridLieu.VerticalAlignment = VerticalAlignment.Center;
-
-                gridDateHeure.Width = 255;
-                gridDateHeure.Height = 30;
-                gridDateHeure.VerticalAlignment = VerticalAlignment.Center;
-                gridDateHeure.Margin = new Thickness(0, 40, 0, 0);
-
-                gridJoueur.VerticalAlignment = VerticalAlignment.Center;
-                gridJoueur.Margin = new Thickness(0, 100, 0, 10);
-                gridJoueur.Width = 255;
-                gridJoueur.Height = Double.NaN;
-
-                // Grid joueur 
-                DataGridTextColumn textColumn = new DataGridTextColumn();
-                textColumn.Header = "Joueur";
-                textColumn.Binding = new Binding("Joueur");
-                textColumn.Width = 50;
-                DataGridTextColumn textColumn1 = new DataGridTextColumn();
-                textColumn1.Header = "Rang";
-                textColumn1.Binding = new Binding("Rang");
-                textColumn1.Width = 50;
-                gridJoueur.Columns.Add(textColumn);
-                gridJoueur.Columns.Add(textColumn1);
-
-
-                // Label Adversaire
-                lbl.Content = "Adversaire : ";
-                lbl.HorizontalAlignment = HorizontalAlignment.Left;
-                gridAdv.Children.Add(lbl);
-
-                // Label Lieux
-                lbl2.HorizontalAlignment = HorizontalAlignment.Left;
-                lbl2.Content = "Lieux : ";
-                gridLieu.Children.Add(lbl2);
-
-
-                // Label Lieux
-                lbl3.HorizontalAlignment = HorizontalAlignment.Left;
-                lbl3.Content = "Heure : ";
-                gridDateHeure.Children.Add(lbl3);
-
-                // Bordure de la Grid
-                B1.BorderBrush = Brushes.Gray;
-                B1.BorderThickness = new Thickness(2);
-                B1.CornerRadius = new CornerRadius(15);
-                // Ajout des grid
-                grid.Children.Add(B1);
-                grid.Children.Add(gridAdv);
-                grid.Children.Add(gridLieu);
-                grid.Children.Add(gridDateHeure);
-                grid.Children.Add(gridJoueur);
-
-                // TextBox Adversaire
-                txtb.Height = 20;
-                txtb.Width = 150;
-                txtb.Text = "";
-                txtb.HorizontalAlignment = HorizontalAlignment.Right;
-                txtb.HorizontalContentAlignment = HorizontalAlignment.Left;
-                txtb.VerticalContentAlignment = VerticalAlignment.Center;
-                gridAdv.Children.Add(txtb);
-
-                // TextBox Lieux
-                txtb2.Height = 20;
-                txtb2.Width = 150;
-                txtb2.HorizontalAlignment = HorizontalAlignment.Right;
-                txtb2.Text = "";
-                txtb2.HorizontalContentAlignment = HorizontalAlignment.Left;
-                txtb2.VerticalContentAlignment = VerticalAlignment.Center;
-                gridLieu.Children.Add(txtb2);
-
-                // TextBox Lieux
-                txtb3.Height = 20;
-                txtb3.Width = 150;
-                txtb3.HorizontalAlignment = HorizontalAlignment.Right;
-                txtb3.Text = "";
-                txtb3.HorizontalContentAlignment = HorizontalAlignment.Left;
-                txtb3.VerticalContentAlignment = VerticalAlignment.Center;
-                gridDateHeure.Children.Add(txtb3);
-
-                // Grid
-                grid.Height = Double.NaN;
-                grid.Width = 275;
-                grid.Background = new SolidColorBrush(Colors.LightGray);
-                grid.Margin = new Thickness(0, 0, 0, 10);
-                stackPanelRencontre.Children.Add(grid);
-
-                Button btn = new Button();
-                btn.Height = 20;
-                btn.Width = 50;
-                btn.Content = i + 1;
-                btn.Click += new RoutedEventHandler(btn_Clicked);
-                stackPanelToEquipe.Children.Add(btn);
+                Border borderEquipe = AjoutBordureStackPanel();
+                Grid grid = AjouterGrilleBordure(borderEquipe, nbLignes);
+                AjouterTitreGrille(numEquipe, grid);
+                AjouterLabelGrille(grid, 1, 1, "Adversaire");
+                AjouterTextBoxGrille(grid, 1, 2);
+                AjouterLabelGrille(grid, 2, 1, "Date");
+                AjouterTextBoxGrille(grid, 2, 2);
+                AjouterLabelGrille(grid, 3, 1, "Lieu");
+                AjouterTextBoxGrille(grid, 3, 2);
+                AjouterDataGridGrille(grid, nbLignes, 1);
+                AjouterButtonStackPanel(stackPanelButtonEquipe, numEquipe);
             }
         }
-        private void btn_Clicked(object sender, RoutedEventArgs e)
+
+        private Border AjoutBordureStackPanel()
         {
+            // CREATION DE LA BORDURE D'UN FORMULAIRE RENCONTRE
+            var border = new Border();
+            border.Style = (Style)bordureStyle["BorderFormulaire"];
+            border.Margin = new Thickness(0, 10, 0, 0);
+            border.MaxWidth = 400;
+            border.MinHeight = 150;
+            stackPanelRencontre.Children.Add(border);
+            return border;
+        }
+
+        private Grid AjouterGrilleBordure(Border border, int nbLigne)
+        {
+            // AJOUT D'UNE GRILLE DANS UN FORMULAIRE RENCONTRE
+            Grid grid = new Grid();
+            border.Child = grid;
+            for (int i = 0; i <= 4; i++)
+            {
+                // 4 colonnes
+                grid.ColumnDefinitions.Add(new ColumnDefinition());
+                // la première et la dernière colonne font office de marge
+                if (i == 0 || i >= 3)
+                {
+                    grid.ColumnDefinitions[i].Width = new GridLength(50);
+                }
+            }
+            for (int i = 0; i < nbLigne; i++)
+            {
+                // Nombre de lignes selon le nombre de champs
+                grid.RowDefinitions.Add(new RowDefinition());
+
+            }
+            return grid;
+        }
+
+        private void AjouterTitreGrille(int numEquipe, Grid grid)
+        {
+            // AJOUT DU TITRE A LA GRILLE
+            Label titre = new Label();
+            grid.Children.Add(titre);
+            Grid.SetColumnSpan(titre, 4);
+            titre.Content = "Equipe n°" + (numEquipe+1);
+            titre.Style = (Style)labelTitreStyle["LabelTitre"];
+        }
+
+        private void AjouterLabelGrille(Grid grid, int row, int column, String content)
+        {
+            // AJOUT DU LABEL ADVERSAIRE A LA GRILLE
+            Label label = new Label();
+            grid.Children.Add(label);
+            Grid.SetRow(label, row);
+            Grid.SetColumn(label, column);
+            label.Content = content + " : ";
+            label.Style = (Style)labelTitreStyle["LabelTitre"];
+        }
+
+        private void AjouterTextBoxGrille(Grid grid, int row, int column)
+        {
+            // AJOUT DE LA TEXTBOX ADVERSAIRE A LA GRILLE
+            TextBox textBox = new TextBox();
+            grid.Children.Add(textBox);
+            Grid.SetRow(textBox, row);
+            Grid.SetColumn(textBox, column);
+            Grid.SetColumnSpan(textBox, 2);
+            textBox.Style = (Style)textBoxStyle["TextBoxStyle"];
+        }
+
+        private void AjouterDataGridGrille(Grid grid, int row, int column)
+        {
+            DataGrid dataGrid = new DataGrid();
+            dataGrid.Columns.Add(AjouterColonneDataGrid("Joueur", "Joueur"));
+            dataGrid.Columns.Add(AjouterColonneDataGrid("Classement", "Rang"));
+            dataGrid.MinHeight = 80;
+            dataGrid.Margin = new Thickness(0,10,0,10);
+            grid.Children.Add(dataGrid);
+            Grid.SetRow(dataGrid, row);
+            Grid.SetColumn(dataGrid, column);
+            Grid.SetColumnSpan(dataGrid, 3);
+            dataGrid.Style = (Style)dataGridStyle["DataGridStyle"];
+        }
+
+        private DataGridTextColumn AjouterColonneDataGrid(string columnTitre, string binding)
+        {
+            DataGridTextColumn textColumn = new DataGridTextColumn();
+            textColumn.Header = columnTitre;
+            textColumn.Binding = new Binding(binding);
+            textColumn.Width = new DataGridLength(1, DataGridLengthUnitType.Star);
+            return textColumn;
+        }
+
+        private void AjouterButtonStackPanel(StackPanel stackPanel, int numEquipe)
+        {
+            Button buttonNumEquipe = new Button();
+            stackPanel.Children.Add(buttonNumEquipe);
+            buttonNumEquipe.Click += new RoutedEventHandler(buttonNumEquipe_Clicked);
+            buttonNumEquipe.Style = (Style)buttonStyle["ButtonStyle"];
+            buttonNumEquipe.Width = 30;
+            buttonNumEquipe.Content = numEquipe + 1;
+        }
+
+        private void buttonNumEquipe_Clicked(object sender, RoutedEventArgs e)
+        {
+            /*
             Button button = (Button)sender;
             int nbrChild = (int)button.Content - 1;
             Grid grid = (Grid)stackPanelRencontre.Children[nbrChild];
@@ -167,7 +179,7 @@ namespace Gestion_de_convo_Tennis.Pages
             j.Rencontres[nbrChild].Joueurs.Add(player);
 
             joueurs.ItemsSource = null;
-            joueurs.ItemsSource = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[nbrChild].Joueurs;
+            joueurs.ItemsSource = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[nbrChild].Joueurs;*/
 
         }
 

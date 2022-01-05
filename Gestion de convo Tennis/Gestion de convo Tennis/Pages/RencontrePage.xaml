@@ -11,12 +11,12 @@
       MinWidth="800"
       MinHeight="470">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -55,9 +55,34 @@
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
-        <ScrollViewer HorizontalAlignment="Left" Height="380" Margin="472,50,0,0" VerticalAlignment="Top" Width="310">
-            <StackPanel x:Name="stackPanelRencontre" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="310"/>
-        </ScrollViewer>
-        <StackPanel x:Name="stackPanelToEquipe" HorizontalAlignment="Left" Height="42" Margin="170,388,0,0" VerticalAlignment="Top" Width="280" Orientation="Horizontal"/>
+        
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" 
+                        x:Name="stackPanelButtonEquipe"
+                        HorizontalAlignment="Center"
+                        Orientation="Horizontal"/>
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.2*"/>
+                </Grid.ColumnDefinitions>
+                <ScrollViewer Margin="10" VerticalScrollBarVisibility="Hidden">
+                <StackPanel x:Name="stackPanelRencontre"
+                            MinHeight="300"/>
+                </ScrollViewer>
+                <Button x:Name="buttonValiderRencontres" 
+                        Grid.Column="1" 
+                        Content="Valider"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Margin="5"
+                        Padding="10"
+                        Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

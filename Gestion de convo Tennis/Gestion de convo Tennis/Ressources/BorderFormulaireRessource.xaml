@@ -2,6 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Style x:Key="BorderFormulaire"
            TargetType="{x:Type Border}">
+        <Setter Property="MinHeight" Value="50"/>
+        <Setter Property="Background" Value="White"/>
         <Setter Property="Background" Value="White"/>
         <Setter Property="CornerRadius" Value="5"/>
         <Setter Property="BorderBrush" Value="#D2007B"/>
