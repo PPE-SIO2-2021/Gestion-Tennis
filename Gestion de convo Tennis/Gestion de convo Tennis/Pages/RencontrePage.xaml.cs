@@ -55,16 +55,16 @@ namespace Gestion_de_convo_Tennis.Pages
                 Grid grid = AjouterGrilleBordure(borderEquipe, nbLignes);
                 AjouterTitreGrille(numEquipe, grid);
                 AjouterLabelGrille(grid, 1, 1, "Adversaire");
-                AjouterTextBoxGrille(grid, 1, 2);
+                AjouterTextBoxGrille(grid, 1, 2,"Adv",numEquipe);
                 AjouterLabelGrille(grid, 2, 1, "Date");
-                AjouterTextBoxGrille(grid, 2, 2);
+                AjouterTextBoxGrille(grid, 2, 2,"Date",numEquipe);
                 AjouterLabelGrille(grid, 3, 1, "Lieu");
-                AjouterTextBoxGrille(grid, 3, 2);
+                AjouterTextBoxGrille(grid, 3, 2,"Lieu",numEquipe);
                 DataGrid dataGrid = AjouterDataGridGrille(grid, nbLignes, 1);
                 AjouterButtonStackPanel(stackPanelButtonEquipe, numEquipe);
                 try
                 {
-                    dataGrid.ItemsSource = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[numEquipe].Joueurs;
+                    dataGrid.ItemsSource = ((Journee)dataGridAffichageJournees.SelectedItem).Rencontres[numEquipe].Joueurs;
                 }
                 catch (Exception error)
                 {
@@ -130,10 +130,30 @@ namespace Gestion_de_convo_Tennis.Pages
             label.Style = (Style)labelTitreStyle["LabelTitre"];
         }
 
-        private void AjouterTextBoxGrille(Grid grid, int row, int column)
+        private void AjouterTextBoxGrille(Grid grid, int row, int column, String nomTxtBox, int numEquipe)
         {
-            // AJOUT DE LA TEXTBOX ADVERSAIRE A LA GRILLE
             TextBox textBox = new TextBox();
+            textBox.Name = "txtBox"+nomTxtBox+numEquipe;
+            Journee j = (Journee)dataGridAffichageJournees.SelectedItem;
+            try
+            {
+                if (nomTxtBox == "Adv")
+                {
+                    textBox.Text = j.Rencontres[numEquipe].Adversaire;
+                }
+                else if (nomTxtBox == "Lieu")
+                {
+                    textBox.Text = j.Rencontres[numEquipe].Lieu;
+                }
+                else if (nomTxtBox == "Date")
+                {
+                    textBox.Text = j.Rencontres[numEquipe].DteHeure.ToString();
+                }
+            }
+            catch (Exception eroor)
+            {
+                Console.WriteLine("Impossible de préremplir les txtBox", eroor);
+            }
             grid.Children.Add(textBox);
             Grid.SetRow(textBox, row);
             Grid.SetColumn(textBox, column);
@@ -184,9 +204,30 @@ namespace Gestion_de_convo_Tennis.Pages
             Grid grid = (Grid)border.Child;
             DataGrid joueurs = (DataGrid)grid.Children[7];
             Joueur player = (Joueur)dataGridAffichageJoueursJournee.SelectedItem;
-            Journee j = MainWindow.journees[dataGridAffichageJournees.SelectedIndex];
-            j.addRencontre();
-            Boolean b = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[nbrChild].Joueurs.Contains(player);
+            Journee j = (Journee)dataGridAffichageJournees.SelectedItem;
+            TextBox txtBoxAdv = (TextBox)grid.Children[2];
+            TextBox txtBoxDate = (TextBox)grid.Children[4];
+            TextBox txtBoxLieu = (TextBox)grid.Children[6];
+            try
+            {
+                if (!j.Rencontres.Contains(j.Rencontres[nbrChild]))
+                {
+                    j.Rencontres.Add(new Rencontre(Convert.ToDateTime(txtBoxDate.Text), txtBoxAdv.Text, txtBoxLieu.Text));
+                }
+            }
+            catch (Exception eror)
+            {
+                try 
+                { 
+                    j.Rencontres.Add(new Rencontre(Convert.ToDateTime(txtBoxDate.Text), txtBoxAdv.Text, txtBoxLieu.Text));
+                }
+                catch (Exception err)
+                {
+                    System.Windows.MessageBox.Show("Veuillez reneignez les champs avant d'ajouter un joueur à l'équipe", "Erreur");
+                }
+            }
+
+            Boolean b = j.Rencontres[nbrChild].Joueurs.Contains(player);
             Boolean a = true;
             if (!b)
             {
@@ -196,7 +237,7 @@ namespace Gestion_de_convo_Tennis.Pages
                 {
                     try
                     {
-                        if (MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[numEquipe].Joueurs.Contains(player))
+                        if (j.Rencontres[numEquipe].Joueurs.Contains(player))
                         {
                             a = false;
                             System.Windows.MessageBox.Show("Le joueur est déjà dans une équipe", "Erreur");
@@ -216,12 +257,11 @@ namespace Gestion_de_convo_Tennis.Pages
             if (a)
             {
                 j.Rencontres[nbrChild].Joueurs.Add(player);
-
             }
 
             joueurs.ItemsSource = null;
            
-            joueurs.ItemsSource = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[nbrChild].Joueurs;
+            joueurs.ItemsSource = j.Rencontres[nbrChild].Joueurs;
 
         }
 

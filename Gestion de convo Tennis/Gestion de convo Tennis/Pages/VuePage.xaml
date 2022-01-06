@@ -24,7 +24,7 @@
         <DataGrid Grid.Row="1" Grid.Column="0"
                   x:Name="dataGridAffichageJournees"
                   Margin="10"
-                  Style="{StaticResource DataGridStyle}">
+                  Style="{StaticResource DataGridStyle}" SelectionChanged="dataGridAffichageJournees_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
                 <DataGridTextColumn Header="Categorie" Binding="{Binding Categorie}" Width="*"/>
@@ -36,12 +36,11 @@
         <DataGrid Grid.Row="1" Grid.Column="1" 
                   x:Name="dataGridAffichageRencontresJournee" 
                   Margin="10"
-                  Style="{StaticResource DataGridStyle}">
+                  Style="{StaticResource DataGridStyle}" SelectionChanged="dataGridAffichageRencontresJournee_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Adversaire" Binding="{Binding Adversaire}" Width="*"/>
                 <DataGridTextColumn Header="Lieu" Binding="{Binding Lieu}" Width="*"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding Date}" Width="*"/>
-                <DataGridTextColumn Header="Heure" Binding="{Binding Heure}" Width="*"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding DteHeure}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         
@@ -51,7 +50,7 @@
         <DataGrid Grid.Row="1" Grid.Column="2"
                   x:Name="dataGridRecapJoueursRencontre"
                   Margin="10"
-                  Style="{StaticResource DataGridStyle}">
+                  Style="{StaticResource DataGridStyle}" SelectionChanged="dataGridRecapJoueursRencontre_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Nom" Binding="{Binding Nom}" Width="*"/>
                 <DataGridTextColumn Header="Prenom" Binding="{Binding Prenom}" Width="*"/>

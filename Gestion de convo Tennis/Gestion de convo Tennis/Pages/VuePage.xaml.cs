@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Gestion_de_convo_Tennis.Classes;
+
 
 namespace Gestion_de_convo_Tennis.Pages
 {
@@ -23,6 +25,26 @@ namespace Gestion_de_convo_Tennis.Pages
         public VuePage()
         {
             InitializeComponent();
+            dataGridAffichageJournees.ItemsSource = MainWindow.journees.OrderBy(x => x.Date);
+
+        }
+
+        private void dataGridAffichageJournees_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Journee journee = (Journee)dataGridAffichageJournees.SelectedItem;
+            dataGridAffichageRencontresJournee.ItemsSource = journee.Rencontres;
+
+        }
+
+        private void dataGridAffichageRencontresJournee_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           Rencontre rencontre = (Rencontre)dataGridAffichageRencontresJournee.SelectedItem;
+            dataGridRecapJoueursRencontre.ItemsSource = rencontre.Joueurs;
+        }
+
+        private void dataGridRecapJoueursRencontre_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
