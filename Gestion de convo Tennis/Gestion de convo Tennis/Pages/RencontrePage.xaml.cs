@@ -40,9 +40,9 @@ namespace Gestion_de_convo_Tennis.Pages
         private void dataGridAffichageJournees_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Journee journee = (Journee)dataGridAffichageJournees.SelectedItem;
-            dataGridAffichageJoueursJournee.ItemsSource = journee.Dispo.Keys;
+            dataGridAffichageJoueursJournee.ItemsSource = null;
             nbrEquipe = MainWindow.equipes.FindAll(x => x.Categorie == journee.Categorie).Count();
-
+            dataGridAffichageJoueursJournee.ItemsSource = journee.Dispo.Keys;
             stackPanelRencontre.Children.Clear();
             stackPanelButtonEquipe.Children.Clear();
 
@@ -60,8 +60,16 @@ namespace Gestion_de_convo_Tennis.Pages
                 AjouterTextBoxGrille(grid, 2, 2);
                 AjouterLabelGrille(grid, 3, 1, "Lieu");
                 AjouterTextBoxGrille(grid, 3, 2);
-                AjouterDataGridGrille(grid, nbLignes, 1);
+                DataGrid dataGrid = AjouterDataGridGrille(grid, nbLignes, 1);
                 AjouterButtonStackPanel(stackPanelButtonEquipe, numEquipe);
+                try
+                {
+                    dataGrid.ItemsSource = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[numEquipe].Joueurs;
+                }
+                catch (Exception error)
+                {
+                    Console.WriteLine("Aucune rencontre n'existe", error);
+                }
             }
         }
 
@@ -107,7 +115,7 @@ namespace Gestion_de_convo_Tennis.Pages
             Label titre = new Label();
             grid.Children.Add(titre);
             Grid.SetColumnSpan(titre, 4);
-            titre.Content = "Equipe n°" + (numEquipe+1);
+            titre.Content = "Rencontre n°" + (numEquipe+1);
             titre.Style = (Style)labelTitreStyle["LabelTitre"];
         }
 
@@ -133,11 +141,12 @@ namespace Gestion_de_convo_Tennis.Pages
             textBox.Style = (Style)textBoxStyle["TextBoxStyle"];
         }
 
-        private void AjouterDataGridGrille(Grid grid, int row, int column)
+        private DataGrid AjouterDataGridGrille(Grid grid, int row, int column)
         {
             DataGrid dataGrid = new DataGrid();
-            dataGrid.Columns.Add(AjouterColonneDataGrid("Joueur", "Joueur"));
-            dataGrid.Columns.Add(AjouterColonneDataGrid("Classement", "Rang"));
+            dataGrid.Columns.Add(AjouterColonneDataGrid("Nom", "Nom"));
+            dataGrid.Columns.Add(AjouterColonneDataGrid("Prénom", "Prenom"));
+            dataGrid.Columns.Add(AjouterColonneDataGrid("Classement", "Classement"));
             dataGrid.MinHeight = 80;
             dataGrid.Margin = new Thickness(0,10,0,10);
             grid.Children.Add(dataGrid);
@@ -145,6 +154,7 @@ namespace Gestion_de_convo_Tennis.Pages
             Grid.SetColumn(dataGrid, column);
             Grid.SetColumnSpan(dataGrid, 3);
             dataGrid.Style = (Style)dataGridStyle["DataGridStyle"];
+            return dataGrid;
         }
 
         private DataGridTextColumn AjouterColonneDataGrid(string columnTitre, string binding)
@@ -168,18 +178,50 @@ namespace Gestion_de_convo_Tennis.Pages
 
         private void buttonNumEquipe_Clicked(object sender, RoutedEventArgs e)
         {
-            /*
             Button button = (Button)sender;
             int nbrChild = (int)button.Content - 1;
-            Grid grid = (Grid)stackPanelRencontre.Children[nbrChild];
-            DataGrid joueurs = (DataGrid)grid.Children[4];
+            Border border = (Border)(stackPanelRencontre.Children[nbrChild]);
+            Grid grid = (Grid)border.Child;
+            DataGrid joueurs = (DataGrid)grid.Children[7];
             Joueur player = (Joueur)dataGridAffichageJoueursJournee.SelectedItem;
             Journee j = MainWindow.journees[dataGridAffichageJournees.SelectedIndex];
             j.addRencontre();
-            j.Rencontres[nbrChild].Joueurs.Add(player);
+            Boolean b = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[nbrChild].Joueurs.Contains(player);
+            Boolean a = true;
+            if (!b)
+            {
+                Journee journee = (Journee)dataGridAffichageJournees.SelectedItem;
+                nbrEquipe = MainWindow.equipes.FindAll(x => x.Categorie == journee.Categorie).Count();
+                for (int numEquipe = 0; numEquipe < nbrEquipe; numEquipe++)
+                {
+                    try
+                    {
+                        if (MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[numEquipe].Joueurs.Contains(player))
+                        {
+                            a = false;
+                            System.Windows.MessageBox.Show("Le joueur est déjà dans une équipe", "Erreur");
+                        }
+                    }
+                    catch (Exception  errror)
+                    {
+                        Console.WriteLine("Aucune rencontre n'ex", errror);
+                    }
+                }
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Le joueur a déjà été ajouté à l'équipe", "Erreur");
+                a = false;
+            }
+            if (a)
+            {
+                j.Rencontres[nbrChild].Joueurs.Add(player);
+
+            }
 
             joueurs.ItemsSource = null;
-            joueurs.ItemsSource = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[nbrChild].Joueurs;*/
+           
+            joueurs.ItemsSource = MainWindow.journees[dataGridAffichageJournees.SelectedIndex].Rencontres[nbrChild].Joueurs;
 
         }
 
